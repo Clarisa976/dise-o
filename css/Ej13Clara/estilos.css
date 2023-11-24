@@ -22,8 +22,18 @@ header>nav#iconos-cabecera {
 
 header>div#buscador {
   flex: 100%;
+  display: flex;
 }
 
+header>div#buscador>input{
+  flex: 1;
+  padding: 0.3rem auto;
+}
+
+header>div#buscador>img{
+  position: absolute;/*no se puede poner position relative*/
+  right: 1rem;
+}
 main,
 footer {
   display: none;
