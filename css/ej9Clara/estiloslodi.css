@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+/*estilos generales*/
+a {
+	color: grey;
+	text-decoration: none;
+}
+
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+/*cabecera*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
+/*la hamburguesa va en primer lugar, quitando el checkbox y sin mostrar el ul*/
+header>nav#menu-principal{
+    order: 1;
+    padding-right: 0.5rem;
+}
+
+header>nav#menu-principal>input#menu-hamburger{
+    display: none;
+}
+
+header>nav#menu-principal>ul#menu{
+    display: none;
+    flex-flow: column;
+    position: absolute;
+    
+    padding: 0.3rem 0;
+}
+header>nav#menu-principal label.menu-hamburger {
+    display: block;
+}
+header>nav#menu-principal>input:checked~ul#menu{
+    display: flex;
+}

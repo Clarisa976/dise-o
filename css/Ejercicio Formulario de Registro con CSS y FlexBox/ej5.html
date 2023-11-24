@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>ejercicio5</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+    <form action="ej5.html" method="post" id="form-registro">
+
+        <input type="radio" name="sexo" id="senior" value="H" autofocus><label for="senior">Sr.</label>
+        <input type="radio" name="sexo" id="seniora" value="M"><label for="seniora">Sra.</label>
+
+        <input type="text" name="nombre" id="nombre" value="" maxlength="30" aria-label="Nombre/Razón Social"
+            title="Indique su nombre o razón social" placeholder="Nombre / Razón Social">
+
+        <input type="text" name="apellidos" id="apellidos" value="" maxlength="30" title="Introduce tus apellidos"
+            required aria-label="Apellidos*" placeholder="Apellidos*">
+
+        <input type="email" name="correo" id="correo" value="" aria-label="Email*" placeholder="Email*"
+            title="Introduce tu correo electrónico" required
+            pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$">
+
+        <input type="password" name="pass" id="pass" value="" aria-label="Contraseña*"
+            title="La contraseña tiene que tener mínimo 8 caracteres y 12 de máximo" placeholder="Contraseña*" required
+            pattern="[A-Za-z0-9!?-]{8,12}">
+
+        <h2>Fecha de nacimiento</h2>
+        <input type="date" name="fecha_nacimiento" aria-label="Fecha nacimiento" value="">
+
+        <input type="text" name="dni" value="" title="Debe tener 8 dígitos y una letra" pattern="[0-9]{8}[A-Za-z]{1}"
+            maxlength="9" minlength="9" placeholder="DNI/NIF/NIE*" required>
+
+        <input type="text" name="direccion" value="" aria-label="Dirección*" title="Introduce la dirección de envio"
+            required placeholder="Dirección*">
+
+        <input type="text" name="codigo_postal" value="" aria-label="Código postal*" title="Introduce el código postal"
+            required placeholder="Código postal*">
+
+        <input type="text" name="ciudad" value="" aria-label="Ciudad*" title="Introduce la ciudad" placeholder="Ciudad*"
+            required>
+
+        <select name="pais" id="pais">
+            <option value="espania">España</option>
+            <option value="portugal">Portugal</option>
+            <option value="italia">Italia</option>
+        </select>
+
+        <input list="provincia" required aria-label="Provincia*" placeholder="Provincia*">
+        <datalist id="provincia">
+            <option value="almeria">
+            <option value="cadiz">
+            <option value="cordoba">
+            <option value="granada">
+            <option value="huelva">
+            <option value="jaen">
+            <option value="malaga">
+            <option value="sevilla">
+        </datalist>
+
+
+        <input type="tel" name="telefono" aria-label="Teléfono" id="telefono" value=""
+            title="El teléfono tiene que tener 9 dígitos" maxlength="9" pattern="[0-9]{9}" placeholder="Teléfono móvil*"
+            required>
+
+
+        <h3>Información adiccional</h3>
+        <div>
+            <input type="checkbox" name="autorizacion" id="autorizacion">
+            <label for="autorizacion">Estos datos personales se autorizarán para responder a sus búsquedas, procesar sus
+                pedidos o autorizar acceso.</label>
+        </div>
+
+        <input type="submit" name="btnEnviar" value="Registrarse">
+
+    </form>
+
+    <footer></footer>
+</body>
+
+</html>

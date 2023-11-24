@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+}
+
+/*Estilos generales*/
+body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    margin: 0;
+    display: flex;
+
+}
+
+/*Contenedor principal*/
+form#form-registro {
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+form#form-registro input {
+    max-width: 400px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+form#form-registro>input ::placeholder {
+    color: black;
+}
+
+/*h2*/
+h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*h3*/
+h3 {
+    font-size: 12px;
+}
+
+/*select de país y la lista de provincias en gris*/
+select[name="pais"],
+datalist,
+input[type="date"] {
+    font-weight: bold;
+    color: #999;
+}
+
+/*Campos de entrada de texto y select*/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[list],
+input[type="tel"],
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+}
+
+/*Negrita para el label del sr y sra.*/
+form#form-registro label[for="senior"],
+form#form-registro label[for="seniora"] {
+    font-weight: bold;
+}
+
+/*Cambio de tamaño del label de autorizacion*/
+form#form-registro label[for="autorizacion"] {
+    font-size: 10px;
+    margin-top: 2rem;
+    padding: 10px;
+}
+
+/*Botón*/
+form#form-registro input[type="submit"] {
+    background-color: #242321;
+    color: #a6896f;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-size: 18px;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    align-items: flex-start;
+}
+
+input[type="submit"]:hover {
+    background-color: #080808;
+}
+
+/*Ocultar el título h1*/
+header h1 {
+    display: none;
+}
+
+/*media query para tablet*/
+@media only screen and (min-width:720px) {
+    form#form-registro  {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+/*media query para escritorio*/
+@media only screen and (min-width: 1024px) {
+    form#form-registro  {
+        flex-direction: row;
+        /*elementos en una fila para escritorio */
+        justify-content: flex-end;
+        /*elementos a la derecha*/
+    }
+}

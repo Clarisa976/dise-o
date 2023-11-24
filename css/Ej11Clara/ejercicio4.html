@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>Ejercicio4</title>
+
+</head>
+
+<body>
+    <div id="contenido">
+        <h2>Iniciar sesión</h2>
+        <form action="ejercicio4.html" method="post" id="form-login">
+            <input type="text" placeholder="Email" name="email" id="email"
+                pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" area-label="Email"
+                title="Introduce el correo" required />
+            <input type="password" placeholder="Contraseña" name="pass" id="pass" pattern="[A-Za-z0-9!?-]{8,12}"
+                aria-label="Contraseña" title="Introduce la contraseña" required>
+            <a href="#">Recuperar contraseña</a>
+
+            <input type="submit" id="BtnInicarSesion" value="Iniciar sesión">
+        </form>
+    </div>
+</body>
+
+</html>
