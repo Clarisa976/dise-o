@@ -1,0 +1,157 @@
+body {
+  box-sizing: border-box;
+}
+
+/*HEADER******/
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header>nav#menu {
+  order: 1;
+  flex: 33%;
+
+}
+
+header>div#logo {
+  order: 2;
+  flex: 33%;
+  text-align: center;
+
+}
+
+header>nav#bolsa-corazon {
+  order: 3;
+  flex: 33%;
+  text-align: right;
+  justify-content: center;
+  
+}
+
+header>div#buscador {
+  order: 4;
+  flex: 100%;
+  padding: 0.2rem;
+  display: flex
+}
+
+header>div#buscador>input {
+  flex: 1;
+  padding: 0.2rem;
+  background-color: rgb(238, 234, 234);
+}
+
+header>div#buscador>input:placeholder-shown {
+  text-align: center;
+}
+
+header>div#buscador>img {
+  position: absolute;
+  right: 1rem;
+
+
+}
+
+/* MAIN*******************************/
+/*main lo hago flexible*/
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*controlo el tamaño de la imagen */
+.imagen {
+  width: 100%;
+  height: auto;
+}
+
+/*escondo el corazon */
+body>main>section>article>img:nth-child(1) {
+  display: none;
+
+}
+
+/*section flexible*/
+body>main>section {
+  display: flex;
+  flex-direction: column;
+  flex:0 48%;
+  margin: 3px;
+
+}
+body>main>section>h2 {
+ text-align: center;
+
+}
+/*article flexible*/
+body>main>section>article {
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body>main>section>article>h3 {
+ text-align: center;
+}
+
+
+
+
+
+/*FOOTER*/
+footer {
+display: flex;
+flex-direction: column;
+background-color: rgb(238, 234, 234);
+
+}
+/*generales del footer*/
+/*quito margenes a los ul*/
+ul{
+padding: 0;
+margin: 0;
+}
+/*le doy formato a todos los elances*/
+a{
+text-decoration: none;
+color: black;
+
+}
+
+#menu-opciones > ul.clearfix > li{
+  border-bottom: 1px solid;
+}
+/*el nav  del footer flexible */
+footer>nav{
+display: flex;
+flex-direction: column;
+
+}
+/* pongo en oreden los elementos del footer*/
+#menu-opciones >h4{
+  order: 2;
+}
+#menu-opciones > ul.clearfix{
+  order: 3;
+}
+
+/*hago flexible este ul*/
+#menu-opciones > ul:nth-child(2){
+  display: flex;
+  flex-direction: row;
+}
+/* elemtos dentro de el primer ul*/
+#menu-opciones > ul:nth-child(2) {
+    list-style: none;
+
+}
+#menu-opciones > ul:nth-child(2) > li {
+  margin: 10px;
+}
+
+#menu-opciones > ul.clearfix > li{
+  padding: 0.2rem;
+}
