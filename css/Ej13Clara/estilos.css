@@ -95,6 +95,7 @@ main>section>h2 {
 }
 
 main>section>article {
+  position: relative;/*para que cada me gusta esté en su imágen correspondiente*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,11 +118,22 @@ main>section>article>h3 {
 main>section>article>span{
   text-align: center;
   margin: 0.2rem;
+  flex: 0 50%;
+}
+main>section>article>span.precio-anterior{
+  text-decoration: line-through;
+}
+main>section>article>span.precio-nuevo{
+  font-weight: 300;
 }
 /*cambiamos el corazón de sitio*/
 main>section>article>img:nth-child(1) {
   position: absolute;
-  left: 1rem;
+  width: 2rem;
+  height: auto;
+  left: 5%;
+  top:5%;
+  padding: 0.25rem;
   background-color: #c2c2c2;
   border-radius: 10px;
 }

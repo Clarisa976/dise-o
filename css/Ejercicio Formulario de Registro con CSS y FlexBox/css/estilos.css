@@ -6,26 +6,27 @@ html {
 body {
     font-family: Arial, sans-serif;
     color: #000;
-    margin: 0;
-    display: flex;
+}
 
+div#contenido {
+    display: flex;
+    flex-direction: column;
 }
 
 /*Contenedor principal*/
 form#form-registro {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 form#form-registro input {
-    max-width: 400px;
-    margin: 0;
-    padding: 10px;
+    flex: 0 100%;
+    margin: 1rem;
+    padding: 1rem;
     border-radius: 10px;
     text-align: left;
-    flex-wrap: wrap;
 }
 
 form#form-registro>input ::placeholder {
@@ -44,24 +45,23 @@ h3 {
 }
 
 /*select de país y la lista de provincias en gris*/
-select[name="pais"],
-datalist,
-input[type="date"] {
+form#form-registro select[name="pais"],
+form#form-registro datalist,
+form#form-registro input[type="date"] {
     font-weight: bold;
     color: #999;
 }
 
 /*Campos de entrada de texto y select*/
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[list],
-input[type="tel"],
-select,
-input[type="date"] {
-    width: 100%;
+form#form-registro input[type="text"],
+form#form-registro input[type="email"],
+form#form-registro input[type="password"],
+form#form-registro input[list],
+form#form-registro input[type="tel"],
+form#form-registro input[type="date"] {
+    flex: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 0.3rem;
     border: none;
     border-bottom: 1px solid #999;
     outline: none;
@@ -91,10 +91,10 @@ form#form-registro input[type="submit"] {
     width: 10rem;
     height: 3rem;
     text-align: center;
-    align-items: flex-start;
+    align-self: center;
 }
 
-input[type="submit"]:hover {
+form#form-registro input[type="submit"]:hover {
     background-color: #080808;
 }
 
@@ -104,20 +104,38 @@ header h1 {
 }
 
 /*media query para tablet*/
-@media only screen and (min-width:720px) {
-    form#form-registro  {
-        flex-direction: row;
-        justify-content: space-between;
+@media (min-width:720px) {
+    form#form-registro {
+        flex-flow: row wrap;
+        align-items: center;
+        padding: 1rem;
     }
 
-}
+    form#form-registro div#tratamiento {
+        flex: 100%;
+    }
 
-/*media query para escritorio*/
-@media only screen and (min-width: 1024px) {
-    form#form-registro  {
-        flex-direction: row;
-        /*elementos en una fila para escritorio */
-        justify-content: flex-end;
-        /*elementos a la derecha*/
+    form#form-registro input[type="text"],
+    form#form-registro input[type="email"],
+    form#form-registro input[type="password"],
+    form#form-registro input[list],
+    form#form-registro input[type="date"] {
+        flex: 0 46%;
+    }
+
+    form#form-registro input[type="tel"]#telefono {
+        flex:100%;
+    }
+    form#form-registro h2,form#form-registro h3{
+        flex: 100%;
+    }
+    form#form-registro input[type="submit"] {
+        flex: 0 100%;
+        margin: 1rem 40%;
+    }
+    form#form-registro label[for="autorizacion"] {
+        flex:100%;
+        align-self: center;
     }
 }
+
