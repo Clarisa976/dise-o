@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+/*estilos generales*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*hacemos flexible el div contenedor ya que el body no se debe hacer*/
+div#contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+/*estilos para la versión móvil*/
+/*estilos de la cabecera*/
+div#contenedor header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+div#contenedor header>picture#logo-cabecera {
+    flex: 30%;
+}
+
+div#contenedor header>picture#logo-cabecera>img {
+    max-width: 100%;
+    height: auto;
+}
+
+div#contenedor header>nav#bloque-iconos {
+    flex: 70%;
+}
+
+div#contenedor header>nav#bloque-iconos>ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    flex: 50%;
+}
+
+div#contenedor header>nav#bloque-iconos>ul>li {
+    margin: 0.3rem;
+}
+
+div#contenedor header>nav#bloque-iconos>ul>li>a {
+    color: #000;
+    font-size: 2rem;
+}
+
+div#contenedor header>nav#menu-principal {
+    flex: 100%;
+    background-color: #000;
+    text-align: center;
+}
+
+div#contenedor header>nav#menu-principal>div#hamburguesa {
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+}
+
+div#contenedor header>nav#menu-principal>div#hamburguesa>span {
+    font-size: 1.5rem;
+}
+
+div#contenedor header>nav#menu-principal>ul#menu {
+    display: none;
+}
+
+div#contenedor header>nav#menu-principal>div#hamburguesa:hover+ul#menu {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/*ocultamos el submenú*/
+div#contenedor header>nav#menu-principal>ul#menu>li>ul.submenu {
+    display: none;
+}
+
+
+/*estilos del main*/
+div#contenedor main {
+    display: flex;
+    justify-content: center;
+    flex: 30%;
+}
+
+div#contenedor main>section#form-contacto {
+    display: flex;
+    flex-flow: column;
+}
+
+div#contenedor main>section#form-contacto>h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+div#contenedor main>section#form-contacto>form#contacto {
+    display: flex;
+    flex-flow: column;
+}
+
+/*quitamos el label*/
+div#contenedor main>section#form-contacto>form#contacto>label {
+    display: none;
+}
+
+div#contenedor main>section#form-contacto>form#contacto>input,
+div#contenedor main>section#form-contacto>form#contacto>select,
+div#contenedor main>section#form-contacto>form#contacto>span,
+div#contenedor main>section#form-contacto>form#contacto>textarea {
+    margin-top: 0.5rem;
+}
+
+div#contenedor main>section#form-contacto>form#contacto>input:focus::placeholder {
+    color: #fff;
+    background-color: #000;
+}
+
+div#contenedor main>section#form-contacto>form#contacto>input[type="text"]:focus {
+    outline: 3px solid #ccc;
+}
+
+div#contenedor main>section#form-contacto>form#contacto>input#boton {
+    background-color: #000;
+    color: #ccc;
+}
+
+/*estilos del pie de página*/
+div#contenedor footer {
+    display: flex;
+    flex-flow: column;
+    background-color: #000;
+    margin-top: 1rem;
+}
+
+div#contenedor footer>nav#menu-adicional>ul {
+    display: flex;
+    flex-flow: column;
+}
+
+div#contenedor footer>nav#menu-adicional>ul>li {
+    text-align: center;
+}
+
+/*estilos para tablet*/
+@media (min-width:720px) {
+    div#contenedor header>nav#menu-principal>div#hamburguesa>span {
+        display: none;
+    }
+
+    div#contenedor header>nav#menu-principal>ul#menu {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    div#contenedor header>nav#menu-principal>ul#menu>li>a:hover+ul.submenu {
+        display: flex;
+        flex-direction: column;
+    }
+    div#contenedor header>nav#menu-principal>ul#menu>li>ul.submenu {
+        margin-top: 0.5rem;       
+    }
+    div#contenedor header>nav#menu-principal>ul#menu>li>ul.submenu>li{
+        text-align: justify;
+        padding: 0.2rem;
+    }
+    
+}

@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+}
+
+/*estilos generales*/
+body {
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+	color: #9b9595;
+	cursor: pointer;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+ul>li {
+	margin: 0.2rem;
+}
+
+/*Comenzamos con la versión móvil*/
+
+/*Hacemos el cuerpo de la web flexible*/
+div#contenedor {
+	display: flex;
+	flex-flow: column;
+}
+
+/*estilos de la cabecera*/
+div#contenedor header {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+/*ordenamos*/
+div#contenedor header>nav#menu-principal {
+	order: 1;
+}
+
+div#contenedor header>a#logo {
+	order: 3;
+}
+
+div#contenedor header>nav#search {
+	order: 2;
+	font-size: 1.4rem;
+}
+
+div#contenedor header>nav#login {
+	order: 4;
+	font-size: 1.4rem;
+}
+
+div#contenedor header>nav#bag {
+	order: 5;
+	font-size: 1.4rem;
+}
+
+/*tamaño fijo a la imagen*/
+div#contenedor header>a>picture>img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*menú principal*/
+div#contenedor header>nav#menu-principal>label>span {
+	font-weight: bold;
+	font-size: 1.4rem;
+	color: #9b9595;
+}
+
+div#contenedor header>nav#menu-principal>input#hamburguesa {
+	display: flex;
+	display: none;
+}
+
+div#contenedor header>nav#menu-principal>ul#menu {
+	display: none;
+	border-bottom: 1px solid #ccc;
+}
+
+div#contenedor header>nav#menu-principal>input#hamburguesa:checked+ul#menu {
+	display: flex;
+	flex-flow: column;
+}
+
+/*estilos del main*/
+div#contenedor main {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+div#contenedor main>article.item {
+	flex: 0 48%;
+	padding: 1rem;
+	display: flex;
+	flex-flow: column;
+	margin-bottom: 1rem;
+}
+
+/*ordenamos el contenido de los artículos*/
+div#contenedor main>article.item>p {
+	order: 2;
+	text-align: center;
+	color: #ccc;
+}
+
+div#contenedor main>article.item>picture {
+	order: 1;
+}
+
+div#contenedor main>article.item>picture>img {
+	width: 100%;
+	height: auto;
+	margin: 0.5rem;
+}
+
+div#contenedor main>article.item>span {
+	order: 3;
+	color: #ccc;
+	text-align: center;
+}
+
+div#contenedor main>article.item>input[type="button"] {
+	order: 4;
+	color: #fff;
+	background-color: aquamarine;
+	border-radius: 0.25rem;
+	border: 1px solid aquamarine;
+	padding: 0.5rem;
+	width: 200px;
+	align-self: center;
+}
+
+/*estilos del pie de página*/
+div#contenedor footer {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	background-color: #ccc;
+	padding: 0.7rem 0;
+}
+
+div#contenedor footer>small {
+	text-align: center;
+	color: #9b9595;
+	font-size: 0.8rem;
+	order: 3;
+}
+
+div#contenedor footer>nav#menu-social-adicional {
+	display: flex;
+	flex-flow: column;
+}
+
+div#contenedor footer>nav#menu-social-adicional>span {
+	text-align: center;
+	color: #9b9595;
+}
+
+div#contenedor footer>nav#menu-social-adicional>ul {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+div#contenedor footer>nav#menu-social-adicional>ul>li>a>i {
+	font-size: 1.4rem;
+	color: #cda194;
+	padding: 0 0.5rem;
+}
+
+div#contenedor footer>nav {
+	display: flex;
+	flex-flow: column;
+}
+
+div#contenedor footer>nav>span {
+	text-align: center;
+	color: #9b9595;
+}
+
+div#contenedor footer>nav>ul#menu-adicional {
+	display: flex;
+	flex-flow: column;
+}
+
+div#contenedor footer>nav>ul#menu-adicional>li {
+	text-align: center;
+}
+
+div#contenedor footer>nav>ul#menu-adicional>li>a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+	color: #4d4c4a;
+}
+
+/*estilos para tablet*/
+@media (min-width:720px) {
+	/*cabecera*/
+
+	div#contenido header {
+		align-items: center;
+	}
+
+	div#contenedor header>nav#menu-principal {
+		order: 5;
+		flex: 100%;
+	}
+
+	div#contenedor header>a#logo {
+		order: 1;
+		flex: 1 70%;
+	}
+
+	div#contenedor header>nav#search {
+		order: 2;
+		flex: 5%;
+		margin-left: auto;
+	}
+
+	div#contenedor header>nav#login {
+		order: 3;
+		flex: 5%;
+	}
+
+	div#contenedor header>nav#bag {
+		order: 4;
+		flex: 5%;
+	}
+
+	/*menú principal*/
+	div#contenedor header>nav#menu-principal>label>span {
+		display: none;
+	}
+
+	div#contenedor header>nav#menu-principal>input#hamburguesa {
+		display: flex;
+		display: none;
+	}
+
+	div#contenedor header>nav#menu-principal>ul#menu {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+
+	/*main*/
+	div#contenedor main>article.item {
+		flex: 0 33%;
+	}
+
+	/*pie de página*/
+	div#contenedor footer {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	div#contenedor footer>nav {
+		flex: 50%;
+	}
+
+	div#contenedor footer>small {
+		flex: 100%;
+	}
+	div#contenedor footer>nav>span{
+		text-decoration: underline;
+	}
+	div#contenedor footer>nav>ul#menu-adicional{
+		flex-flow: row wrap;
+	}
+	div#contenedor footer>nav>ul#menu-adicional>li{
+		flex: 48%;
+	}
+}
+/*estilos para escritorio*/
+@media (min-width:1020px){
+	/*main*/
+	div#contenedor main>article.item {
+		flex: 0 25%;
+	}
+
+}
