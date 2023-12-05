@@ -1,0 +1,322 @@
+/*estilos generales*/
+
+body {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/*estilos HEAD////////////////////*/
+input#hamburger,
+ul#op-idiomas {
+    display: none;
+}
+
+
+nav#main-menu ul#op-menu {
+    display: none;
+}
+/*deslpiegue del menu*/
+nav#main-menu>input#hamburger:checked ~ div#menu-toggle ul#op-idiomas {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    background-color: white;
+}
+nav#main-menu>input#hamburger:checked ~ div#menu-toggle ul#op-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+
+}
+/*estilos con el menu abierto*/
+ul#op-idiomas a{
+    color: lightslategray;
+    border-bottom: 2px solid lightslategray;
+}
+ul#op-menu li{
+   padding: 0.2rem;
+    
+}
+
+
+/*flex al contendor prinicpal de toda la cabecera*/
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*elementos dentro de la cabecera*/
+header nav#main-menu {
+    flex: 0 28%;
+
+}
+
+header img#logo {
+    flex: 0 33.3%;
+    height: 1.5rem;
+
+}
+
+header nav#login-shop {
+    flex: 0 32%;
+
+
+}
+
+header nav#search {
+    flex-basis: 100%;
+    padding: 0.5rem;
+
+
+
+}
+
+/* elemeto hamburger*/
+header nav#main-menu label {
+    margin-left: 25%;
+    height: 2rem;
+}
+
+/*elementos login y bolsa*/
+
+header nav#login-shop ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+header nav#login-shop ul li i {
+    font-size: xx-large;
+
+}
+
+/*buscado//////////////////////////////////*/
+
+header nav#search {
+    background-color: black;
+    height: 2rem;
+
+}
+
+header nav#search div#searcher {
+    display: flex;
+
+}
+
+header nav#search div#searcher>svg {
+    color: white;
+    position: absolute;
+    height: 25px;
+
+}
+
+header nav#search div#searcher>input:placeholder-shown {
+      background-color: black;
+    flex: 0 90%;
+    height: 25px;
+
+}
+
+header nav#search div#searcher>input::placeholder {
+    color: white;
+
+}
+
+header nav#search div#searcher>input {
+    margin-left: 40px;
+    border: none;
+
+}
+
+/*estilos MAIN////////////////////*/
+
+
+main section#section-giftguide {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main section#section-giftguide div#header-giftguide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 0 100%;
+    justify-content: space-between;
+
+
+}
+
+
+
+/* articles general*/
+main section#section-giftguide article.category {
+    flex: 0 48%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 7px;
+    justify-content: center;
+
+
+
+
+}
+
+/*imagen principal de cada articulo*/
+main section#section-giftguide article.category img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*menu de opciones dentro del article ul y sus imagenes*/
+main section#section-giftguide article.category ul.menu-options {
+    display: flex;
+    flex-direction: row;
+
+}
+
+main section#section-giftguide article.category ul.menu-options li>img {
+    width: 50%;
+    height: auto;
+
+}
+
+
+
+/*estilos FOOTER///////////////////*/
+footer {
+    display: none;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ebe6e6;
+
+}
+
+footer h5 {
+    font-size: large;
+    border-bottom: 2px solid black;
+}
+
+footer nav#additional-menu1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 50%;
+
+}
+
+footer nav#additional-menu2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 50%;
+}
+
+/*logos de app store y google play*/
+footer nav#apps-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 0 100%;
+    align-items: center;
+}
+
+#apps-menu>ul>li>a>img {
+    width: 100%;
+    height: auto;
+}
+
+footer nav#apps-menu ul {
+    display: flex;
+
+}
+
+
+
+footer small#info-footer {
+
+    background-color: white;
+    color: #aaa8a8;
+    font-size: large;
+
+}
+
+
+
+/*version tablet*/
+
+
+@media (min-width:1000px) {
+    header nav#main-menu {
+        flex: 0 28%;
+        display: flex;
+        order: 3;
+        flex: 100%;
+        background-color: rgb(170, 168, 168);
+        justify-content: space-around;
+    }
+
+    header nav#main-menu label {
+        display: none;
+    }
+
+    header nav#main-menu ul#op-menu {
+        display: flex;
+
+    }
+
+    header nav#main-menu ul#op-menu,
+    li,
+    a {
+        color: black;
+        margin-left: 0.2rem;
+
+    }
+
+    header img#logo {
+        flex: 0 50%;
+        height: 1.5rem;
+
+    }
+
+    header nav#login-shop {
+        flex: 0 50%;
+
+    }
+
+    main section#section-giftguide article.category {
+        flex:1 1 20%;
+      
+    
+    
+    
+    }
+
+
+
+
+
+ 
+}

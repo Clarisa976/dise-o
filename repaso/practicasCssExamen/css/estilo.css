@@ -1,0 +1,297 @@
+/*estilos generales*/
+body {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+div#content {
+    display: flex;
+    flex-direction: column;
+}
+
+/*estilos para móvil*/
+/*cabecera*/
+header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    /*para que queden al mismo nivel*/
+}
+
+/*elementos dentro de la cabecera*/
+header nav#main-menu {
+    flex: 0 28%;
+}
+
+header nav#main-menu input#hamburger {
+    display: none;
+}
+
+/* elemeto hamburger*/
+header nav#main-menu label {
+    margin-left: 25%;
+    height: 2rem;
+}
+
+header nav#main-menu>label svg {
+    size: 1.5rem;
+}
+
+header nav#main-menu>div#menu-toggle ul#op-idiomas {
+    display: flex;
+    display: none;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+header nav#main-menu>div#menu-toggle ul#op-idiomas>li a {
+    color: #ccc;
+    text-decoration: underline
+}
+
+header nav#main-menu>div#menu-toggle ul#op-menu {
+    display: flex;
+    display: none;
+    flex-flow: column;
+}
+
+header nav#main-menu>div#menu-toggle ul#op-menu>li {
+    margin: 0.2rem;
+}
+
+/*mostramos el menu-toggle*/
+header nav#main-menu input#hamburger:checked~div#menu-toggle {
+    position: absolute;
+    background-color: #fff;
+}
+
+header nav#main-menu input#hamburger:checked~div#menu-toggle ul#op-idiomas {
+    display: flex;
+    padding: 0 1rem;
+    background-color: #fff;
+}
+
+header nav#main-menu input#hamburger:checked~div#menu-toggle ul#op-menu {
+    display: flex;
+    padding: 0 1rem;
+    background-color: #fff;
+}
+
+/*logotipo*/
+header img#logo {
+    flex: 0 33.3%;
+    height: 1.5rem;
+}
+
+/*iconos login y bolsa*/
+header nav#login-shop {
+    flex: 0 32%;
+}
+
+header nav#login-shop>ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+header nav#login-shop>ul>li {
+    padding: 0.5rem;
+}
+
+header nav#login-shop>ul>li>i {
+    font-size: 1.5rem;
+}
+
+
+/*buscador*/
+header nav#search {
+    flex-basis: 100%;
+    padding: 0.5rem;
+    background-color: black;
+    height: 2rem;
+}
+
+header nav#search div#searcher {
+    display: flex;
+}
+
+header nav#search div#searcher>svg {
+    color: white;
+    position: absolute;
+    height: 25px;
+}
+
+header nav#search div#searcher>input:placeholder-shown {
+    background-color: black;
+    flex: 0 90%;
+    height: 25px;
+
+}
+
+header nav#search div#searcher>input::placeholder {
+    color: white;
+}
+
+header nav#search div#searcher>input {
+    margin-left: 40px;
+    border: none;
+}
+
+
+/*main*/
+/*section*/
+main section#section-giftguide {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+main section#section-giftguide div#header-giftguide {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 100%;
+}
+
+/*artículos*/
+main section#section-giftguide article.category {
+    flex: 0 48%;
+    /*dos imágenes por fila*/
+    margin: 0.2rem;
+}
+
+/*imagen principal de cada articulo*/
+main section#section-giftguide article.category img {
+    width: 100%;
+    height: auto;
+}
+
+main section#section-giftguide article.category ul.menu-options {
+    display: flex;
+    flex-direction: row;
+}
+
+main section#section-giftguide article.category ul.menu-options li>img {
+    width: 50%;
+    height: auto;
+
+}
+
+/*pie de página*/
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #ebe6e6;
+}
+
+footer h5 {
+    font-size: 1.1rem;
+    border-bottom: 2px solid black;
+}
+
+footer nav#additional-menu1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 0 50%;
+
+}
+
+footer nav#additional-menu2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    flex: 0 50%;
+}
+
+/*logo store*/
+footer nav#apps-menu {
+    display: flex;
+    flex-direction: column;
+    flex: 0 100%;
+    align-items: center;
+}
+
+footer nav#apps-menu ul {
+    display: flex;
+    flex-flow: row;
+}
+
+footer nav#apps-menu>ul>li>a>img {
+    width: 100%;
+    height: auto;
+}
+
+footer small#info-footer {
+    background-color: #fff;
+    color: #aaa8a8;
+    font-size: 0.8rem;
+}
+
+/*versión tablet*/
+@media (min-width:720px) {
+
+    /*header*/
+    header nav#main-menu {
+        display: flex;
+        order: 3;
+        flex: 100%;
+        background-color: #aaa8a8;
+        justify-content: space-around;
+    }
+
+    header nav#main-menu label {
+        display: none;
+    }
+
+    header nav#main-menu>div#menu-toggle ul#op-idiomas {
+        display: none;
+    }
+
+    header nav#main-menu>div#menu-toggle ul#op-menu {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header nav#main-menu>div#menu-toggle ul#op-menu>li {
+        margin-right: 1rem;
+    }
+    header nav#login-shop>ul {
+        justify-content: flex-end;
+    }
+    /*main*/
+    main section#section-giftguide article.category {
+        flex: 0 30%;
+
+    }
+}
+
+/*versión escritorio*/
+@media(min-width:1020px) {
+    header {
+        justify-content: space-between;
+    }
+    
+    /*main*/
+    main section#section-giftguide article.category {
+        flex: 0 23%;
+
+    }
+}
