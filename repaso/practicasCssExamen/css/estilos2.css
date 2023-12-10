@@ -1,8 +1,9 @@
-* {
+
+/*estilos generales*/
+*{
     box-sizing: border-box;
 }
 
-/*estilos generales*/
 body {
     font-size: 18px;
 }
@@ -10,33 +11,20 @@ body {
 a {
     text-decoration: none;
     color: #000;
-    cursor: pointer;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 div#content {
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
 }
 
-svg {
-    cursor: pointer;
-}
-
-img {
-    cursor: pointer;
-}
-
-i {
-    cursor: pointer;
-}
-
-/*estilos para la versión de móvil*/
-
+/*estilos para móvil*/
 /*cabecera*/
 header {
     display: flex;
@@ -61,9 +49,8 @@ header nav#main-menu label {
 }
 
 header nav#main-menu>label svg {
-    font-size: 1.5rem;
+    size: 1.5rem;
 }
-
 
 header nav#main-menu>div#menu-toggle ul#op-idiomas {
     display: flex;
@@ -130,12 +117,13 @@ header nav#login-shop>ul>li>i {
     font-size: 1.5rem;
 }
 
+
 /*buscador*/
 header nav#search {
     flex-basis: 100%;
     padding: 0.5rem;
     background-color: black;
-    height: 2.5rem;
+    height: 2rem;
 }
 
 header nav#search div#searcher {
@@ -145,15 +133,23 @@ header nav#search div#searcher {
 header nav#search div#searcher>svg {
     color: white;
     position: absolute;
-    height: 1.5rem;
+    height: 25px;
 }
 
-header nav#search div#searcher>input#text-searcher {
+header nav#search div#searcher>input:placeholder-shown {
+    background-color: black;
     flex: 0 90%;
-    height: 1.5rem;
-    margin-left: 2.3rem;
+    height: 25px;
+
+}
+
+header nav#search div#searcher>input::placeholder {
+    color: white;
+}
+
+header nav#search div#searcher>input {
+    margin-left: 40px;
     border: none;
-    background-color: #000;
 }
 
 
@@ -173,49 +169,29 @@ main section#section-giftguide div#header-giftguide {
     flex: 0 100%;
 }
 
-main section#section-giftguide picture#head-giftguide img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-/*artículo*/
-main section#section-giftguide article.category a {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-main section#section-giftguide article.category img {
-    width: 100%;
-    height: auto;
-}
-
+/*artículos*/
 main section#section-giftguide article.category {
     flex: 0 48%;
     /*dos imágenes por fila*/
     margin: 0.2rem;
 }
 
+/*imagen principal de cada articulo*/
+main section#section-giftguide article.category img {
+    width: 100%;
+    height: auto;
+}
+
 main section#section-giftguide article.category ul.menu-options {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-}
-
-main section#section-giftguide article.category ul.menu-options li {
-    display: inline-block;
-
 }
 
 main section#section-giftguide article.category ul.menu-options li>img {
     width: 50%;
     height: auto;
-    display: block;
-    margin: 0 auto;
 
 }
-
 
 /*pie de página*/
 footer {
@@ -266,19 +242,18 @@ footer small#info-footer {
     background-color: #fff;
     color: #aaa8a8;
     font-size: 0.8rem;
-    flex: 100%;
 }
 
-/*versión de tablet*/
+/*versión tablet*/
 @media (min-width:720px) {
 
-    /*cabecera*/
+    /*header*/
     header nav#main-menu {
         display: flex;
         order: 3;
         flex: 100%;
         background-color: #aaa8a8;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     header nav#main-menu label {
@@ -299,16 +274,13 @@ footer small#info-footer {
     header nav#main-menu>div#menu-toggle ul#op-menu>li {
         margin-right: 1rem;
     }
-
     header nav#login-shop>ul {
         justify-content: flex-end;
     }
-
     /*main*/
     main section#section-giftguide article.category {
         flex: 0 30%;
-        /*dos imágenes por fila*/
-        margin: 0.2rem;
+
     }
 }
 
@@ -317,7 +289,7 @@ footer small#info-footer {
     header {
         justify-content: space-between;
     }
-
+    
     /*main*/
     main section#section-giftguide article.category {
         flex: 0 23%;
