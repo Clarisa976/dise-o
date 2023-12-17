@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+div#contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+/*estilos generales*/
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*fin de estilos generales*/
+
+/*header*/
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header>nav#iconos-cabecera {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 10%;
+    /*tamaño fijo para que no se deformen al hacer el menú desplegable*/
+    width: 30px;
+    height: 30px;
+}
+
+header>div#buscador {
+    flex: 100%;
+    display: flex;
+}
+
+header>div#buscador>input {
+    flex: 1;
+    padding: 0.3rem 0.2rem;
+}
+
+header>div#buscador>img {
+    position: absolute;
+    /*no se puede poner position relative*/
+    right: 1.5rem;
+}
+
+/*menú desplegable*/
+header>nav#menu-principal {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+header>nav#menu-principal>ul#menu {
+    display: flex;
+    display: none;    
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    background-color: #fff;
+    margin-top: 2rem;
+    z-index: 1000;
+}
+
+header>nav#menu-principal>ul#menu>li {
+    padding: 0.5rem;
+
+}
+
+/*transformación de la hamburguesa*/
+/*ocultamos el checkbox*/
+header>nav#menu-principal>div#hamburguesa>label>input#hamburguer-icon {
+    display: none;
+}
+
+/*pintamos el label escondiendo primero la imagen*/
+header>nav#menu-principal>div#hamburguesa>img {
+    display: none;
+}
+
+header>nav#menu-principal>div#hamburguesa>label {
+    display: inline-block;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    /*background-color: aquamarine;*/
+}
+
+/*primera línea*/
+header>nav#menu-principal>div#hamburguesa>label>span.hamburguer-line {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 1.2rem;
+    height: 0.2rem;
+    background: black;
+    transition: background 0s .25s;
+}
+
+/*segunda linea*/
+header>nav#menu-principal>div#hamburguesa>label>span.hamburguer-line:nth-child(4) {
+    top: 1.5rem;
+    transition: top .25s ease .3s,
+        transform .25s ease .0s;
+
+}
+
+/*tercera linea*/
+header>nav#menu-principal>div#hamburguesa>label>span.hamburguer-line:nth-child(2) {
+    top: 1rem;
+    transition: top .25s ease .3s,
+        transform .25s ease .0s;
+}
+
+/*transformación de la hamburguesa*/
+header>nav#menu-principal>div#hamburguesa>label>input:checked~span.hamburguer-line:nth-child(2) {
+    transition: top 1s, rotate 1s;
+    transition-delay: 0s, 1s;
+    top: 1rem;
+    rotate: 40deg;
+
+
+
+}
+
+header>nav#menu-principal>div#hamburguesa>label>input:checked~span.hamburguer-line:nth-child(4) {
+    transition: top 1s, rotate 1s;
+    transition-delay: 0s, 1s;
+    top: 1rem;
+    rotate: -40deg;
+
+}
+
+header>nav#menu-principal>div#hamburguesa>label>input:checked~span.hamburguer-line:nth-child(3) {
+    background: none;
+}
+
+header>nav#menu-principal>div#hamburguesa:hover+ul#menu {
+    display: flex;
+}
+
+/*main*/
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main>section {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main>section>h2 {
+    text-align: center;
+    flex: 100%;
+
+}
+
+main>section>article {
+    position: relative;
+    /*para que cada me gusta esté en su imágen correspondiente*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 48%;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/*tamaño para las imágenes*/
+main>section>article>img.imagen {
+    width: 100%;
+    height: auto;
+}
+
+main>section>article>h3 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+main>section>article>span {
+    text-align: center;
+    margin: 0.2rem;
+}
+
+/*cambiamos el corazón de sitio*/
+main>section>article>img:nth-child(1) {
+    position: absolute;
+    width: 2rem;
+    height: auto;
+    left: 5%;
+    top: 5%;
+    padding: 0.25rem;
+    background-color: #c2c2c2;
+    border-radius: 10px;
+}
+
+main>section>article>img:nth-child(1):hover {
+    background-color: #ff6060;
+}
+
+/*pie de página*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0d9c1;
+}
+
+footer>h4 {
+    order: 2;
+    margin-left: 0.3rem;
+    font-size: 0.85rem;
+}
+
+footer>nav#menu-social {
+    order: 1;
+    display: flex;
+    flex-flow: column;
+}
+
+footer>nav#menu-social ul {
+    display: flex;
+    flex-flow: row;
+}
+
+footer>nav#menu-social>ul>li {
+    margin: 0.5rem;
+}
+
+footer>nav#menu-adicional {
+    order: 3;
+}
+
+footer>nav#menu-adicional>ul>li {
+    margin-left: 0.3rem;
+    padding: 0.3rem;
+    border-bottom: 1px solid #9c9999;
+}
+
+footer>nav#menu-adicional>ul>li>a:hover {
+    color: #9c9999;
+}

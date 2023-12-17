@@ -1,0 +1,113 @@
+/*todo el documento*/
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000;
+    background-color: #fff;
+}
+
+/*cabecera y pie de página*/
+header,
+footer {
+    background-color: #e6e7e8;
+    border: 2px solid #3f3f3f;
+    border-radius: 5px;
+}
+
+/*pie de página*/
+footer {
+    color: #3f3f3f;
+    height: 2rem;
+}
+
+/*imagen del logotipo de la cabecera*/
+header img#logo {
+    width: 5rem;
+    height: 4.35rem;
+}
+
+/*etiquetas de titulo (h1-h6)*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+    color: #00acdd;
+}
+
+/*h1 de la cabecera*/
+header h1 {
+    color: #004166;
+    font-weight: bold;
+}
+
+/*etiqueta span dentro del h1*/
+header h1 span#subject {
+    color: #96bc33;
+}
+
+/*enlaces*/
+a {
+    text-decoration: none;
+    color: #00acdd;
+}
+
+/*enlaces al ser visitados*/
+a:visited {
+    color: #ea2126;
+}
+
+/*enlaces con el puntero sobre ellos*/
+a:hover {
+    cursor: pointer;
+    color: #f58a1e;
+}
+
+/*elemento li de las listas no ordenadas dentro de la etiqueta nav*/
+nav ul li{
+    list-style-type: none;
+}
+
+/*al menú main*/
+nav ul#main-menu{
+    background-color: #004166;
+    font-weight: bold;
+    border: 2px solid #e6e7e8;
+    border-radius: 5px;
+}
+
+/*sección principal*/
+main section#principal{
+    border: 2px solid #004166;
+    border-radius: 5px;
+}
+
+/*al h2 de la sección principal*/
+main section#principal h2 {
+    text-align: center;
+}
+
+/*la clase news-art que tienen todos los artículos dentro de la sección principal*/
+.news-art {
+    border: 5px solid #e6e7e8;
+    border-radius: 10px;
+    width: 50%;
+}
+
+/*la imagen dentro de los artículos dentro de la sección principal*/
+main section#principal article img {
+    width: 30%;
+    height: auto;
+}
+
+/*párrafos dentro de los artículos de la sección principal*/
+main section#principal article p {
+    width: 70%;
+    height: auto;
+    text-align: justify;
+}
+
+/*destacar el primer artículo
+con :nth-child(X) podemos elegir el hijo directo que queramos destacar*/
+main section#principal article:nth-child(2) {
+    background-color: #e6e7e8;
+    border: 2px solid #f58a1e;
+    /*border-color: #f58a1e;*/
+}

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url("texture-background/99.jpg");
+  }
+  body > div.row ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  li > a > img {
+    width: 90%;
+    margin-left: 5%;
+  }
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 20%;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    padding: 1%;
+    margin: 5px;
+    z-index: 0;
+  }
+  /*Fotos par*/
+  li:nth-child(even):hover {
+    transform: rotate(5deg);
+  }
+  li:nth-child(even):hover {
+    transform: rotate(-5deg);
+  }
+  /*Fotos impar*/
+  li:nth-child(odd) {
+    transform: rotate(-5deg);
+  }
+  li:nth-child(odd):hover {
+    transform: rotate(5deg);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  span {
+    color: black;
+  }
+  a[title]{
+    position: relative;
+  }
+  
+  a[title]:after {
+    content: attr(title);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    white-space: nowrap;
+    background: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  a[title]:hover:after {
+    opacity: 1;
+  }
