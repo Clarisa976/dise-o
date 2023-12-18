@@ -4,6 +4,12 @@
   body {
     background-image: url("texture-background/99.jpg");
   }
+  a {
+    text-decoration: none;
+  }
+  span {
+    color: black;
+  }
   body > div.row ul {
     list-style: none;
     display: flex;
@@ -14,6 +20,7 @@
   li > a > img {
     width: 90%;
     margin-left: 5%;
+    transition: transform 0.3s ease;
   }
   li {
     display: flex;
@@ -41,14 +48,13 @@
   li:nth-child(odd):hover {
     transform: rotate(5deg);
   }
+  li > a:hover > img {
+    transform: scale(1.1);
+}
+
   
-  a {
-    text-decoration: none;
-  }
-  
-  span {
-    color: black;
-  }
+
+  /*
   a[title]{
     position: relative;
   }
@@ -68,4 +74,4 @@
   }
   a[title]:hover:after {
     opacity: 1;
-  }
+  }*/
