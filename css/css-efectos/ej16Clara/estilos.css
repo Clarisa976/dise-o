@@ -50,6 +50,7 @@
   }
   li > a:hover > img {
     transform: scale(1.1);
+<<<<<<< Updated upstream
 }
 
   a[title]{
@@ -72,3 +73,6 @@
   a[title]:hover:after {
     opacity: 1;
   }
+=======
+}
+>>>>>>> Stashed changes
