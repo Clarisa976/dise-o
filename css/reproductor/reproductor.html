@@ -10,23 +10,38 @@
 
 <body>
     <div id="contenido">
-        <!--play-->
-        <button class="boton">
-            <img src="img/bx-play.svg">
-        </button>
-        <!--pause-->
-        <button class="boton">
-            <img src="img/bx-pause.svg">
-        </button>
-        <!--stop-->
-        <button class="boton">
-            <img src="img/bx-stop.svg" >
-        </button>
-        <!--volumen-->
-        <button class="boton">
-            <img src="img/bxs-volume-full.svg" >
-        </button>
+        <!--canción-->
+        <audio id="cancion">
+            <source src="music/hotel-california.m4a" type="audio/m4a">
+        </audio>
+        <div id="botones-reproductor">
+            <!--play-->
+            <button class="boton" id="play">
+                <img src="img/bx-play.svg" alt="reproducir">
+            </button>
+            <!--pause-->
+            <button class="boton" id="pause">
+                <img src="img/bx-pause.svg" alt="pausar">
+            </button>
+            <!--stop-->
+            <button class="boton" id="stop">
+                <img src="img/bx-stop.svg" alt="parar">
+            </button>
+            <!--reset-->
+            <button class="boton" id="reset">
+                <img src="img/bx-reset.svg" alt="resetear">
+            </button>
+            <!--volumen-->
+            <div class="controlador-volumen">
+                <button class="boton" id="volumen">
+                    <img src="img/bxs-volume-full.svg" alt="volumen">
+                </button>
+                <!-- control para deslizar la barra de volumen y baja o subir volumen -->
+                <input type="range" value="20" min="0" max="100" step="1" id="barra-volumen">
+            </div>
+        </div>
     </div>
+    <script src="funcionalidad.js"></script>
 </body>
 
 </html>

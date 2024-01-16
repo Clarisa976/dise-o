@@ -3,23 +3,48 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: #525252;
+}
 #contenido{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    justify-content: center;
     margin: 2rem;
-    width: 200px;
-    border: 1px solid #FFA559;
+    width: 400px;
     background-color: #525252;
+    border: 3px dotted pink;
+}
+#botones-reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    border: 2px dotted orangered;
+    justify-content: space-evenly;
+    padding: 0.2rem;
 }
 .boton{
     margin-right: 0.2rem;
+    background-color: #171616;    
+    border: 1px solid #ffa559;
+    padding: 0.2rem;
     
 }
+.boton img{
+    filter: invert();
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
 
 /*
 colores de la web
 #FFA559 --> logo
 #525252 --> fondo
 #000 --> cabecera y pie
-
+#383838 --> resaltar el fondo
+#ffa97f --> errores
+#171616 --> buscador
 */
