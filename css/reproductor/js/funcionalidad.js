@@ -39,17 +39,10 @@ document.addEventListener('DOMContentLoaded', function () {
         pauseBtn.style.display = 'inline-block';  // Muestra el botón de pausa
     });
 
-    // Event listener para el botón de volumen
+   /* // Event listener para el botón de volumen
     volumenBtn.addEventListener('click', function () {
         toggleMute();  // Alternar entre silencio y sonido
     });
-
-    // Event listener para la barra de volumen
-    barraVolumen.addEventListener('input', function () {
-        var volumen = this.value / 100;  // Calcula el volumen en base al valor de la barra
-        cancion.volume = volumen;  // Aplica el volumen a la canción
-    });
-
     // Función para alternar entre silencio y sonido
     function toggleMute() {
         if (cancion.volume > 0) {
@@ -59,6 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
             cancion.volume = 1;  // Establece el volumen al máximo
             volumenBtn.innerHTML = '<img src="img/bxs-volume-full.svg" alt="volumen">';
         }
-    }
+    }*/
+    // Event listener para la barra de volumen
+    barraVolumen.addEventListener('input', function () {
+        var volumen = this.value / 100;  // Calcula el volumen en base al valor de la barra
+        cancion.volume = volumen;  // Aplica el volumen a la canción
+    });
+
+    
 });
 
