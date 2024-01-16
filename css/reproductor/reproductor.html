@@ -11,8 +11,9 @@
 <body>
     <div id="contenido">
         <!--canción-->
-        <audio id="cancion">
-            <source src="music/hotel-california.m4a" type="audio/m4a">
+        <audio id="cancion" preload="metadata" controls>
+            <source src="music/hotel-california.ogg" type="audio/ogg">
+            <source src="music/hotel-california.mp3" type="audio/mp3">
         </audio>
         <div id="botones-reproductor">
             <!--play-->
@@ -32,16 +33,16 @@
                 <img src="img/bx-reset.svg" alt="resetear">
             </button>
             <!--volumen-->
-            <div class="controlador-volumen">
-                <button class="boton" id="volumen">
-                    <img src="img/bxs-volume-full.svg" alt="volumen">
-                </button>
-                <!-- control para deslizar la barra de volumen y baja o subir volumen -->
-                <input type="range" value="20" min="0" max="100" step="1" id="barra-volumen">
-            </div>
+            <button class="boton" id="volumen">
+                <img src="img/bxs-volume-full.svg" alt="volumen">
+            </button>
+            <!-- control para deslizar la barra de volumen y baja o subir volumen 
+                el step es como va subiendo o bajando -->
+            <input  class="oculto" type="range" value="0" min="0" max="100" step="10" id="barra-volumen">
+
         </div>
     </div>
-    <script src="funcionalidad.js"></script>
+    <script src="js/funcionalidad.js"></script>
 </body>
 
 </html>

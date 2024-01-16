@@ -31,14 +31,15 @@ body{
     
 }
 .boton img{
-    filter: invert();
     width: 30px;
     height: auto;
     cursor: pointer;
     padding: 0.2rem;
 }
 
-
+#pause{
+    display: none;
+}
 /*
 colores de la web
 #FFA559 --> logo
