@@ -13,22 +13,23 @@ body{
     margin: 2rem;
     width: 400px;
     background-color: #525252;
-    border: 3px dotted pink;
 }
 #botones-reproductor{
     display: flex;
     flex-flow: row wrap;
     flex: 100%;
-    border: 2px dotted orangered;
     justify-content: space-evenly;
-    padding: 0.2rem;
+    padding: 1rem;
+    background-color: #171616;  
+    border-radius: 25px;
+    border: 1px solid #ffa559;
 }
 .boton{
     margin-right: 0.2rem;
-    background-color: #171616;    
+    background-color: #000;    
     border: 1px solid #ffa559;
     padding: 0.2rem;
-    
+    border-radius: 25px;
 }
 .boton img{
     width: 30px;
