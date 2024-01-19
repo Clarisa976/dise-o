@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/estilos.css" rel="stylesheet">
+    <title>Reproductor</title>
+    <script src="js/funcionalidad.js"></script>
+</head>
+
+<body>
+    <div id="contenido">
+        <!--canción-->
+        <audio id="cancion" preload="metadata">
+            <source src="music/hotel-california.ogg" type="audio/ogg">
+            <source src="music/hotel-california.mp3" type="audio/mp3">
+        </audio>
+        <div id="nombre-cancion"></div>
+        <div id="botones-reproductor">
+            <!--play-->
+            <button class="boton" id="play">
+                <img src="img/bx-play.svg" alt="reproducir">
+            </button>
+            <!--pause-->
+            <button class="boton" id="pause">
+                <img src="img/bx-pause.svg" alt="pausar">
+            </button>
+            <!--stop-->
+            <button class="boton" id="stop">
+                <img src="img/bx-stop.svg" alt="parar">
+            </button>
+            <!--reset-->
+            <button class="boton" id="reset">
+                <img src="img/bx-reset.svg" alt="resetear">
+            </button>
+            <!--volumen-->
+            <button class="boton" id="volumen">
+                <img src="img/bxs-volume-full.svg" alt="volumen">
+            </button>
+            <!-- control para deslizar la barra de volumen y baja o subir volumen 
+                el step es como va subiendo o bajando -->
+            <input type="range" value="10" min="0" max="100" step="10" id="barra-volumen">
+
+        </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de vídeo</title>
     <link href="css/estilos.css" rel="stylesheet">
-    <title>Reproductor</title>
-    <script src="js/funcionalidad.js"></script>
+    <script src="funcionamiento.js"></script>
 </head>
-
 <body>
     <div id="contenido">
         <!--canción-->
-        <audio id="cancion" preload="metadata">
-            <source src="music/hotel-california.ogg" type="audio/ogg">
-            <source src="music/hotel-california.mp3" type="audio/mp3">
-        </audio>
+        <video poster="img/trailer.png" preload="metadata" muted width="500px" height="auto">
+            <source src="videos/trailer.mp4" type="video/mp4">
+            <source src="videos/trailer.ogv" type='"video/ogv; codecs="theora, vorbis"''>
+            <source src="videos/trailer.webm" type='"video/webm"; codecs="vp8, vorbis"'>
+        </video>
         <div id="botones-reproductor">
             <!--play-->
             <button class="boton" id="play">
@@ -43,7 +42,5 @@
 
         </div>
     </div>
-    
 </body>
-
 </html>
