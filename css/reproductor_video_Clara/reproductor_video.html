@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reproductor de vídeo</title>
     <link href="css/estilos.css" rel="stylesheet">
+    <link href="img/favicon-2.png" rel="icon" type="image/x-icon">
     <script src="funcionamiento.js"></script>
 </head>
 <body>
@@ -16,6 +17,10 @@
             <source src="videos/trailer.webm" type='"video/webm"; codecs="vp8, vorbis"'>
         </video>
         <div id="botones-reproductor">
+            <!--anterior-->
+            <button class="boton" id="anteiror">
+                <img src="img/bx-skip-previous.svg" alt="anteiror">
+            </button>
             <!--play-->
             <button class="boton" id="play">
                 <img src="img/bx-play.svg" alt="reproducir">
@@ -23,6 +28,10 @@
             <!--pause-->
             <button class="boton" id="pause">
                 <img src="img/bx-pause.svg" alt="pausar">
+            </button>
+            <!--siguiente-->
+            <button class="boton" id="siguiente">
+                <img src="img/bx-skip-next.svg" alt="siguiente">
             </button>
             <!--stop-->
             <button class="boton" id="stop">

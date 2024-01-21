@@ -8,21 +8,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var resetBtn = document.getElementById('reset');
     var volumenBtn = document.getElementById('volumen');
     var barraVolumen = document.getElementById('barra-volumen');
-    var nombreCancion = document.getElementById('nombre-cancion');
+    var barraProgreso = document.getElementById('barra-progreso');
 
     //eventos para las variables
-    // Nombre de la canción (puedes obtenerlo de la fuente del audio, por ejemplo)
-    var nombreCancionActual = "Hotel California";
-    
-    // Función para mostrar el nombre de la canción
-    function mostrarNombreCancion() {
-        nombreCancion.innerHTML = "Reproduciendo: " + nombreCancionActual;
-    }
-
-    // Función para ocultar el nombre de la canción
-    function ocultarNombreCancion() {
-        nombreCancion.innerHTML = "";
-    }
     // Event listener para el botón de reproducción (play)
     playBtn.addEventListener('click', function (event) {
         cancion.play();  // Inicia la reproducción
@@ -74,7 +62,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
             volumenBtn.innerHTML = '<img src="img/bxs-volume-full.svg" alt="volumen">';
         }
     }
+    // Escucha el evento timeupdate para actualizar la barra de progreso
+    cancion.addEventListener('timeupdate', function () {
+        // Calcula el progreso en porcentaje
+        var progreso = (cancion.currentTime / cancion.duration) * 100;
 
+        // Actualiza el valor de la barra de progreso
+        barraProgreso.value = progreso;
+
+        // Puedes mostrar el tiempo actual y el tiempo restante en minutos
+        var tiempoActual = formatTime(cancion.currentTime);
+        var tiempoRestante = formatTime(cancion.duration - cancion.currentTime);
+
+        // Puedes mostrar estos valores en elementos HTML
+        document.getElementById('tiempo-actual').textContent = tiempoActual;
+        document.getElementById('tiempo-restante').textContent = tiempoRestante;
+    });
+
+    // Función para formatear el tiempo en minutos y segundos
+    function formatTime(seconds) {
+        var minutos = Math.floor(seconds / 60);
+        var segundos = Math.floor(seconds % 60);
+        return minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
+    }
 
 });
 

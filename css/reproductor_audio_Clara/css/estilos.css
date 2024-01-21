@@ -11,7 +11,7 @@ body{
     flex-flow: row wrap;
     justify-content: center;
     margin: 2rem;
-    width: 400px;
+    width: 600px;
     background-color: #525252;
 }
 #botones-reproductor{
@@ -40,6 +40,24 @@ body{
 
 #pause{
     display: none;
+}
+#barra-progreso{
+    align-self: center;
+}
+#tiempo-actual{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+#tiempo-restante{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+.guion{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
 }
 /*
 colores de la web
