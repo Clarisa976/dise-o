@@ -6,20 +6,24 @@
     <title>Reproductor de vídeo</title>
     <link href="css/estilos.css" rel="stylesheet">
     <link href="img/favicon-2.png" rel="icon" type="image/x-icon">
-    <script src="funcionamiento.js"></script>
+    <script src="js/funcionamiento.js"></script>
 </head>
 <body>
     <div id="contenido">
-        <!--canción-->
-        <video poster="img/trailer.png" preload="metadata" muted width="500px" height="auto">
+        <!--videos-->
+        <video id="video" poster="img/trailer.png" preload="metadata" muted width="750px" height="auto">
             <source src="videos/trailer.mp4" type="video/mp4">
-            <source src="videos/trailer.ogv" type='"video/ogv; codecs="theora, vorbis"''>
+            <source src="videos/trailer.ogv" type='"video/ogv; codecs="theora, vorbis"'>
             <source src="videos/trailer.webm" type='"video/webm"; codecs="vp8, vorbis"'>
+        <!--compatibilidad hacia atrás-->
+            <object>
+                <embed src="videos/trailer.swf" type="application/x-shockwave-flash" allowfullscreen="false" allowscripaccess="always">
+            </object>
         </video>
         <div id="botones-reproductor">
             <!--anterior-->
             <button class="boton" id="anteiror">
-                <img src="img/bx-skip-previous.svg" alt="anteiror">
+                <img src="img/bx-rewind.svg" alt="anteiror">
             </button>
             <!--play-->
             <button class="boton" id="play">
@@ -29,9 +33,14 @@
             <button class="boton" id="pause">
                 <img src="img/bx-pause.svg" alt="pausar">
             </button>
+            <!-- barra de progreso-->
+            <progress id="barra-progreso" max="100" value="0"></progress>
+            <div id="tiempo-actual">0:00</div>
+            <div class="guion"> - </div>
+            <div id="tiempo-restante">0:00</div>
             <!--siguiente-->
             <button class="boton" id="siguiente">
-                <img src="img/bx-skip-next.svg" alt="siguiente">
+                <img src="img/bx-fast-forward.svg" alt="siguiente">
             </button>
             <!--stop-->
             <button class="boton" id="stop">
@@ -48,6 +57,10 @@
             <!-- control para deslizar la barra de volumen y baja o subir volumen 
                 el step es como va subiendo o bajando -->
             <input type="range" value="10" min="0" max="100" step="10" id="barra-volumen">
+            <!--reset-->
+            <button class="boton" id="fullscreen">
+                <img src="img/bx-fullscreen.svg" alt="pantalla completa">
+            </button>
 
         </div>
     </div>

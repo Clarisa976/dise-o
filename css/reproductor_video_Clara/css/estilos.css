@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #525252;
+}
+#contenido{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 2rem;
+    width: 800px;
+    background-color: #171616;  
+    border-radius: 25px;
+    border: 1px solid #ffa559;
+}
+#botones-reproductor{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+    
+}
+#video{
+    padding: 0.3rem;
+    align-self: center;
+}
+.boton{
+    margin-right: 0.2rem;
+    background-color: #000;    
+    border: 1px solid #ffa559;
+    padding: 0.2rem;
+    border-radius: 25px;
+}
+.boton img{
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+#pause{
+    display: none;
+}
+#barra-progreso{
+    align-self: center;
+}
+#tiempo-actual{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+#tiempo-restante{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+.guion{
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
