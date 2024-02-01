@@ -1,101 +1,123 @@
-/*lo primero que hay que poner para llamar a los eventos que queremos que sucedan*/
-document.addEventListener("DOMContentLoaded", function (event) {
-    //creación de variables
-    var video = document.getElementById('video');
-    var playBtn = document.getElementById('play');
-    var pauseBtn = document.getElementById('pause');
-    var stopBtn = document.getElementById('stop');
-    var resetBtn = document.getElementById('reset');
-    var volumenBtn = document.getElementById('volumen');
-    var barraVolumen = document.getElementById('barra-volumen');
-    var barraProgreso = document.getElementById('barra-progreso');
-    var fullscreenBtn = document.getElementById('fullscreen');
+document.addEventListener("DOMContentLoaded", function () {
+    // Escucha el evento cuando el DOM (estructura HTML) está completamente cargado.
 
-    //eventos para las variables
-    // Event listener para el botón de reproducción (play)
-    playBtn.addEventListener('click', function (event) {
-        video.play();  // Inicia la reproducción
-        playBtn.style.display = 'none';  // Oculta el botón de reproducción
-        pauseBtn.style.display = 'inline-block';  // Muestra el botón de pausa
+    const video = document.getElementById("video");
+    // Obtiene el elemento de video por su ID.
+
+    const playButton = document.getElementById("play");
+    const pauseButton = document.getElementById("pause");
+    const retrocederButton = document.getElementById("retroceder");
+    const avanzarButton = document.getElementById("avanzar");
+    const stopButton = document.getElementById("stop");
+    const resetButton = document.getElementById("reset");
+    const volumenButton = document.getElementById("volumen");
+    const barraVolumen = document.getElementById("barra-volumen");
+    const fullscreenButton = document.getElementById("fullscreen");
+    const exitFullscreenButton = document.getElementById("exit-fullscreen");
+    const tiempoActual = document.getElementById("tiempo-actual");
+    const tiempoRestante = document.getElementById("tiempo-restante");
+    // Obtiene otros elementos HTML necesarios por sus IDs.
+
+
+
+    playButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de reproducción.
+        video.play(); // Reproduce el video.
+        playButton.style.display = "none"; // Oculta el botón de reproducción.
+        pauseButton.style.display = "block"; // Muestra el botón de pausa.
     });
 
-    // Event listener para el botón de pausa
-    pauseBtn.addEventListener('click', function (event) {
-        video.pause();  // Pausa la reproducción
-        playBtn.style.display = 'inline-block';  // Muestra el botón de reproducción
-        pauseBtn.style.display = 'none';  // Oculta el botón de pausa
+    pauseButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de pausa.
+        video.pause(); // Pausa el video.
+        playButton.style.display = "block"; // Muestra el botón de reproducción.
+        pauseButton.style.display = "none"; // Oculta el botón de pausa.
     });
 
-    // Event listener para el botón de parada (stop)
-    stopBtn.addEventListener('click', function (event) {
-        video.pause();  // Pausa la reproducción
-        video.currentTime = 0;  // Reinicia la posición de reproducción al inicio
-        playBtn.style.display = 'inline-block';  // Muestra el botón de reproducción
-        pauseBtn.style.display = 'none';  // Oculta el botón de pausa
+    retrocederButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de retroceso.
+        video.currentTime -= 10; // Retrocede 10 segundos en el video.
     });
 
-    // Event listener para el botón de reinicio (reset)
-    resetBtn.addEventListener('click', function (event) {
-        video.currentTime = 0;  // Reinicia la posición de reproducción al inicio
-        video.play();  // Inicia la reproducción
-        playBtn.style.display = 'none';  // Oculta el botón de reproducción
-        pauseBtn.style.display = 'inline-block';  // Muestra el botón de pausa
+    avanzarButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de avance.
+        video.currentTime += 10; // Avanza 10 segundos en el video.
     });
 
-    // Event listener para la barra de volumen
-    barraVolumen.addEventListener('input', function (event) {
-        var volumen = this.value / 100;  // Calcula el volumen en base al valor de la barra
-        video.volume = volumen;  // Aplica el volumen a la canción
+    stopButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de parar.
+        video.pause(); // Pausa el video.
+        video.currentTime = 0; // Reinicia el tiempo del video al principio.
+        playButton.style.display = "block"; // Muestra el botón de reproducción.
+        pauseButton.style.display = "none"; // Oculta el botón de pausa.
     });
 
-    // Event listener para el botón de volumen
-    volumenBtn.addEventListener('click', function (event) {
-        toggleMute();  // Alternar entre silencio y sonido
+    resetButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de reset.
+        video.currentTime = 0; // Reinicia el tiempo del video al principio.
     });
 
-    // Función para alternar entre los botones de mute y de sonido
-    function toggleMute() {
-        if (video.volume > 0) {
-            video.volume = 0;  // Establece el volumen en 0 (silencio)
-            volumenBtn.innerHTML = '<img src="img/bxs-volume-mute.svg" alt="volumen">';
+    let isMuted = true;
+    volumenButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de volumen.
+        if (isMuted) {
+            video.muted = false; // Desactiva el modo silencio.
+            isMuted = false;
+            volumenButton.innerHTML = '<img src="img/bxs-volume-full.svg" alt="volumen">';
+            barraVolumen.value = video.volume * 50;
         } else {
-            video.volume = 1;  // Establece el volumen al máximo
-            volumenBtn.innerHTML = '<img src="img/bxs-volume-full.svg" alt="volumen">';
+            video.muted = true; // Activa el modo silencio.
+            isMuted = true;
+            volumenButton.innerHTML = '<img src="img/bxs-volume-mute.svg" alt="silenciar">';
+            barraVolumen.value = 0;
         }
-    }
-    // Escucha el evento timeupdate para actualizar la barra de progreso
-    cancion.addEventListener('timeupdate', function () {
-        // Calcula el progreso en porcentaje
-        var progreso = (video.currentTime / video.duration) * 100;
-
-        // Actualiza el valor de la barra de progreso
-        barraProgreso.value = progreso;
-
-        // Puedes mostrar el tiempo actual y el tiempo restante en minutos
-        var tiempoActual = formatTime(video.currentTime);
-        var tiempoRestante = formatTime(video.duration - video.currentTime);
-
-        // Puedes mostrar estos valores en elementos HTML
-        document.getElementById('tiempo-actual').textContent = tiempoActual;
-        document.getElementById('tiempo-restante').textContent = tiempoRestante;
     });
 
-    // Función para formatear el tiempo en minutos y segundos
-    function formatTime(seconds) {
-        var minutos = Math.floor(seconds / 60);
-        var segundos = Math.floor(seconds % 60);
-        return minutos + ':' + (segundos < 10 ? '0' : '') + segundos;
-    }
-    //Escucha el evento fullscreen para la pantalla completa
-    fullscreenBtn.addEventListener('click', function () {
+    barraVolumen.addEventListener("input", function () {
+        // Agrega un evento input a la barra de volumen.
+        video.volume = barraVolumen.value / 100; // Ajusta el volumen del video.
+        if (barraVolumen.value == 0) {
+            volumenButton.innerHTML = '<img src="img/bxs-volume-mute.svg" alt="silenciar">';
+        } else {
+            volumenButton.innerHTML = '<img src="img/bxs-volume-full.svg" alt="volumen">';
+        }
+    });
+
+    fullscreenButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de pantalla completa.
         if (video.requestFullscreen) {
-            video.requestFullscreen();
+            video.requestFullscreen(); // Entra en modo pantalla completa.
         } else if (video.mozRequestFullScreen) {
             video.mozRequestFullScreen();
         } else if (video.webkitRequestFullscreen) {
             video.webkitRequestFullscreen();
         }
+        fullscreenButton.style.display = "none"; // Oculta el botón de pantalla completa.
+        exitFullscreenButton.style.display = "block"; // Muestra el botón de salir de pantalla completa.
     });
 
-});
+    exitFullscreenButton.addEventListener("click", function () {
+        // Agrega un evento click al botón de salir de pantalla completa.
+        if (document.exitFullscreen) {
+            document.exitFullscreen(); // Sale del modo pantalla completa.
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        }
+        fullscreenButton.style.display = "block"; // Muestra el botón de pantalla completa.
+        exitFullscreenButton.style.display = "none"; // Oculta el botón de salir de pantalla completa.
+    });
 
+    video.addEventListener("timeupdate", function () {
+        // Agrega un evento timeupdate al video para actualizar el tiempo actual y restante.
+        const tiempoActualMinutos = Math.floor(video.currentTime / 60);
+        const tiempoActualSegundos = Math.floor(video.currentTime % 60);
+        const tiempoRestanteMinutos = Math.floor((video.duration - video.currentTime) / 60);
+        const tiempoRestanteSegundos = Math.floor((video.duration - video.currentTime) % 60);
+
+        tiempoActual.textContent = `${tiempoActualMinutos}:${tiempoActualSegundos < 10 ? '0' : ''}${tiempoActualSegundos}`;
+        tiempoRestante.textContent = `${tiempoRestanteMinutos}:${tiempoRestanteSegundos < 10 ? '0' : ''}${tiempoRestanteSegundos}`;
+        // Actualiza los elementos HTML que muestran el tiempo actual y restante.
+    });
+});

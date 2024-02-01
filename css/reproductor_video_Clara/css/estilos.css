@@ -24,8 +24,10 @@ body{
     
 }
 #video{
-    padding: 0.3rem;
+    padding: 0.5rem;
     align-self: center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .boton{
     margin-right: 0.2rem;
@@ -42,6 +44,9 @@ body{
 }
 
 #pause{
+    display: none;
+}
+#exit-fullscreen{
     display: none;
 }
 #barra-progreso{

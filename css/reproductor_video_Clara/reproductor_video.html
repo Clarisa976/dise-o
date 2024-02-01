@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,18 @@
     <link href="img/favicon-2.png" rel="icon" type="image/x-icon">
     <script src="js/funcionamiento.js"></script>
 </head>
+
 <body>
     <div id="contenido">
         <!--videos-->
-        <video id="video" poster="img/trailer.png" preload="metadata" muted width="750px" height="auto">
+        <video id="video" poster="img/trailer.png" preload="metadata" muted width="800" >
             <source src="videos/trailer.mp4" type="video/mp4">
-            <source src="videos/trailer.ogv" type='"video/ogv; codecs="theora, vorbis"'>
-            <source src="videos/trailer.webm" type='"video/webm"; codecs="vp8, vorbis"'>
-        <!--compatibilidad hacia atrás-->
-            <object>
-                <embed src="videos/trailer.swf" type="application/x-shockwave-flash" allowfullscreen="false" allowscripaccess="always">
-            </object>
+            <source src="videos/trailer.ogv" type="video/ogg; codecs='theora-vorbis'">
+            <source src="videos/trailer.webm" type="video/webm; codecs='vp8-vorbis'">
+            <!--compatibilidad hacia atrás-->
+            <source src="videos/trailer.swf" type="video/flv; codecs='vp6-sorenson-spark'" >
         </video>
         <div id="botones-reproductor">
-            <!--anterior-->
-            <button class="boton" id="anteiror">
-                <img src="img/bx-rewind.svg" alt="anteiror">
-            </button>
             <!--play-->
             <button class="boton" id="play">
                 <img src="img/bx-play.svg" alt="reproducir">
@@ -33,14 +29,16 @@
             <button class="boton" id="pause">
                 <img src="img/bx-pause.svg" alt="pausar">
             </button>
-            <!-- barra de progreso-->
-            <progress id="barra-progreso" max="100" value="0"></progress>
+            <!-- barra de progreso
+            <progress id="barra-progreso" max="100" value="0"></progress>-->
+            <button class="boton" id="retroceder">
+                <img src="img/time-past.svg" alt="retroceder">
+            </button>
             <div id="tiempo-actual">0:00</div>
             <div class="guion"> - </div>
             <div id="tiempo-restante">0:00</div>
-            <!--siguiente-->
-            <button class="boton" id="siguiente">
-                <img src="img/bx-fast-forward.svg" alt="siguiente">
+            <button class="boton" id="avanzar">
+                <img src="img/time-forward.svg" alt="avanzar">
             </button>
             <!--stop-->
             <button class="boton" id="stop">
@@ -52,17 +50,22 @@
             </button>
             <!--volumen-->
             <button class="boton" id="volumen">
-                <img src="img/bxs-volume-full.svg" alt="volumen">
+                <img src="img/bxs-volume-mute.svg" alt="volumen">
             </button>
             <!-- control para deslizar la barra de volumen y baja o subir volumen 
                 el step es como va subiendo o bajando -->
-            <input type="range" value="10" min="0" max="100" step="10" id="barra-volumen">
-            <!--reset-->
+            <input type="range" value="0" min="0" max="100" step="10" id="barra-volumen">
+            <!--pantalla completa-->
             <button class="boton" id="fullscreen">
                 <img src="img/bx-fullscreen.svg" alt="pantalla completa">
+            </button>
+            <!--salir de pantalla completa-->
+            <button class="boton" id="exit-fullscreen">
+                <img src="img/bx-exit-fullscreen.svg" alt="salir de pantalla completa">
             </button>
 
         </div>
     </div>
 </body>
+
 </html>
