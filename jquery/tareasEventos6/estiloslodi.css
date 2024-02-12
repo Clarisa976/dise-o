@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+/*estilos para fijar la cabecera*/
+.fijar-cabecera {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    opacity: 50%;
+    z-index: 100;
+}
 /*estilos generales*/
 a {
     color: grey;
@@ -156,8 +164,9 @@ footer>nav#iconos-sociales>ul>li {
 
 /*estilos para la versión de escritorio*/
 @media(min-width:1200px) {
+
     /*modificamos el main*/
-    main>article.item{
+    main>article.item {
         flex: 0 15%;
     }
 
@@ -166,6 +175,7 @@ footer>nav#iconos-sociales>ul>li {
         order: 1;
         flex: 70%;
     }
+
     header>nav#buscador {
         order: 2;
         flex: 10%;
@@ -175,7 +185,7 @@ footer>nav#iconos-sociales>ul>li {
         order: 3;
         flex: 10%;
     }
-  
+
     /*ocultamos el icono del menú*/
     header>nav#menu-principal>label {
         display: none;
@@ -190,11 +200,12 @@ footer>nav#iconos-sociales>ul>li {
         padding-left: 0;
         justify-content: space-between;
     }
-    
+
     header>nav#menu-principal {
         flex: 100%;
         order: 4;
     }
+
     header>nav#menu-principal>ul#menu li {
         margin-left: 0.5rem;
     }
