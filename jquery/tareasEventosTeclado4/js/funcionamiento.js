@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$(document).keypress(function(e){
-		e.preventDefault();
-		
+		if(e.key=='m'){
+			$('h3').toggle();
+		}
 	});
 })
