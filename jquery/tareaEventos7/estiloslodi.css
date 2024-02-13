@@ -7,12 +7,10 @@
     position: fixed;
     width: 100%;
     background-color: #fff;
-    opacity: 0.8;/*va del 0 al 1*/
-    margin-top: 0;
+    opacity: 50%;
+    z-index: 100;
 }
-body{
-    margin: 0;
-}
+
 /*estilos generales*/
 a {
     color: grey;

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Tarea 8</title>
+	<meta charset="utf-8">
+	<meta name="lang" content="es-ES" />
+	<script src="jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+	<style>
+		#mi-capa{
+			width: 50px;
+			background-color: pink;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="mi-capa">
+    	<p>Esta es una capa creada para comprobar el funcionamiento del método css(). <br>
+    	Haz clic sobre la capa para cambiar varios atributos CSS que afectan a la misma.</p>
+    </div>
+	<script>
+		$("#mi-capa").click(function (evento) {
+			$(this).css("width", function (index, value) {
+				var aumento = prompt("¿Cuánto quieres aumentar?", "25");
+				return (parseInt(value) + parseInt(aumento)) + "px";
+			});
+		});
+	</script>
+</body>
+
+</html>
