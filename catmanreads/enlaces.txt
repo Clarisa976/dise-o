@@ -4,55 +4,55 @@ chevrons-down.svg
     https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-chevrons-down.svg
     https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-chevrons-down.svg
 edit-alt.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-chevrons-down.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-chevrons-down.svg
 filter-alt.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-edit-alt.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-edit-alt.svg
 log-in.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-log-in.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-log-in.svg
 menu.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-menu.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-menu.svg
 plus.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bx-plus.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bx-plus.svg
 facebook.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxl-facebook.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxl-facebook.svg
 instagram.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxl-instagram.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxl-instagram.svg
 reddit.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxl-reddit.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxl-reddit.svg
 twitter.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxl-twitter.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxl-twitter.svg
 envelope.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxs-envelope.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxs-envelope.svg
 lock-alt.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxs-lock-alt.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxs-lock-alt.svg
 user.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/bxs-user.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/bxs-user.svg
 x.svg
-    https://cmr-ciaa.s3.amazonaws.com/imagen/icons/svg/x.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/svg/x.svg
 
 
 Logo
-    https://cmr-ciaa.s3.amazonaws.com/imagen/logo/catmanlogov2.webp
-    https://cmr-ciaa.s3.amazonaws.com/imagen/logo/logocatmanv2.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/catmanlogov2.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg
 
 
 Portadas
 
 1
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/1.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/1.webp
 2
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/2.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/2.webp
 3
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/3.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/3.webp
 4
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/4.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/4.webp
 5
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/5.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/5.webp
 6
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/6.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/6.webp
 7
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/7.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/7.webp
 8
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/8.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/8.webp
 9
-    https://cmr-ciaa.s3.amazonaws.com/imagen/portadas/webp/9.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/9.webp
