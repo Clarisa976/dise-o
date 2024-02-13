@@ -56,3 +56,11 @@ Portadas
     https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/8.webp
 9
     https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp/9.webp
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap')
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
