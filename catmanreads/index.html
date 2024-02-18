@@ -1,55 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/estilos.css" rel="stylesheet">
     <link href="imagen/favicon-2.png" rel="icon" type="image/x-icon">
     <script src="jq/jquery-3.7.1.min.js" type="text/javascript"></script>
-	<script src="js/funcionamiento.js" type="text/javascript"></script>
+    <script src="js/funcionamiento.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <title>Catmanreads</title>
 </head>
+
 <body>
     <div id="content">
         <!--cabecera-->
         <header>
             <div id="logo">
                 <a href="index.html">
-                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman" id="imglogo">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                        <h1>Catmanreads</h1>
                 </a>
             </div>
-            <div id="buscador">
-                <a href="#">
-                    a
-                </a>
+            <div id="iconos">
+                <div id="buscador">
+                    <a href="#">
+                        <img src="imagen/icons/bx-search.svg" alt="lupa" id="lupa-buscador">
+                    </a>
+                </div>
+                <nav id="menuUsuario">
+                    <img src="imagen/icons/bxs-user.svg" alt="menu-usuario" id="menu-usuario">
+                    <ul>
+                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg"
+                            alt="cerrar menu"></li>
+                        <li class="nomUser">NOMBRE_USUARIO</li>
+                        <li><a href="perfil-usuario.html">Mi perfil</a></li>
+                        <li><a href="listas.html">Listas</a></li>
+                        <li><a href="ajustes-usuario.html">Ajustes</a></li>
+                        <li><a href="index.html">Cerrar sesión</a></li>
+                    </ul>
+
+                </nav>
+                <nav id="menuPrincipal">
+                    <img src="imagen/icons/bx-menu.svg" alt="menu-principal" id="menu-principal">
+                    <ul>
+                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg"
+                            alt="cerrar menu"></li>
+                        <li class="nomUser">NOMBRE_USUARIO</li>
+                        <li><a href="recomendados.html">Recomendados</a></li>
+                        <li><a href="explora.html">Explora</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+
+                </nav>
+
             </div>
-            <nav id="menuPrincipal">
-                <img src="" alt="menu-principal" id="menu-principal">
-                <ul>
-                    <li>NOMBRE_USUARIO</li>
-                    <li><img class="xmenu" src="img/x.svg" alt="cerrar menu"></li>
-                    <li><a href="recomendados.html">Recomendados</a></li>
-                    <li><a href="explora.html">Explora</a></li>
-                    <li><a href="contactanos.html">Contáctanos</a></li>
-                </ul>
-
-            </nav>
-            <nav id="menuUsuario">
-                <img src="" alt="menu-usuario" id="menu-usuario">
-                <ul>
-                    <li>NOMBRE_USUARIO</li>
-                    <li><img class="xmenu" src="img/x.svg" alt="cerrar menu"></li>
-                    <li><a href="perfil-usuario.html">Mi perfil</a></li>
-                    <li><a href="listas.html">Listas</a></li>
-                    <li><a href="ajustes-usuario.html">Ajustes</a></li>
-                    <li><a href="index.html">Cerrar sesión</a></li>
-                </ul>
-
-            </nav>
         </header>
         <!--cuerpo-->
+        <body>
+            <section>
+                <h2>Lo más visto</h2>
+            </section>
+            <section>
+                <h2>Añadido recientemente</h2>
+            </section>
+            <section>
+                <h2>Recomendaciones</h2>
+            </section>
+        </body>
         <!--pie de página-->
+        <footer>
+            <div id="rrss">
+                <img src="imagen/icons/bxl-twitter.svg" alt="twitter" id="twitter">
+                <img src="imagen/icons/bxl-instagram.svg" alt="instagram" id="instagram">
+                <img src="imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+                <img src="imagen/icons/bxl-facebook.svg" alt="facebook" id="facebook">
+            </div>
+            <nav id="menuTerminos">
+                <ul>
+                    <li><a href="terminos-uso.html">Términos de uso</a></li>
+                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                    <li><a href="terminos-uso.html">Política de cookies</a></li>
+                </ul>
+            </nav>
+            <span>© catmanreads, 2023</span>
+        </footer>
 
-    </div>    
+    </div>
 </body>
+
 </html>
