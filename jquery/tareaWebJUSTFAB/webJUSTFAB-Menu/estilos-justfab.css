@@ -7,6 +7,15 @@ body{
 	margin:0;
 	flex-flow: column nowrap;
 }
+/*estilos para fijar la cabecera*/
+.fijar-cabecera {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    opacity: 50%;
+    z-index: 100;
+}
+
 /*Estilo para todos los enlaces de la web*/
 a{
 	color:black;
