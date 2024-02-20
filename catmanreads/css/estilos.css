@@ -34,8 +34,34 @@ ul {
     font-size: 0.75rem;
 }
 
+img {
+    cursor: pointer;
+}
+
+
+div#volverarriba {
+    color: #454545;
+    font-family: 'Open Sans Condensed', sans-serif;
+    width: 8rem;
+    background-color: lightgrey;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    opacity: 0.7;
+    display: none;
+}
+
+div#volverarriba>a {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    padding: 0.2rem 1rem;
+}
+
 /*cabecera*/
-header h1{
+header h1 {
     display: none;
     color: #FFA559;
 }
@@ -61,17 +87,19 @@ header div#logo a img#imglogo {
 header div#iconos {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;  
+    justify-content: flex-end;
     height: 50px;
-    margin-top:1rem;
+    margin-top: 1rem;
 
 }
+
 header div#iconos nav#menuPrincipal img {
     padding-left: 1rem;
 
 
 }
-header div#iconos nav#menuUsuario img {
+
+header div#iconos nav#menu-usuario img {
     padding-left: 1rem;
 
 }
@@ -79,35 +107,41 @@ header div#iconos nav#menuUsuario img {
 header div#iconos div#buscador img {
     padding-left: 1rem;
 }
-header nav#menuPrincipal ul {
-    display: flex;
+
+header nav#menuPrincipal ul#opciones-menu-principal {
+    display: none;
+
     flex-flow: column wrap;
     background-color: #171616;
-    /*padding: 0.2rem 0.5rem;
-    
-    margin-top: 5rem;
-    width: 180px;*/
+    position: absolute;
+	top:3rem;
+    right: 0;
+    z-index: 2;
+
 }
 
-header nav#menuPrincipal ul>li {
-    display: none;
+header nav#menuPrincipal ul#opciones-menu-principal>li {
+
+    display: flex;
     background-color: #383838;
     border-bottom: 1px solid #FFA559;
     padding: 0.5rem;
     width: 160px;
     align-self: center;
 }
-header nav#menuPrincipal ul>li.nomUser {
+
+header nav#menuPrincipal ul#opciones-menu-principal>li.nomUser {
     background-color: #171616;
     border-bottom: none;
     align-self: center;
 }
 
-header nav#menuPrincipal ul>li.cerrarMenu{
+header nav#menuPrincipal ul#opciones-menu-principal>li.cerrarMenu {
     background-color: #171616;
     border-bottom: none;
     position: relative;
-} 
+}
+
 .cerrarMenu img {
     padding: 0;
     width: 60px;
@@ -118,35 +152,40 @@ header nav#menuPrincipal ul>li.cerrarMenu{
     top: 15%;
 }
 
-header nav#menuUsuario ul {
-    display: flex;
+header nav#menu-usuario ul#opciones-menu-usuario {
+    display: none;
+    
     flex-flow: column wrap;
     background-color: #171616;
-    
-    /*margin-top: 5rem;
-    width: 180px;*/
+    position: absolute;
+	top:3rem;
+    right: 0;
+    z-index: 2;
 }
 
-header nav#menuUsuario ul>li {
-    display: none;
+header nav#menu-usuario ul#opciones-menu-usuario>li {
+    
+    display: flex;
     background-color: #383838;
     border-bottom: 1px solid #FFA559;
     padding: 0.5rem;
     width: 160px;
     align-self: center;
+
+
 }
 
-header nav#menuUsuario ul>li.nomUser {
+header nav#menu-usuario ul#opciones-menu-usuario>li.nomUser {
     background-color: #171616;
     border-bottom: none;
     align-self: center;
 }
 
-header nav#menuUsuario ul>li.cerrarMenu{
+header nav#menu-usuario ul#opciones-menu-usuario>li.cerrarMenu {
     background-color: #171616;
     border-bottom: none;
     position: relative;
-} 
+}
 
 
 
@@ -154,7 +193,7 @@ header nav#menuUsuario ul>li.cerrarMenu{
 /*cuerpo*/
 
 /*pie de página*/
-footer{
+footer {
     background-color: #000;
     display: flex;
     flex-flow: column nowrap;
@@ -163,22 +202,26 @@ footer{
     width: 100%;
     height: auto;
 }
-footer div#rrss{
+
+footer div#rrss {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.5rem;
 }
-footer div#rrss img{
+
+footer div#rrss img {
     padding-right: 0.5rem;
     width: 40px;
 }
-footer nav#menuTerminos ul li{
+
+footer nav#menuTerminos ul li {
     padding: 0.5rem;
     text-align: center;
     font-size: 15px;
 }
-footer span{
+
+footer span {
     color: #FFF;
     font-size: 15px;
     text-align: center;

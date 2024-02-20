@@ -27,6 +27,7 @@ $(document).ready(function () {
              $(this).find("i.fa-angle-down").css("transform", "rotate(-180deg)");
          }
      });*/
+     //cada opción de submenú se muestra con efecto, se rota la flecha y se oculta el resto
     $("ul#menu>li").click(function () {
         $("ul#menu>li a").find("i.fa-angle-down").css({//buscamos los iconos con la flecha abajo
             transform: "rotate(0deg)"//nos aseguramos que esté en la posición inical

@@ -7,11 +7,14 @@
     <link href="css/estilos.css" rel="stylesheet">
     <link href="imagen/favicon-2.png" rel="icon" type="image/x-icon">
     <script src="jq/jquery-3.7.1.min.js" type="text/javascript"></script>
-    <script src="js/funcionamiento.js" type="text/javascript"></script>
+    <script src="jq/script-cmr.js" type="text/javascript"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+    
+    
+
     <title>Catmanreads</title>
 </head>
 
@@ -23,7 +26,7 @@
                 <a href="index.html">
                     <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
                         id="imglogo">
-                        <h1>Catmanreads</h1>
+                    <h1>Catmanreads</h1>
                 </a>
             </div>
             <div id="iconos">
@@ -32,11 +35,10 @@
                         <img src="imagen/icons/bx-search.svg" alt="lupa" id="lupa-buscador">
                     </a>
                 </div>
-                <nav id="menuUsuario">
-                    <img src="imagen/icons/bxs-user.svg" alt="menu-usuario" id="menu-usuario">
-                    <ul>
-                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg"
-                            alt="cerrar menu"></li>
+                <nav id="menu-usuario">
+                    <img src="imagen/icons/bxs-user.svg" alt="menu-usuario" id="img-menu-usuario">
+                    <ul id="opciones-menu-usuario">
+                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg" alt="cerrar menu"></li>
                         <li class="nomUser">NOMBRE_USUARIO</li>
                         <li><a href="perfil-usuario.html">Mi perfil</a></li>
                         <li><a href="listas.html">Listas</a></li>
@@ -46,10 +48,9 @@
 
                 </nav>
                 <nav id="menuPrincipal">
-                    <img src="imagen/icons/bx-menu.svg" alt="menu-principal" id="menu-principal">
-                    <ul>
-                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg"
-                            alt="cerrar menu"></li>
+                    <img src="imagen/icons/bx-menu.svg" alt="menu-principal" id="img-menu-principal">
+                    <ul id="opciones-menu-principal">
+                        <li class="cerrarMenu"><img class="xmenu" src="imagen/icons/bx-x.svg" alt="cerrar menu"></li>
                         <li class="nomUser">NOMBRE_USUARIO</li>
                         <li><a href="recomendados.html">Recomendados</a></li>
                         <li><a href="explora.html">Explora</a></li>
@@ -61,7 +62,8 @@
             </div>
         </header>
         <!--cuerpo-->
-        <body>
+
+        <main>
             <section>
                 <h2>Lo más visto</h2>
             </section>
@@ -71,7 +73,9 @@
             <section>
                 <h2>Recomendaciones</h2>
             </section>
-        </body>
+          
+        </main>
+
         <!--pie de página-->
         <footer>
             <div id="rrss">
@@ -91,6 +95,8 @@
         </footer>
 
     </div>
+    <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc"
+        aria-hidden="true"></i></span></a></div>
 </body>
 
 </html>
