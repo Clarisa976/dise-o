@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/estilos.css" rel="stylesheet">
+    <link href="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/favicon-2.png" rel="icon" type="image/x-icon">
+    <script src="../jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../jq/script-cmr.js" type="text/javascript"></script>
+    <!--script del vídeo-->
+    <script src="../jq/script-video.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Catmanreads - Perfil usuario</title>
+</head>
+
+<body>
+    <div id="container-body">
+        <!--cabecera-->
+        <header>
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                    <h1>Catmanreads</h1>
+                </a>
+            </div>
+            <div id="iconos">
+                <div id="buscador">
+                    <label for="busquedas">
+                        <input type="text" placeholder="Buscar..." id="busquedas">
+                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
+                                alt="lupa" id="lupa-buscador"></a>
+                    </label>
+                </div>
+                <nav id="menu-usuario">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
+                        id="img-menu-usuario">
+                    <ul id="opciones-menu-usuario">
+                        <li>
+                            <h2>NOMBRE_USUARIO</h2>
+                        </li>
+                        <li><a href="perfil-usuario.html">Mi perfil</a></li>
+                        <li><a href="ajustes-usuario.html">Ajustes</a></li>
+                        <li><a href="../index.html">Cerrar sesión</a></li>
+                    </ul>
+
+                </nav>
+                <nav id="menuPrincipal">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg" alt="menu-principal"
+                        id="img-menu-principal">
+                    <ul id="opciones-menu-principal">
+                        <li><a href="recomendados.html">Recomendados</a></li>
+                        <li><a href="explora.html">Explora</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+
+
+        <!--cuerpo-->
+        <main>
+            <div id="container-perfil">
+                <section class="perfil-usuario">
+                    <h3>Nombre del usuario</h3>
+                    <article>
+                        <div class="foto-perfil"></div>                        
+                        
+                        <p>Se unió el 00/00/0000</p>
+                        <div class="editar-perfil"><a href="ajustes-usuario.html">Editar perfil</a></div>
+                    </article>
+                </section>
+                <section class="estanterias">
+                    <h4>Estantería</h4>
+                    <article class="estanteria">
+                        
+
+                        <ul>
+                            <li>
+                                <a href="lecturas-leidas.html"><span class="conteo">10 </span>
+                                    Leido</a>
+                            </li>
+                            <li>
+                                <a href="lecturas-leyendo.html"><span class="conteo">12 </span>
+                                    Leyendolo</a>
+                            </li>
+                            <li>
+                                <a href="lecturas-quiero-leerlo.html"><span class="conteo">23 </span>
+                                    Quiero leerlo</a>
+                            </li>
+                        </ul>
+
+                    </article>
+                </section>
+                <section class="listas-personalizadas">
+                    <h4>Listas personalizadas </h4>
+                    <article class="listas">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/2.webp"
+                            alt="portada2">
+                        <div class="formateo-texto">
+                            <h5>Título de la lista personalizada</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
+                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="listas">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/2.webp"
+                            alt="portada2">
+                        <div class="formateo-texto">
+                            <h5>Título de la lista personalizada</h5>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
+                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
+                            </p>
+                        </div>
+                    </article>
+                    <div class="boton-crear-lista">Crear lista personalizada</div>
+                    <!--ventana emergente para crear una lista-->
+                    <div id="ventana-emergente-crear-lista">
+                        <p class="x-cerrar-crear-lista"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg" alt="boton-cerrar" class="boton-x"></p>
+                        <h6>Crea una nueva lista personalizada</h6>
+                        <p>Crea una lista personalizada sobre el tópico que quieras.
+                            Añade tus titulos favoritos a la lista o crea una nueva lista 
+                            con aquellos que aún no has leido aun
+                        </p>
+                        <div>
+                            <label for="nombre-lista">Ponle un título</label>
+                            <input type="text" id="nombre-lista" required>
+                        </div>
+                        <div>
+                            <label for="descripcion-lista">Describe aquí de que trata (opcional)</label>
+                            <textarea name="descripcion-lista" id="descripcion-lista" cols="20" rows="10"></textarea>
+                        </div>
+                        <button class="crear-lista">Guardar</button><!--sin funcionalidad-->
+                    </div>
+                    
+                </section>
+            
+            <!--ventana del vídeo-->
+            <div id="contenido-video">
+                <!--videos-->
+                <video id="video" poster="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/trailer.png" preload="metadata" muted width="800" >
+                    <source src="https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.mp4" type="video/mp4">
+                    <source src="https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.ogv" type="video/ogg; codecs='theora-vorbis'">
+                    <source src="https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.webm" type="video/webm; codecs='vp8-vorbis'">
+                    <!--compatibilidad hacia atrás-->
+                    <source src="https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.swf" type="video/flv; codecs='vp6-sorenson-spark'" >
+                </video>
+                <div id="botones-reproductor">
+                    <!--play-->
+                    <button class="boton" id="play">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-play.svg" alt="reproducir">
+                    </button>
+                    <!--pause-->
+                    <button class="boton" id="pause">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-pause.svg" alt="pausar">
+                    </button>
+                    <!-- barra de progreso
+                    <progress id="barra-progreso" max="100" value="0"></progress>-->
+                    <button class="boton" id="retroceder">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/time-past.svg" alt="retroceder">
+                    </button>
+                    <div id="tiempo-actual">0:00</div>
+                    <div class="guion"> - </div>
+                    <div id="tiempo-restante">0:00</div>
+                    <button class="boton" id="avanzar">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/time-forward.svg" alt="avanzar">
+                    </button>
+                    <!--stop-->
+                    <button class="boton" id="stop">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-stop.svg" alt="parar">
+                    </button>
+                    <!--reset-->
+                    <button class="boton" id="reset">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-reset.svg" alt="resetear">
+                    </button>
+                    <!--volumen-->
+                    <button class="boton" id="volumen">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bxs-volume-mute.svg" alt="volumen">
+                    </button>
+                    <!-- control para deslizar la barra de volumen y baja o subir volumen 
+                        el step es como va subiendo o bajando -->
+                    <input type="range" value="0" min="0" max="100" step="10" id="barra-volumen">
+                    <!--pantalla completa-->
+                    <button class="boton" id="fullscreen">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-fullscreen.svg" alt="pantalla completa">
+                    </button>
+                    <!--salir de pantalla completa-->
+                    <button class="boton" id="exit-fullscreen">
+                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-exit-fullscreen.svg" alt="salir de pantalla completa">
+                    </button>
+        
+                </div>
+            </div>
+        </div>
+        </main>
+
+        <!--pie de página-->
+        <footer>
+            <div id="rrss">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter"
+                    id="twitter">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
+                    id="instagram">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook"
+                    id="facebook">
+            </div>
+            <div id="menu-terminos">
+                <ul>
+                    <li><a href="terminos-uso.html">Términos de uso</a></li>
+                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                    <li><a href="terminos-uso.html">Política de cookies</a></li>
+                </ul>
+            </div>
+            <span>© catmanreads, 2023</span>
+        </footer>
+
+    </div>
+    <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+        " alt="volver arriba"> <span></span></a></div>
+</body>
+
+</html>

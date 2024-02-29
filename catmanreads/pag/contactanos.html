@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/estilos.css" rel="stylesheet">
+
+    <link href="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/favicon-2.png" rel="icon" type="image/x-icon">
+    <script src="../jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../jq/script-cmr.js" type="text/javascript"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Catmanreads - Contacta con nosotros</title>
+</head>
+
+<body>
+    <div id="container-body">
+        <!--cabecera-->
+        <header>
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                    <h1>Catmanreads</h1>
+                </a>
+            </div>
+            <div id="iconos">
+                <div id="buscador">
+                    <label for="busquedas">
+                        <input type="text" placeholder="Buscar..." id="busquedas">
+                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
+                                alt="lupa" id="lupa-buscador"></a>
+                    </label>
+                </div>
+                <nav id="menu-usuario">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
+                        id="img-menu-usuario">
+                    <ul id="opciones-menu-usuario">
+                        <li>
+                            <h2>NOMBRE_USUARIO</h2>
+                        </li>
+                        <li><a href="perfil-usuario.html">Mi perfil</a></li>
+                        <li><a href="ajustes-usuario.html">Ajustes</a></li>
+                        <li><a href="../index.html">Cerrar sesión</a></li>
+                    </ul>
+
+                </nav>
+                <nav id="menuPrincipal">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg" alt="menu-principal"
+                        id="img-menu-principal">
+                    <ul id="opciones-menu-principal">
+                        <li><a href="recomendados.html">Recomendados</a></li>
+                        <li><a href="explora.html">Explora</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+
+
+        <!--cuerpo-->
+
+        <main>
+
+            <form id="formulario-contactanos" action="#" method="post">
+                <h3>Contacta con nosotros</h3>
+
+                <div class="contenedor-formulario">
+                    <label class="label-opciones" for="opciones-contacto">Por favor, escoge la opción que describe mejor tu
+                        situación</label>
+
+                    <select class="errores" id="opciones-contacto" name="opciones" required>
+                        <option value="">Elige una opción*</option>
+                        <option value="reportar-contenido-inadecuado">Reportar contenido inadecuado</option>
+                        <option value="reportar-error">Reportar un error</option>
+                        <option value="aportar-nueva-obra">Aportar nueva obra</option>
+                        <option value="otros">Otros</option>
+                    </select>
+
+                    <div class="mensaje-error">No puedes dejar este campo en blanco</div>
+
+                    <label for="email">Email*:</label>
+
+                    <input type="email" class="errores" id="email" name="email" required placeholder="ejemplo@ejemplo.com">
+
+                    <div class="mensaje-error">No puedes dejar este campo en blanco</div>
+
+                    <label for="asunto">Asunto*:</label>
+
+                    <input type="text" class="errores" id="asunto" name="asunto" required>
+
+                    <div class="mensaje-error">No puedes dejar este campo en blanco</div>
+
+                    <label for="descripcion">Descripción*:</label>
+
+                    <textarea id="descripcion"  class="errores" name="descripcion" required></textarea>
+
+                    <div class="mensaje-error">No puedes dejar este campo en blanco</div>
+
+                    <button type="submit" class="bonton-enviar">ENVIAR</button>
+                </div>
+            </form>
+
+
+        </main>
+
+        <!--pie de página-->
+        <footer class="no-completa">
+            <div id="rrss">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter"
+                    id="twitter">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
+                    id="instagram">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook"
+                    id="facebook">
+            </div>
+            <div id="menu-terminos">
+                <ul>
+                    <li><a href="terminos-uso.html">Términos de uso</a></li>
+                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                    <li><a href="terminos-uso.html">Política de cookies</a></li>
+                </ul>
+            </div>
+            <span>© catmanreads, 2023</span>
+        </footer>
+
+    </div>
+    <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+        " alt="volver arriba"> <span></span></a></div>
+</body>
+
+</html>

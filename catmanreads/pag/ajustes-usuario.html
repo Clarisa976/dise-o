@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/estilos.css" rel="stylesheet">
+    <link href="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/favicon-2.png" rel="icon" type="image/x-icon">
+    <script src="../jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../jq/script-cmr.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Catmanreads - Ajustes perfil usuario</title>
+</head>
+
+<body>
+    <div id="container-body">
+        <!--cabecera-->
+        <header>
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                    <h1>Catmanreads</h1>
+                </a>
+            </div>
+            <div id="iconos">
+                <div id="buscador">
+                    <label for="busquedas">
+                        <input type="text" placeholder="Buscar..." id="busquedas">
+                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
+                                alt="lupa" id="lupa-buscador"></a>
+                    </label>
+                </div>
+                <nav id="menu-usuario">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
+                        id="img-menu-usuario">
+                    <ul id="opciones-menu-usuario">
+                        <li>
+                            <h2>NOMBRE_USUARIO</h2>
+                        </li>
+                        <li><a href="perfil-usuario.html">Mi perfil</a></li>
+                        <li><a href="ajustes-usuario.html">Ajustes</a></li>
+                        <li><a href="../index.html">Cerrar sesión</a></li>
+                    </ul>
+
+                </nav>
+                <nav id="menuPrincipal">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg" alt="menu-principal"
+                        id="img-menu-principal">
+                    <ul id="opciones-menu-principal">
+                        <li><a href="recomendados.html">Recomendados</a></li>
+                        <li><a href="explora.html">Explora</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+
+
+        <!--cuerpo-->
+        <main>
+            <div id="container-perfil">
+                <section class="perfil-usuario">
+                    <h3>Nombre del usuario</h3>
+                    <article>
+                        <div class="foto-perfil"></div>
+
+                        <p>Se unió el 00/00/0000</p>
+
+                    </article>
+                </section>
+                <section>
+                    <h4>Ajustes del perfil</h4>
+                    
+                    <form action="#" method="post" id="formulario-cambiar-datos">    
+                    <div class="formulario-cambiar-datos">
+                        
+                        <h5>Cambiar contraseña</h5>
+                        
+                            <label class="error" for="contrasenia-acutal">Contraseña actual</label>
+                            <input id="contrasenia-acutal" type="password" required>
+                            <div class="mensaje-error"> No es tu contraseña actual</div>
+                        
+                            <label  class="error" for="contrasenia-nueva">Nueva contraseña</label>
+                            <input id="contrasenia-nueva" type="password">
+                            <div class="mensaje-error"> No coinciden</div>
+
+                            <label class="error" for="contrasenia-nueva-confirmar">Confirma la contraseña</label>
+                            <input id="contrasenia-nueva-confirmar" type="password">
+                            <div class="mensaje-error"> No coinciden</div>
+                        
+                        <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
+                    
+                        <h5>Cambiar correo</h5>
+                        
+                            <label class="error" for="contrasenia-acutal">Introduce tu contraseña actual</label>
+                            <input id="contrasenia-acutal-cambio" type="password" required>
+                            <div class="mensaje-error"> No es tu contraseña actual</div>
+
+                            
+                            <label class="error" for="correo">Nuevo correo</label>
+                            <input type="text" id="correo">
+                            <div class="mensaje-error"> Dirección de correo no válida</div>
+
+                        
+
+                        <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
+                   </div> 
+                
+                </form>
+                
+                </section>
+
+            </div>
+        </main>
+
+        <!--pie de página-->
+        <footer>
+            <div id="rrss">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter"
+                    id="twitter">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
+                    id="instagram">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook"
+                    id="facebook">
+            </div>
+            <div id="menu-terminos">
+                <ul>
+                    <li><a href="terminos-uso.html">Términos de uso</a></li>
+                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                    <li><a href="terminos-uso.html">Política de cookies</a></li>
+                </ul>
+            </div>
+            <span>© catmanreads, 2023</span>
+        </footer>
+
+    </div>
+    <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+        " alt="volver arriba"> <span></span></a></div>
+</body>
+
+</html>

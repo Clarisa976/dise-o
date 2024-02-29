@@ -1,0 +1,54 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%p;
+    margin-left: 10%;
+
+}
+
+
+
+/* Estilos para el contenedor */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    padding: 1.5rem;
+  
+
+  }
+
+  /* Estilos para el icono o texto que activará el tooltip */
+  .tooltip-trigger {
+    cursor: pointer;
+    border-bottom: 1px dashed #333;
+  }
+
+  /* Estilos para el tooltip */
+  .tooltip-content {
+    display: none;
+    position: absolute;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+  
+  div#arriba{
+    background-color:red;
+    top:-20px
+  }
+  div#abajo{
+    background-color:blue;
+  }
+  div#derecha{
+    background-color:green;
+    top:10px;
+    left: 150px;
+  }
+
+
+  /* Estilos para mostrar el tooltip al pasar el ratón por encima del icono o texto */
+  .tooltip-container:hover .tooltip-content {
+    display: block;
+  }

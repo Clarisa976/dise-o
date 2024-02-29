@@ -19,7 +19,23 @@ body {
     font-size: 20px;
 }
 
+#container-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    flex-shrink: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
 a {
+    font-size: 16px;
     cursor: pointer;
     text-decoration: none;
     color: #FFF;
@@ -29,7 +45,7 @@ ul {
     list-style: none;
 }
 
-.nomUser {
+h2 {
     color: #FFA559;
     font-size: 0.75rem;
 }
@@ -38,12 +54,42 @@ img {
     cursor: pointer;
 }
 
+h3 {
+    font-size: 24px;
+    font-weight: 380;
+    color: #FFF;
+    width: auto;
+    margin-bottom: 1rem;
+    text-decoration: underline #B3DEE5;
+    cursor: pointer;
+}
+
+h4 {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+    padding-top: 1rem;
+    width: 160px;
+    margin-bottom: 1rem;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 350;
+    text-decoration: underline;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+}
 
 div#volverarriba {
-    color: #454545;
-    font-family: 'Open Sans Condensed', sans-serif;
     width: 8rem;
-    background-color: lightgrey;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -53,17 +99,17 @@ div#volverarriba {
     display: none;
 }
 
-div#volverarriba>a {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid grey;
-    padding: 0.2rem 1rem;
+div#volverarriba img {
+    border: 1px solid #FFA559;
+    border-radius: 25px;
+    padding: 0.2rem;
 }
 
 /*cabecera*/
 header h1 {
     display: none;
     color: #FFA559;
+    font-size: 30px;
 }
 
 header {
@@ -93,35 +139,45 @@ header div#iconos {
 
 }
 
-header div#iconos nav#menuPrincipal img {
-    padding-left: 1rem;
-
-
-}
-
-header div#iconos nav#menu-usuario img {
-    padding-left: 1rem;
-
-}
-
+header div#iconos nav#menuPrincipal img,
+header div#iconos nav#menu-usuario img,
 header div#iconos div#buscador img {
     padding-left: 1rem;
 }
 
-header nav#menuPrincipal ul#opciones-menu-principal {
+/*buscador*/
+#buscador input[type="text"] {
     display: none;
-
-    flex-flow: column wrap;
-    background-color: #171616;
-    position: absolute;
-	top:3rem;
-    right: 0;
-    z-index: 2;
-
 }
 
-header nav#menuPrincipal ul#opciones-menu-principal>li {
 
+
+/*estilos del menú usuario*/
+nav#menu-usuario ul#opciones-menu-usuario li:first-child {
+    background-color: #171616;
+    border-bottom: none;
+}
+
+/*estilos en conjunto para los menús de usuario y principal*/
+header nav#menuPrincipal ul,
+nav#menu-usuario ul {
+    background-color: #171616;
+    padding: 10px 5px 0 5px;
+    display: flex;
+    display: none;
+    flex-flow: column wrap;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    z-index: 2;
+}
+
+nav#menu-usuario ul {
+    z-index: 10000;
+}
+
+header nav#menuPrincipal ul#opciones-menu-principal>li,
+nav#menu-usuario ul#opciones-menu-usuario>li {
     display: flex;
     background-color: #383838;
     border-bottom: 1px solid #FFA559;
@@ -130,67 +186,1086 @@ header nav#menuPrincipal ul#opciones-menu-principal>li {
     align-self: center;
 }
 
-header nav#menuPrincipal ul#opciones-menu-principal>li.nomUser {
-    background-color: #171616;
-    border-bottom: none;
-    align-self: center;
-}
 
-header nav#menuPrincipal ul#opciones-menu-principal>li.cerrarMenu {
-    background-color: #171616;
-    border-bottom: none;
-    position: relative;
-}
-
-.cerrarMenu img {
-    padding: 0;
-    width: 60px;
-    height: 30px;
-    align-self: flex-start;
-    position: absolute;
-    left: 68%;
-    top: 15%;
-}
-
-header nav#menu-usuario ul#opciones-menu-usuario {
-    display: none;
-    
-    flex-flow: column wrap;
-    background-color: #171616;
-    position: absolute;
-	top:3rem;
-    right: 0;
-    z-index: 2;
-}
-
-header nav#menu-usuario ul#opciones-menu-usuario>li {
-    
-    display: flex;
-    background-color: #383838;
-    border-bottom: 1px solid #FFA559;
-    padding: 0.5rem;
-    width: 160px;
-    align-self: center;
-
-
-}
-
-header nav#menu-usuario ul#opciones-menu-usuario>li.nomUser {
-    background-color: #171616;
-    border-bottom: none;
-    align-self: center;
-}
-
-header nav#menu-usuario ul#opciones-menu-usuario>li.cerrarMenu {
-    background-color: #171616;
-    border-bottom: none;
-    position: relative;
-}
 
 
 
 
 /*cuerpo*/
+section {
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+section:nth-child(even) {
+    background-color: #383838;
+}
+
+section div.swiper {
+    width: 100%;
+}
+
+section article.swiper-slide {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    flex: 0 0 50%;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+    transition: all 0.3s ease;
+    color: #FFA559 !important;
+    /*cambiamos el color de los botones*/
+
+}
+
+section .boton-ver-mas {
+    background-color: #FFA559;
+    width: 94px;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+}
+
+section .boton-ver-mas a {
+    font-size: 16px;
+    color: #000;
+
+
+}
+
+/*términos y políticas*/
+h3 {
+    margin-left: 30px;
+}
+
+section div.terminos {
+    padding: 30px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+section div.terminos h4 {
+    width: max-content;
+}
+
+section div.terminos h5 {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 350;
+    padding-bottom: 0.5rem;
+}
+
+section div.terminos ul {
+    padding-left: 20px;
+    list-style-position: outside;
+}
+
+section div.terminos li {
+    list-style: disc;
+}
+
+section div.terminos article {
+    margin-bottom: 1rem;
+}
+
+/*lo más visto, añadido recientemente, recomendaciones y recomendados por la comunidad*/
+div.lo-mas-visto,
+div.aniadido-recientemente,
+div.recomendaciones,
+div.recomendados-comunidad {
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section article.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+    flex: 0 0 48%;
+}
+
+
+
+
+
+/*ficha de la obra*/
+section.obra article {
+    display: flex;
+    flex-flow: column;
+
+}
+
+section.obra article h3 {
+    flex: 0 1 100%;
+    margin: 0;
+    width: 100%;
+}
+
+section.obra article div#contenido-fijo,
+section.obra article div.datos-obra {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 2rem;
+    flex: 0 1 100%;
+
+}
+
+
+/*desplegable para elegir el estado de la lectura*/
+section.obra article div#contenido-fijo div.estado-lectura {
+    margin: 5px;
+}
+
+section.obra article div#contenido-fijo #estadoLectura {
+    background-color: #171616;
+    color: white;
+    appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+    /* Espacio para la imagen de la flecha */
+    background-image: url('https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-down.svg');
+    /* SVG de la flecha */
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    cursor: pointer;
+
+}
+
+section.obra article div#contenido-fijo #estadoLectura option {
+    background-color: #383838;
+    color: white;
+}
+
+/*puntuación en la ficha de una obra*/
+section.obra article div#contenido-fijo div.puntuacion {
+    border: 2px solid #FFA559;
+    border-radius: 15px;
+    width: 150px;
+    height: auto;
+    padding: 2px;
+    text-align: center;
+    margin: 5px;
+
+}
+
+section.obra article div#contenido-fijo div.puntuacion .star {
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Efecto suave al pasar el mouse */
+}
+
+section.obra article div#contenido-fijo div.puntuacion .star:hover {
+    transform: scale(1.1);
+    /* Efecto de crecimiento al pasar el mouse */
+}
+
+/*enlace que te llevará a la lectura de la pagina oficial de la obra*/
+section.obra article div#contenido-fijo div.enlace-obra {
+    background-color: #FFA559;
+    border-radius: 15px;
+    width: 150px;
+    padding: 2px;
+    text-align: center;
+    margin: 5px;
+}
+
+section.obra article div#contenido-fijo div.enlace-obra a {
+    color: #000;
+    font-size: 16px;
+}
+
+section.obra article div.datos-obra p {
+    padding-right: 1rem;
+}
+
+/*estilos para los géneros*/
+section.obra article div.datos-obra div#generos {
+    align-self: flex-start;
+    margin: 1rem;
+}
+
+section.obra article div.datos-obra h4 {
+    color: #FFF;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 0.2rem;
+    text-decoration: underline #B3DEE5;
+}
+
+section.obra article p {
+    color: #FFF;
+    font-size: 16px;
+}
+
+section.obra article div.datos-obra div#autor {
+    margin: 2rem auto;
+}
+
+section.obra article div.datos-obra div#generos li {
+    display: inline-block;
+    /*alinea los elementos horizontalmente */
+    margin-right: 15px;
+}
+
+section.obra article div.datos-obra div#generos a {
+    font-size: 16px;
+    position: relative;
+    /*posicionamiento relativo para la pseudoelemento */
+    padding-bottom: 5px;
+}
+
+section.obra article div.datos-obra div#generos a::after {
+    content: '';
+    /* Contenido vacío para la pseudoelemento */
+    position: absolute;
+    /* Posicionamiento absoluto respecto al enlace */
+    bottom: 0;
+    /* Alineado a la parte inferior del enlace */
+    left: 0;
+    /* Alineado al lado izquierdo del enlace */
+    width: 0;
+    /* Ancho inicial de la línea */
+    height: 2px;
+    /* Altura de la línea */
+    background-color: #FFA559;
+    /* Color de la línea */
+    transition: width 0.5s;
+    /* Transición suave para la animación de "carga" */
+}
+
+section.obra article div.datos-obra div#generos a:hover::after {
+    width: 100%;
+    /* Ancho final de la línea al pasar el ratón */
+}
+
+/*reseñas*/
+
+section.resenias {
+    background-color: #525252;
+    display: flex;
+    flex-flow: column;
+}
+
+section.resenias h4 {
+    color: #FFF;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 0.2rem;
+    text-decoration: underline #B3DEE5;
+    margin-bottom: 1rem;
+
+}
+
+section.resenias article {
+    background-color: #383838;
+    padding: 2rem;
+    color: #FFF;
+    margin-bottom: 3rem;
+    flex: 0 0 80%;
+}
+
+section.resenias article p.nota,
+section.resenias article p.boton-postear {
+    text-align: end;
+    padding-bottom: 1rem;
+}
+
+textarea#resenia-user {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+}
+
+button#submit-resena {
+    background-color: #FFA559;
+    border-radius: 15px;
+    font-weight: 550;
+    padding: 10px;
+    cursor: pointer;
+}
+
+section .boton-ver-resenias {
+    background-color: #FFA559;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+}
+
+section .boton-ver-resenias a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+
+
+}
+
+/*listas en la que está inculida la obra que se muestra*/
+section.listas-incluidas h4 {
+    color: #FFF;
+    padding-right: 0;
+    padding-bottom: 0.2rem;
+    width: 100%;
+    text-align: left;
+    text-decoration: underline #B3DEE5;
+    margin-bottom: 1rem;
+}
+
+section.listas-incluidas article.listas {
+    display: flex;
+    align-items: center;
+    background-color: #383838;
+    padding: 2rem;
+    color: #FFF;
+    margin-bottom: 3rem;
+    flex: 0 0 80%;
+}
+
+.listas p {
+    font-size: 15px;
+}
+
+section.listas-incluidas article.listas h5,
+.listas p {
+    flex: 1;
+    margin-left: 1.5rem;
+}
+
+section .boton-ver-listas {
+    background-color: #FFA559;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+}
+
+section .boton-ver-listas a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+section.resenias,
+section.listas-incluidas {
+    width: 90%;
+}
+
+/*ventana emergente para añadir o crear una lista*/
+#ventana-emergente-listas {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #171616;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.mostrar {
+    display: block !important;
+}
+
+#ventana-emergente-listas p,
+#ventana-emergente-listas div,
+#ventana-emergente-listas input {
+    padding-bottom: 5px;
+}
+
+#ventana-emergente-listas p.x-cerrar {
+    text-align: right;
+}
+
+/*estilo para el checkbox creados desde cero para personalizarlos*/
+/*oculta el checkbox original*/
+#ventana-emergente-listas input[type="checkbox"] {
+    display: none;
+}
+
+/*Estilo para el label, con texto blanco*/
+#ventana-emergente-listas label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    font-size: 15px;
+}
+
+/*crear el cuadradito usando ::before, con fondo blanco*/
+#ventana-emergente-listas label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FFA559;
+    background-color: #171616;
+}
+
+/*cambiar el fondo y borde del cuadradito cuando está marcado*/
+#ventana-emergente-listas input[type="checkbox"]:checked+label::before {
+    background-color: #171616;
+    border-color: #FFA559;
+}
+
+/*crear el tick usando ::after cuando el checkbox está marcado*/
+#ventana-emergente-listas input[type="checkbox"]:checked+label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #FFA559;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+#ventana-emergente-listas input#nueva-lista-nombre {
+    background: none;
+    border-bottom: 1px solid #FFA559;
+    color: white;
+}
+
+button.crear-lista {
+    margin-top: 5px;
+    background-color: #FFA559;
+    width: 90px;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+/*ver más reseñas*/
+section.obra article {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+
+
+/*explora y descubre títulos aleatorios genrados aleatoriamente*/
+
+section.obra-explorar article h4 {
+    color: #FFF;
+    width: 200px;
+    padding-left: 0;
+    padding-bottom: 0.2rem;
+    text-decoration: underline #B3DEE5;
+    margin: 1rem;
+}
+
+div.enlace-obra {
+    background-color: #FFA559;
+    border-radius: 15px;
+    width: 150px;
+    padding: 2px;
+    text-align: center;
+    margin: 5px;
+    align-self: start;
+
+}
+
+div.enlace-obra a {
+    color: #000;
+    font-size: 16px;
+}
+
+section.obra-explorar article {
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+section.obra-explorar article:nth-child(odd) {
+    background-color: #383838;
+}
+
+section.obra-explorar article div.contenido-articulo {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    max-width: 600px;
+}
+
+section.obra-explorar div.descripcion {
+    margin-left: 3rem;
+    flex: 0 0 80%;
+    align-items: flex-end;
+}
+
+section.obra-explorar .portada {
+    flex: 0 0 20%;
+}
+
+/*contacta con nosotros*/
+form#formulario-contactanos div.contenedor-formulario {
+    background-color: #383838;
+}
+
+form#formulario-contactanos h3 {
+    padding-top: 1rem;
+}
+
+form#formulario-contactanos div.contenedor-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex: 0 0 70%;
+}
+
+form#formulario-contactanos div.contenedor-formulario label {
+    font-size: 16px;
+    text-align: left;
+    color: #FFF;
+    padding-top: 1.2rem;
+    padding-bottom: 0.2rem;
+}
+
+form#formulario-contactanos div.contenedor-formulario #opciones-contacto {
+    background-color: #171616;
+    color: white;
+    appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+    /*espacio para la imagen de la flecha*/
+    background-image: url('https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    cursor: pointer;
+}
+
+form#formulario-contactanos div.contenedor-formulario #opciones-contacto option {
+    background-color: #383838;
+    color: white;
+}
+
+form#formulario-contactanos div.contenedor-formulario #email,
+form#formulario-contactanos div.contenedor-formulario #asunto,
+form#formulario-contactanos div.contenedor-formulario #descripcion {
+    color: #000;
+    appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+}
+
+.mensaje-error {
+    font-size: 12px;
+    visibility: hidden;
+    color: #ffa97f;
+    margin-top: 5px;
+    z-index: 1;
+}
+
+input.interactuado:invalid,
+select.interactuado:invalid,
+textarea.interactuado:invalid {
+    border: 2px solid #ffa97f;
+}
+
+form#formulario-contactanos div.contenedor-formulario .bonton-enviar {
+    background-color: #FFA559;
+    width: 90px;
+    padding: 0.3rem;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+    margin: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+/*perfil usuario*/
+#container-perfil {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+}
+
+section.perfil-usuario {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+section.perfil-usuario h3 {
+    align-self: start;
+    width: 100%;
+}
+
+section.perfil-usuario p {
+    font-size: 16px;
+    color: #FFF;
+    margin: 0.5rem;
+    text-align: center;
+}
+
+section.perfil-usuario div.foto-perfil {
+    margin: 1rem;
+    width: 160px;
+    height: 160px;
+    background-color: #FFF;
+
+}
+
+section.perfil-usuario div.editar-perfil {
+    font-size: 16px;
+    background-color: #383838;
+    color: #FFF;
+    position: relative;
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+section.perfil-usuario div.editar-perfil::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFA559;
+    transition: width 0.5s;
+
+}
+
+section.perfil-usuario div.editar-perfil:hover::after {
+    width: 100%;
+
+}
+
+section.estanterias {
+    background-color: #525252;
+
+}
+
+section.estanterias article.estanteria {
+
+    align-self: flex-start;
+}
+
+article.estanteria ul {
+    margin-left: 1rem;
+}
+
+article.estanteria li {
+    display: inline-block;
+    /*alinea los elementos horizontalmente */
+    margin-right: 15px;
+}
+
+article.estanteria a {
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+article.estanteria a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFA559;
+    transition: width 0.5s;
+}
+
+article.estanteria a:hover::after {
+    width: 100%;
+}
+
+section.listas-personalizadas {
+    max-width: 800px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+section.listas-personalizadas h4,
+section.estanterias h4 {
+    align-self: flex-start;
+    color: #FFF;
+    text-align: left;
+    padding-right: 0;
+    padding-bottom: 0.2rem;
+    text-decoration: underline #B3DEE5;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+section.listas-personalizadas article.listas {
+    display: flex;
+    align-items: center;
+    background-color: #383838;
+    padding: 2rem;
+    color: #FFF;
+    margin-bottom: 3rem;
+    flex: 0 0 80%;
+}
+
+section.listas-personalizadas article.listas h5 {
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+section.listas-personalizadas .listas p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+
+section.listas-personalizadas div.boton-crear-lista {
+    font-size: 16px;
+    background-color: #383838;
+    color: #FFF;
+    position: relative;
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+section.listas-personalizadas div.boton-crear-lista::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFA559;
+    transition: width 0.5s;
+
+}
+
+section.listas-personalizadas div.boton-crear-lista:hover::after {
+    width: 100%;
+
+}
+
+/*ventana emergente para crear una lista*/
+#ventana-emergente-crear-lista {
+    background-color: #383838;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    z-index: 10000;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ventana-emergente-crear-lista h6 {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#ventana-emergente-crear-lista p,
+label {
+    font-size: 15px;
+}
+
+#ventana-emergente-crear-lista div {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#ventana-emergente-crear-lista input,
+#ventana-emergente-crear-lista textarea {
+    background-color: #171616;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#ventana-emergente-crear-lista .x-cerrar-crear-lista {
+    text-align: right;
+    cursor: pointer;
+}
+
+/*ajustes usuario*/
+#container-perfil section>h4 {
+    text-decoration: underline #B3DEE5;
+}
+
+section div.formulario-cambiar-datos {
+    display: flex;
+    flex-flow: column;
+}
+
+section div.formulario-cambiar-datos article.cambiar-contrasenia,
+section div.formulario-cambiar-datos article.cambiar-correo {
+    margin-bottom: 1rem;
+    align-items: center;
+
+}
+
+section div.formulario-cambiar-datos {
+    display: flex;
+    flex-flow: column;
+    max-width: 500px;
+}
+
+section div.formulario-cambiar-datos label,
+section div.formulario-cambiar-datos label {
+    color: #FFF;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+section div.formulario-cambiar-datos h5,
+section div.formulario-cambiar-datos h5 {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    align-self: flex-start;
+}
+
+section div.formulario-cambiar-datos input,
+section div.formulario-cambiar-datos input {
+    width: 300px;
+    background-color: #171616;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+section div.formulario-cambiar-datos button.boton-enviar,
+section div.formulario-cambiar-datos button.boton-enviar {
+    background-color: #FFA559;
+    width: 150px;
+    padding: 0.2rem;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+    margin: 1rem;
+}
+
+
+
+
+/*obras que se ha leido, quiere leer o se está leyendo*/
+
+section div.obras-lectura article {
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: column wrap;
+
+}
+
+section div.obras-lectura article h4 {
+    color: #FFF;
+    width: 200px;
+    padding-left: 0;
+    padding-bottom: 0.2rem;
+    text-decoration: underline #B3DEE5;
+    margin: 1rem;
+}
+
+section div.obras-lectura article:nth-child(even) {
+    background-color: #383838;
+}
+
+section div.obras-lectura article div.contenido-articulo {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    max-width: 650px;
+}
+
+section div.obras-lectura div.descripcion {
+    margin-left: 3rem;
+    flex: 0 0 80%;
+    align-items: flex-end;
+}
+
+section div.obras-lectura .portada {
+    flex: 0 0 20%;
+}
+
+/*buscador*/
+#container-buscador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buscar,
+.filtros {
+    width: 90%;
+}
+
+.buscar select,
+.filtros select,
+.contenido-filtrar select {
+    background-color: #171616;
+    color: #FFF;
+    border: none;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.buscardor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #171616;
+    width: 100%;
+}
+
+.buscardor input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    padding-right: 40px;
+    border: none;
+    background-color: #171616;
+    color: #FFF;
+    appearance: none;
+    background-image: url('https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg');
+    /* Imagen de la lupa */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: text;
+}
+
+.filtros {
+    background-color: #383838;
+    padding: 10px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+#mostrar-filtros {
+    display: none;
+}
+
+.filtros span {
+    color: #FFF;
+    font-size: 22px;
+}
+
+.contenido-filtrar label {
+    color: #FFF;
+    font-size: 15px;
+}
+
+.contenido-filtrar label.seleccionable {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: inline-block;
+    color: #FFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contenido-filtrar input[type="checkbox"] {
+    display: none;
+}
+
+
+/*crear el cuadradito usando ::before, con fondo blanco*/
+.contenido-filtrar .seleccionable::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #FFA559;
+    background-color: #171616;
+}
+
+/*cambiar el fondo y borde del cuadradito cuando está marcado*/
+.contenido-filtrar input[type="checkbox"]:checked+.seleccionable::before {
+    background-color: #171616;
+    border-color: #FFA559;
+}
+
+/*crear el tick usando ::after cuando el checkbox está marcado*/
+.contenido-filtrar input[type="checkbox"]:checked+.seleccionable::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #FFA559;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.contenido-filtrar div.generos {
+    display: flex;
+    flex-flow: row wrap;
+
+
+    justify-content: flex-start;
+}
+
+.contenido-filtrar div.generos div {
+    flex: 1 1 50%;
+    padding: 5px;
+}
+
+.contenido-filtrar-desplegable div.contenido-filtrar {
+    width: 100%;
+}
+
+
+
+
+/*ocultamos el mensaje de que no hay resultados*/
+section.busqueda-no-encontrada {
+    display: none;
+}
+
+section.resultado-busqueda {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+}
+
+
+
+
 
 /*pie de página*/
 footer {
@@ -201,7 +1276,9 @@ footer {
     padding: 0.5rem;
     width: 100%;
     height: auto;
+
 }
+
 
 footer div#rrss {
     display: flex;
@@ -215,14 +1292,372 @@ footer div#rrss img {
     width: 40px;
 }
 
-footer nav#menuTerminos ul li {
+footer div#menu-terminos ul li {
     padding: 0.5rem;
     text-align: center;
-    font-size: 15px;
+
+}
+
+footer div#menu-terminos ul li a {
+    font-size: 16px;
+    font-weight: 400;
+
 }
 
 footer span {
     color: #FFF;
     font-size: 15px;
     text-align: center;
+}
+
+/*cookies*/
+div#cookies {
+    color: #FFF;
+    font-size: 16px;
+}
+
+div.cookie-consentimiento {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #383838;
+    z-index: 1000;
+}
+
+div.cookie-contenido {
+    padding: 20px;
+    text-align: center;
+}
+
+button#aceptar-cookies,
+button#saber-mas-cookies {
+    background-color: #FFA559;
+    width: 90px;
+    padding: 0.2rem;
+    border-radius: 25px;
+    text-align: center;
+    align-self: center;
+    margin: 1rem;
+}
+
+button#saber-mas-cookies a {
+    color: #000;
+}
+
+/*vídeo*/
+#contenido-video {
+    align-self: flex-start;
+    display: flex;
+    flex-flow: column;
+    margin: 2rem;
+    max-width: 500px;
+    background-color: #171616;
+    border-radius: 25px;
+    border: 1px solid #ffa559;
+    align-items: center;
+}
+
+#contenido-video #botones-reproductor {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0.2rem;
+
+}
+
+#contenido-video #video {
+    padding: 0.5rem;
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+#contenido-video .boton {
+    margin-right: 0.2rem;
+    background-color: #000;
+    border: 1px solid #ffa559;
+    padding: 0.2rem;
+    border-radius: 25px;
+}
+
+#contenido-video .boton img {
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+    padding: 0.2rem;
+}
+
+#contenido-video #tiempo-actual,
+#contenido-video #tiempo-restante {
+    align-self: center;
+    font-size: 14px;
+}
+
+#contenido-video #pause {
+    display: none;
+}
+
+#contenido-video #exit-fullscreen {
+    display: none;
+}
+
+#contenido-video #barra-progreso {
+    align-self: center;
+}
+
+#contenido-video #tiempo-actual {
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+
+#contenido-video #tiempo-restante {
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+
+#contenido-video .guion {
+    color: #ffa559;
+    font-weight: bolder;
+    align-self: center;
+}
+
+
+
+/*media query para tablet*/
+@media (min-width:900px) {
+    section article.swiper-slide {
+        /*se muestran tres artículos*/
+        flex: 0 0 33%;
+    }
+
+    section article.card {
+        /*se muestran tres artículos*/
+        flex: 0 0 33%;
+    }
+
+    /*ficha obra*/
+    /*contenido de la obra (datos)*/
+    section.obra article {
+        flex-flow: row wrap;
+
+    }
+
+    section.obra article h3 {
+        width: 100%;
+    }
+
+
+
+    section.obra article div#contenido-fijo {
+        flex: 0 0 20%;
+    }
+
+    section.obra article div.datos-obra {
+        flex: 1;
+    }
+
+    /*perfil usuario*/
+
+    #container-perfil {
+        align-items: center;
+    }
+
+    /*buscador*/
+    .contenido-filtrar div.generos div {
+        flex-basis: 33%;
+        /* Cuatro elementos por fila */
+    }
+
+    .contenido-filtrar-desplegable {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenido-filtrar-desplegable div.contenido-filtrar {
+        flex: 1;
+        margin-right: 1rem;
+    }
+
+    /*pie de página*/
+    footer {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    footer div#menu-terminos ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    footer span {
+        order: 3;
+        /* Asegura que el span se muestre al final, independientemente del orden en el HTML */
+        flex: 1 100%;
+        /* Ocupa el 100% del ancho disponible forzando que se muestre en su propia línea */
+        text-align: center;
+        /* Centra el texto del span */
+    }
+}
+
+/*media query para escritorio*/
+@media (min-width:1440px) {
+
+
+    section article.swiper-slide {
+        /*se muestran cuatro artículos*/
+        flex: 0 0 25%;
+    }
+
+    section article.card {
+        /*se muestran cuatro artículos*/
+        flex: 0 0 25%;
+    }
+
+    /*obras leidas, leyendo y pendientes de leer*/
+    section div.obras-lectura {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section div.obras-lectura article {
+        width: calc(50% - 1rem);
+    }
+
+    /*ajustes de usuario*/
+    section div.formulario-cambiar-datos article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Para centrar los elementos dentro de los artículos */
+    #container-perfil {
+        display: flex;
+        justify-content: center;
+        /* Centra el contenido horizontalmente */
+        flex-wrap: wrap;
+
+    }
+
+    #container-perfil .perfil-usuario,
+    .formulario-cambiar-datos {
+        /* Asegura que cada sección no ocupe más del 50% del ancho, menos cualquier margen deseado para separación */
+        max-width: calc(50% - 2rem);
+        /* Ajusta según sea necesario */
+        margin: 1rem;
+        /* Proporciona un poco de espacio alrededor de los elementos */
+    }
+
+    #container-perfil section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Alinea los elementos de la sección verticalmente en el centro */
+    }
+
+    #container-perfil section div.formulario-cambiar-datos article h5,
+    #container-perfil section div.formulario-cambiar-datos article label,
+    #container-perfil section div.formulario-cambiar-datos article input,
+    #container-perfil section div.formulario-cambiar-datos article .boton-enviar {
+        align-self: center;
+    }
+
+    /*buscador*/
+
+    .contenido-filtrar div.generos div {
+        flex-basis: 25%;
+    }
+
+    /*cabecera*/
+    header nav#menuPrincipal img#img-menu-principal {
+        display: none;
+    }
+
+    header nav#menuPrincipal ul {
+        display: flex;
+        flex-flow: row nowrap;
+        background-color: transparent;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+
+
+    }
+
+    header nav#menuPrincipal ul#opciones-menu-principal>li {
+        width: 100%;
+        margin: 32px 0;
+        padding: 10px;
+
+    }
+
+    header nav#menuPrincipal ul#opciones-menu-principal>li:nth-last-child(even) {
+        border-left: 1px solid #FFA559;
+        border-right: 1px solid #FFA559;
+    }
+
+    header nav#menuPrincipal ul#opciones-menu-principal>li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
+    /*buscador de la cabecera*/
+    #buscador {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #525252;
+        align-self: flex-start;
+    }
+
+    #buscador input[type="text"] {
+        display: block;
+        width: 100%;
+        background-color: #000;
+        color: #FFF;
+        appearance: none;
+        padding: 5px 5px 0 30px;
+        padding-right: 30px;
+        border: none;
+
+        cursor: text;
+    }
+
+    #buscador a {
+        display: block;
+        /* Cambiado de 'none' a 'block' */
+        position: absolute;
+        /* Posición absoluta para ubicarlo correctamente */
+        right: 0;
+        /* Alinea el enlace a la derecha dentro de #buscador */
+        top: 0;
+        /* Alinea el enlace en la parte superior de #buscador */
+        height: 100%;
+        /* Asegura que el enlace ocupe toda la altura de #buscador */
+        width: 50px;
+        /* Ancho suficiente para cubrir el área de la lupa */
+        z-index: 10;
+        /* Asegura que el enlace esté sobre el input */
+    }
+
+    #buscador {
+        position: relative;
+        /* Necesario para que la posición absoluta de 'a' funcione correctamente */
+    }
+
+    header div#iconos {
+        justify-content: flex-start;
+    }
 }

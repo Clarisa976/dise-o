@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/estilos.css" rel="stylesheet">
+    <link href="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/favicon-2.png" rel="icon" type="image/x-icon">
+    <script src="../jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="../jq/script-cmr.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Catmanreads - Buscador</title>
+</head>
+
+<body>
+    <div id="container-body">
+        <!--cabecera-->
+        <header>
+            <div id="logo">
+                <a href="../index.html">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                    <h1>Catmanreads</h1>
+                </a>
+            </div>
+            <div id="iconos">
+                <div id="buscador">
+
+                    <input type="text" placeholder="Buscar..." id="busquedas">
+                    <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
+                            alt="lupa" id="lupa-buscador"></a>
+
+                </div>
+                <nav id="menu-usuario">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
+                        id="img-menu-usuario">
+                    <ul id="opciones-menu-usuario">
+                        <li>
+                            <h2>NOMBRE_USUARIO</h2>
+                        </li>
+                        <li><a href="perfil-usuario.html">Mi perfil</a></li>
+                        <li><a href="ajustes-usuario.html">Ajustes</a></li>
+                        <li><a href="../index.html">Cerrar sesión</a></li>
+                    </ul>
+
+                </nav>
+                <nav id="menuPrincipal">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg" alt="menu-principal"
+                        id="img-menu-principal">
+                    <ul id="opciones-menu-principal">
+                        <li><a href="recomendados.html">Recomendados</a></li>
+                        <li><a href="explora.html">Explora</a></li>
+                        <li><a href="contactanos.html">Contáctanos</a></li>
+                    </ul>
+
+                </nav>
+
+            </div>
+        </header>
+
+
+        <!--cuerpo-->
+        <main>
+            <div id="container-buscador">
+                <div class="buscar">
+                    <div class="buscardor">
+                        <input type="text" placeholder="Buscar..." class="buscar">
+                    </div>
+                    <select name="forma-busqueda">
+                        <option value="titulo" selected="">Título</option>
+                        <option value="autor">Autor</option>
+                        <option value="web">Web</option>
+                    </select>
+                </div>
+                <div class="filtros">
+                    <div class="filtro"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-filter-alt.svg"
+                            alt="filtro" id="filtro-buscador"><span>Filtros</span>
+                    </div>
+                    <div id="mostrar-filtros">
+                        <div class="contenido-filtrar-desplegable">
+                            <div class="contenido-filtrar">
+                                <label>Tipo</label>
+                                <select name="tipo" class="form-control">
+                                    <option value="">Ver todo</option>
+                                    <option value="manga">Manga</option>
+                                    <option value="manhua">Manhua</option>
+                                    <option value="manhwa">Manhwa</option>
+                                    <option value="novel">Novela</option>
+                                </select>
+                            </div>
+                            <div class="contenido-filtrar">
+                                <label>Demografía</label>
+                                <select name="demografia" class="form-control">
+                                    <option value="">Ver todo</option>
+                                    <option value="seinen">Seinen</option>
+                                    <option value="shoujo">Shoujo</option>
+                                    <option value="shounen">Shounen</option>
+                                    <option value="josei">Josei</option>
+                                    <option value="kodomo">Kodomo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contenido-filtrar">
+                            <label>Géneros</label>
+                            <div class="generos">
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_1" value="1">
+                                    <label class="seleccionable" for="gender_1">Acción</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_2" value="2">
+                                    <label class="seleccionable" for="gender_2">Aventura</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_3" value="3">
+                                    <label class="seleccionable" for="gender_3">Comedia</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_4" value="4">
+                                    <label class="seleccionable" for="gender_4">Drama</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_7" value="7">
+                                    <label class="seleccionable" for="gender_7">Fantasia</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_8" value="8">
+                                    <label class="seleccionable" for="gender_8">Magia</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_9" value="9">
+                                    <label class="seleccionable" for="gender_9">Sobrenatural</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_10" value="10">
+                                    <label class="seleccionable" for="gender_10">Horror</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_11" value="11">
+                                    <label class="seleccionable" for="gender_11">Misterio</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_12" value="12">
+                                    <label class="seleccionable" for="gender_12">Psicológico</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_13" value="13">
+                                    <label class="seleccionable" for="gender_13">Romance</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_15" value="15">
+                                    <label class="seleccionable" for="gender_15">Thriller</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_16" value="16">
+                                    <label class="seleccionable" for="gender_16">Deporte</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_21" value="21">
+                                    <label class="seleccionable" for="gender_21">Supervivencia</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_22" value="22">
+                                    <label class="seleccionable" for="gender_22">Reencarnación</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_23" value="23">
+                                    <label class="seleccionable" for="gender_23">Gore</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_25" value="25">
+                                    <label class="seleccionable" for="gender_25">Tragedia</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_26" value="26">
+                                    <label class="seleccionable" for="gender_26">Vida Escolar</label>
+                                </div>
+
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_29" value="29">
+                                    <label class="seleccionable" for="gender_29">Policiaco</label>
+                                </div>
+
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_32" value="32">
+                                    <label class="seleccionable" for="gender_32">Vampiros</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_38" value="38">
+                                    <label class="seleccionable" for="gender_38">Musica</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_39" value="39">
+                                    <label class="seleccionable" for="gender_39">Parodia</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_41" value="41">
+                                    <label class="seleccionable" for="gender_41">Demonios</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_42" value="42">
+                                    <label class="seleccionable" for="gender_42">Familia</label>
+                                </div>
+
+                                <div>
+                                    <input type="checkbox" name="generos" id="gender_47" value="47">
+                                    <label class="seleccionable" for="gender_47">Guerra</label>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="busqueda-no-encontrada">
+                <h3>¡Lo sentimos!<br>No encontramos lo que estás buscando</h3>
+            </section>
+            <section class="resultado-busqueda">
+
+
+                <article class="card">
+                    <a href="ficha-tecnica-lectura.html">
+                        <picture>
+                            <!--tablet -->
+                            <source srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/1.webp"
+                                media="(min-width: 768px) and (max-width: 1439px)">
+                            <!--escritorio -->
+                            <source
+                                srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/1.webp"
+                                media="(min-width: 1440px)">
+                            <!-- navegadores antiguos y dispositivos móviles -->
+                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/1.webp"
+                                alt="portada1">
+                        </picture>
+                    </a>
+                    <h4><a href="pag/ficha-tecnica-lectura.html">El único final de la villana es la
+                            muerte</a>
+                    </h4>
+                </article>
+                <article class="card">
+
+                    <a href="ficha-tecnica-lectura.html">
+                        <picture>
+                            <!--tablet -->
+                            <source srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/2.webp"
+                                media="(min-width: 768px) and (max-width: 1439px)">
+                            <!--escritorio -->
+                            <source
+                                srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/2.webp"
+                                media="(min-width: 1440px)">
+                            <!-- navegadores antiguos y dispositivos móviles -->
+                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/2.webp"
+                                alt="portada2">
+
+                        </picture>
+                    </a>
+                    <h4>
+                        <a href="ficha-tecnica-lectura.html">El único final de la villana es la
+                            muerte</a>
+                    </h4>
+
+                </article>
+            </section>
+
+
+        </main>
+
+        <!--pie de página-->
+        <footer class="no-completa">
+            <div id="rrss">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter"
+                    id="twitter">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
+                    id="instagram">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook"
+                    id="facebook">
+            </div>
+            <div id="menu-terminos">
+                <ul>
+                    <li><a href="terminos-uso.html">Términos de uso</a></li>
+                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                    <li><a href="terminos-uso.html">Política de cookies</a></li>
+                </ul>
+            </div>
+            <span>© catmanreads, 2023</span>
+        </footer>
+
+    </div>
+    <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+        " alt="volver arriba"> <span></span></a></div>
+</body>
+
+</html>

@@ -4,3 +4,4 @@ cabecera y pie #000
 erroes #ffa97f
 definir areas #383838
 menu y buscador #171616
+borde h2 #B3DEE5
