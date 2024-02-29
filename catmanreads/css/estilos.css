@@ -89,7 +89,7 @@ p {
 }
 
 div#volverarriba {
-    width: 8rem;
+    width: 6rem;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -307,7 +307,6 @@ section.obra article {
 section.obra article h3 {
     flex: 0 1 100%;
     margin: 0;
-    width: 100%;
 }
 
 section.obra article div#contenido-fijo,
@@ -670,12 +669,13 @@ section.obra-explorar article h4 {
     padding-bottom: 0.2rem;
     text-decoration: underline #B3DEE5;
     margin: 1rem;
+    text-align: left;
 }
 
 div.enlace-obra {
     background-color: #FFA559;
     border-radius: 15px;
-    width: 150px;
+    width: 100px;
     padding: 2px;
     text-align: center;
     margin: 5px;
@@ -689,7 +689,7 @@ div.enlace-obra a {
 }
 
 section.obra-explorar article {
-    padding: 1.5rem;
+    padding: 2rem;
     display: flex;
     flex-flow: column wrap;
 }
@@ -700,17 +700,23 @@ section.obra-explorar article:nth-child(odd) {
 
 section.obra-explorar article div.contenido-articulo {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     align-items: flex-start;
+    
+}
+section.obra-explorar div.datos-obra{
     max-width: 600px;
 }
-
 section.obra-explorar div.descripcion {
-    margin-left: 3rem;
+    margin-left: 1rem;
     flex: 0 0 80%;
     align-items: flex-end;
 }
-
+section.obra-explorar div.descripcion p{
+    color: #FFF;
+    margin-right:0.5rem;
+    font-weight: 300;
+}
 section.obra-explorar .portada {
     flex: 0 0 20%;
 }
@@ -812,7 +818,6 @@ section.perfil-usuario {
 
 section.perfil-usuario h3 {
     align-self: start;
-    width: 100%;
 }
 
 section.perfil-usuario p {
@@ -900,7 +905,7 @@ article.estanteria a:hover::after {
 }
 
 section.listas-personalizadas {
-    max-width: 800px;
+    max-width: 600px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -1108,13 +1113,28 @@ section div.obras-lectura article div.contenido-articulo {
     align-items: flex-start;
     max-width: 650px;
 }
-
+section div.obras-lectura div.descripcion h4{
+    margin-right: 0;
+}
 section div.obras-lectura div.descripcion {
-    margin-left: 3rem;
+    margin-left: 1rem;
     flex: 0 0 80%;
     align-items: flex-end;
 }
+section div.obras-lectura div.descripcion p{
+    color: #FFF;
+    padding-right: 2rem;
+}
+section div.obras-lectura div.descripcion div.puntuacion {
+    border: 2px solid #FFA559;
+    border-radius: 15px;
+    width: 155px;
+    height: auto;
+    padding: 2px;
+    text-align: center;
+    margin: 5px;
 
+}
 section div.obras-lectura .portada {
     flex: 0 0 20%;
 }
@@ -1346,12 +1366,14 @@ button#saber-mas-cookies a {
 }
 
 /*vídeo*/
+
 #contenido-video {
     align-self: flex-start;
     display: flex;
     flex-flow: column;
-    margin: 2rem;
-    max-width: 500px;
+    max-width: 450px;
+    max-height: 500px;
+    margin: 0.1rem auto;
     background-color: #171616;
     border-radius: 25px;
     border: 1px solid #ffa559;
@@ -1447,10 +1469,6 @@ button#saber-mas-cookies a {
 
     }
 
-    section.obra article h3 {
-        width: 100%;
-    }
-
 
 
     section.obra article div#contenido-fijo {
@@ -1465,6 +1483,7 @@ button#saber-mas-cookies a {
 
     #container-perfil {
         align-items: center;
+        
     }
 
     /*buscador*/
@@ -1549,7 +1568,7 @@ button#saber-mas-cookies a {
     #container-perfil .perfil-usuario,
     .formulario-cambiar-datos {
         /* Asegura que cada sección no ocupe más del 50% del ancho, menos cualquier margen deseado para separación */
-        max-width: calc(50% - 2rem);
+        max-width: calc(50% - 1rem);
         /* Ajusta según sea necesario */
         margin: 1rem;
         /* Proporciona un poco de espacio alrededor de los elementos */
