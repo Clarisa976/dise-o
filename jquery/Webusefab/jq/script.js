@@ -30,7 +30,7 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
     var splides = document.querySelectorAll('.splide');
 
-    // Itera sobre cada elemento encontrado y monta el carrusel individualmente
+    //itera sobre cada elemento encontrado y monta el carrusel individualmente
     splides.forEach(function (splide) {
         new Splide(splide).mount();
     });
