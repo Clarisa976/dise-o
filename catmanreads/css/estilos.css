@@ -1471,8 +1471,7 @@ button#saber-mas-cookies a {
         flex-flow: row wrap;
 
     }
-
-
+    
 
     section.obra article div#contenido-fijo {
         flex: 0 0 20%;
@@ -1546,7 +1545,7 @@ button#saber-mas-cookies a {
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
+    
     section div.obras-lectura article {
         width: calc(50% - 1rem);
     }

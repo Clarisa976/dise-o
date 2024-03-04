@@ -1,45 +1,40 @@
 $(document).ready(function () {
-    //funcionamiento para el menú
-    $('#img-menu-principal').click(function () {
-        // if ($(window).width() < 1440) {
-        var isMenuOpen = $('#opciones-menu-principal').is(':visible');
-        //se cierra todos los menús abiertos y restablece sus iconos
-        $('.menu-icon').attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg');
-        $('.menu-content').hide(); // Asumiendo que todos los menús tienen una clase común para ocultarlos.
-
-        //se abre este menú si no estaba abierto, o lo cierra si estaba abierto
-        if (!isMenuOpen) {
-            $(this).attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg');
-            $('#opciones-menu-principal').show();
+    $(window).on('resize', function() {
+        if ($(window).width() >= 1440) {
+            //si la ventana es de 1440 o más se muestra el menú
+            $('#opciones-menu-principal').css('display', 'flex');
+            $('#img-menu-principal').css('display', 'none');
         } else {
-            //si el menú estaba abierto, ciérralo y cambia el icono a 'menú'
-            $(this).attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg');
-            $('#opciones-menu-principal').hide();
-        }
-        // }
-    });
-
-    //cierra el menú si se hace clic fuera de él
-    //quitado esto para la versión escritorio
-    /*$(document).click(function (event) {
-        //  if ($(window).width() < 1440) {
-        if (!$(event.target).closest('#menuPrincipal, #opciones-menu-principal').length) {
-            $('#opciones-menu-principal').hide();
+            //si la ventana es menor a 1440, oculta el menú y muestra el botón del menú
+            $('#opciones-menu-principal').css('display', 'none');
+            $('#img-menu-principal').css('display', 'block');
             $('#img-menu-principal').attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg');
         }
-        // }
-    });*/
+    });
 
+    //menú principal
+    $('#img-menu-principal').click(function () {
+        var isMenuOpen = $('#opciones-menu-principal').is(':visible');
+        //se cierra el menú principal y restablece su icono
+        $('#img-menu-principal').attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg');
+        $('#opciones-menu-principal').hide();
 
-    //funcionamiento para el menú usuario
+        //si no está abierto se abre y viceversa
+        if (!isMenuOpen) {
+            $(this).attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg');
+            $('#opciones-menu-principal').css('display', 'flex');
+        } else {
+            //si el menú está abierto se cierra
+            $(this).attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg');
+            $('#opciones-menu-principal').css('display', 'none');
+        }
+    });
+
+    //menú usuario
     $('#img-menu-usuario').click(function () {
         var isMenuOpen = $('#opciones-menu-usuario').is(':visible');
 
-        //se cierra todos los menús abiertos y restablece sus iconos
-        $('.menu-icon').attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg');
-        $('.menu-content').hide(); // Asumiendo que todos los menús tienen una clase común para ocultarlos.
-
-        //se abre este menú si no estaba abierto, o lo cierra si estaba abierto
+        //si no está abierto se abre y viceversa
         if (!isMenuOpen) {
             $(this).attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg');
             $('#opciones-menu-usuario').show();
@@ -49,13 +44,16 @@ $(document).ready(function () {
         }
     });
 
-    // cierra el menú si se hace clic fuera de él.
+    //si se clickea fuera se cierra
     $(document).click(function (event) {
         if (!$(event.target).closest('#menu-usuario, #opciones-menu-usuario').length) {
             $('#opciones-menu-usuario').hide();
             $('#img-menu-usuario').attr('src', 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg');
         }
     });
+
+
+
 
 
 
@@ -172,16 +170,18 @@ $(document).ready(function () {
     
 
     /*ocultar el menú principal si está abierto al redimensionar la ventana*/
-    
+    $(window).resize(function() {
+    if ($(window).width() >= 1440) {
+        // Si la ventana es de 1440px o más, muestra el menú
+        $('#opciones-menu-principal').show();
+        $('#img-menu-principal').hide();
+    } else {
+        // Si la ventana es menor a 1440px, oculta el menú y muestra el botón del menú
+        $('#opciones-menu-principal').hide();
+        $('#img-menu-principal').show();
+    }
+});
 
-	$(window).on('resize',function() {
-		if($(window).width()>1440){//tamaño puesto para la versión de escritorio
-				$("#opciones-menu-principal").prop(true, true);//se marca el checkbox del menú de hamburguesa
-		}else{
-			$("#opciones-menu-principal").prop(true, false);//se desmarca el checkbox del menú de hamburguesa
-		}
-                 
-    });
 
 
 
