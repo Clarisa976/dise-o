@@ -4,11 +4,11 @@
 <head>
     <title>JUSTFAB</title>
     <meta charset="utf-8">
-    <meta content="Escribe tu nombre y apellidos" name="author" >
-    <meta content="Diseño de Aplicaciones Web" name="description" >
-    <meta content="diseño web, responsive web design" name="keywords" >
-    <meta name="robots" content="index, follow" >
-    <meta name="lang" content="es-ES" >
+    <meta content="Escribe tu nombre y apellidos" name="author">
+    <meta content="Diseño de Aplicaciones Web" name="description">
+    <meta content="diseño web, responsive web design" name="keywords">
+    <meta name="robots" content="index, follow">
+    <meta name="lang" content="es-ES">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -16,17 +16,39 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="estilos-justfab.css">
-    <script src="jq/jquery-3.3.1.min.js"></script>
+    <!-- Swiper CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+<script src="jq/jquery-3.7.1.min.js"></script>
     <script src="jq/script.js"></script>
-    <script src="inc/jquery.mb.CSSAnimate.js"></script>
-    <script src="inc/jquery.mb.browser.min.js"></script>
-    <!--javascript del plugin del carrusel-->
-    <script src="jq/swiper-element-bundle.min.js" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--<script src="inc/jquery.mb.CSSAnimate.js"></script>
+    <script src="inc/jquery.mb.browser.min.js"></script>-->
+    <!-- Swiper JS -->
+<script src="jq/swiper-element-bundle.min.js" type="text/javascript"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    
 
 </head>
 
-<body>
+<body><script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "flip",
+      grabCursor: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 
     <ul id="menu">
         <li><a href="#">BOTAS <span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
@@ -163,24 +185,26 @@
         <main>
             <article class="item">
                 <a href="#">
-                    <h3>XARENI ADVOCAT</h3>
+                    <h3>COSTA RICA</h3>
                 </a>
                 <p>145€</p>
-                <a href="#">
-                    <!-- Contenedor de Swiper -->
-                    <<div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="img/zapato1.jpg" alt="Zapato 1"></div>
-                            <div class="swiper-slide"><img src="img/zapato1-1.jpg" alt="Zapato 1-1"></div>
-                            <!-- Añade más .swiper-slide según sea necesario -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <picture><img src="img/zapato1.jpg" alt="ZAPATO COSTA RICA"></picture>
                         </div>
-                        <!-- Botones de navegación -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-slide">
+                            <picture><img src="img/zapato1-1.jpg" alt="ZAPATO COSTA RICA"></picture>
+                        </div>
                     </div>
-                    <span class="comprar">COMPRAR</span>
-                </a>
+                    <!--controles-->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <a href="#" class="comprar">COMPRAR</a>
             </article>
+
+
             <article class="item">
                 <a href="#">
                     <h3>COSTA RICA</h3>
@@ -291,7 +315,8 @@
                 </ul>
             </nav>
         </footer>
-        <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc" aria-hidden="true"></i></span></a></div>
+        <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc"
+                        aria-hidden="true"></i></span></a></div>
     </div>
 </body>
 

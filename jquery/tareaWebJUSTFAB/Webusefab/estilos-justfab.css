@@ -30,7 +30,7 @@ div#oscuro {
     display: none;
 }
 
-a > span.compra {
+a > span.comprar {
     position: absolute;
     bottom: 0;
     z-index: 20;
@@ -44,7 +44,7 @@ a > span.compra {
     transition: background-color .3s linear;
 }
 
-a > span.compra:hover {
+a > span.comprar:hover {
     background-color: black;
     color: white;
 }
@@ -231,7 +231,7 @@ main {
 
 main > article.item {
     flex: 0 1 50%;
-
+    max-width: 50%;
     display: flex;
     flex-flow: column;
     padding: 0.8rem;
@@ -348,11 +348,7 @@ div#volverarriba > a {
     border: 1px solid grey;
     padding: 0.2rem 1rem;
 }
-
-.mySwiper {
+.swiper-slide img {
     width: 100%;
     height: auto;
-}
-.swiper-button-next, .swiper-button-prev {
-    z-index: 10;
 }

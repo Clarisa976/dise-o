@@ -348,7 +348,7 @@ div#volverarriba > a {
     border: 1px solid grey;
     padding: 0.2rem 1rem;
 }
-.splide__slide > img {
+.splide__slide img {
     width: 100%;
     height: auto;
 }
