@@ -149,7 +149,7 @@ $(document).ready(function () {
 
     /*desplegar los filtros*/
     $(document).ready(function () {
-        $("#filtro-buscador").click(function () {
+        $(".filtro").click(function () {
             $("#mostrar-filtros").toggle(); // Alternar la visibilidad
         });
     });
@@ -170,8 +170,18 @@ $(document).ready(function () {
         });
     });
     
+
+    /*ocultar el menú principal si está abierto al redimensionar la ventana*/
     
 
+	$(window).on('resize',function() {
+		if($(window).width()>1440){//tamaño puesto para la versión de escritorio
+				$("#opciones-menu-principal").prop(true, true);//se marca el checkbox del menú de hamburguesa
+		}else{
+			$("#opciones-menu-principal").prop(true, false);//se desmarca el checkbox del menú de hamburguesa
+		}
+                 
+    });
 
 
 

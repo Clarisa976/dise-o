@@ -34,12 +34,13 @@
             </div>
             <div id="iconos">
                 <div id="buscador">
-                    <label for="busquedas">
-                        <input type="text" placeholder="Buscar..." id="busquedas">
-                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
-                                alt="lupa" id="lupa-buscador"></a>
-                    </label>
-                </div>
+                    
+                    <input type="text" placeholder="Buscar..." id="busquedas" aria-label="Buscar">
+                    <a href="pag/buscador.html"><img
+                            src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg" alt="lupa"
+                            id="lupa-buscador"></a>
+                
+            </div>
                 <nav id="menu-usuario">
                     <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
                         id="img-menu-usuario">
@@ -192,7 +193,7 @@
                     </button>
                     <!-- control para deslizar la barra de volumen y baja o subir volumen 
                         el step es como va subiendo o bajando -->
-                    <input type="range" value="0" min="0" max="100" step="10" id="barra-volumen">
+                    <input type="range" value="0" min="0" max="100" step="10" id="barra-volumen" aria-label="barra-de-volumen">
                     <!--pantalla completa-->
                     <button class="boton" id="fullscreen">
                         <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-fullscreen.svg" alt="pantalla completa">

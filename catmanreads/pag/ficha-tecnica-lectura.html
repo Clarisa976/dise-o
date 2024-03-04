@@ -37,12 +37,12 @@
             </div>
             <div id="iconos">
                 <div id="buscador">
-                    <label for="busquedas">
-                        <input type="text" placeholder="Buscar..." id="busquedas">
-                        <a href="buscador.html"><img
-                                src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg" alt="lupa"
-                                id="lupa-buscador"></a>
-                    </label>
+
+                    <input type="text" placeholder="Buscar..." id="busquedas" aria-label="Buscar">
+                    <a href="pag/buscador.html"><img
+                            src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg" alt="lupa"
+                            id="lupa-buscador"></a>
+
                 </div>
                 <nav id="menu-usuario">
                     <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
@@ -75,179 +75,175 @@
         <!--cuerpo-->
 
         <main>
-            
-                <section class="obra">
-                    <h3>Nombre de la obra</h3>
-                    <article>
 
-                        <div id="contenido-fijo">
-                            <!--portada-->
-                            <picture>
-                                <!--tablet -->
-                                <source
-                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
-                                    media="(min-width: 768px) and (max-width: 1439px)">
-                                <!--escritorio -->
-                                <source
-                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
-                                    media="(min-width: 1440px)">
-                                <!-- navegadores antiguos y dispositivos móviles -->
-                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                                    alt="portada4">
-                            </picture>
-                            <!--seleccionar lectura-->
-                            <div class="opciones-lectura">
-                                <select id="estadoLectura">
-                                    <option value="desmarcado" selected>Desmarcado</option>
-                                    <option value="quiero_leerlo">Quiero leerlo</option>
-                                    <option value="leyendo">Leyéndolo</option>
-                                    <option value="leido">Leído</option>
-                                </select>
-                            </div>
-                            <!--ventana emergente para añadir a lista o crear nueva-->
-                            <div id="ventana-emergente-listas">
-                                <p class="x-cerrar"><img
-                                        src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg"
-                                        alt="boton-cerrar" class="boton-x"></p>
-                                <p>¿Quieres añadirlo a una de tus listas personalizadas?</p>
-                                <!-- Listas personalizadas existentes-->
-                                <div>
-                                    <input type="checkbox" id="lista1" name="lista">
-                                    <label for="lista1">Nombre_lista</label>
-                                </div>
-                                <div>
-                                    <input type="checkbox" id="lista2" name="lista">
-                                    <label for="lista2">Nombre_lista</label>
-                                </div>
-                                <!-- Opción para crear una nueva lista -->
-                                <p>O crear una lista nueva:</p>
-                                <input type="text" id="nueva-lista-nombre" placeholder="Nombre de la nueva lista">
-                                <button class="crear-lista">Crear Lista</button><!--sin funcionalidad-->
-                            </div>
+            <section class="obra">
+                <h3>Nombre de la obra</h3>
+                <article>
 
+                    <div id="contenido-fijo">
+                        <!--portada-->
+                        <picture>
+                            <!--tablet -->
+                            <source srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
+                                media="(min-width: 768px) and (max-width: 1439px)">
+                            <!--escritorio -->
+                            <source
+                                srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
+                                media="(min-width: 1440px)">
+                            <!-- navegadores antiguos y dispositivos móviles -->
+                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
+                                alt="portada4">
+                        </picture>
+                        <!--seleccionar lectura-->
+                        <div class="opciones-lectura">
+                            <select id="estadoLectura">
+                                <option value="desmarcado" selected>Desmarcado</option>
+                                <option value="quiero_leerlo">Quiero leerlo</option>
+                                <option value="leyendo">Leyéndolo</option>
+                                <option value="leido">Leído</option>
+                            </select>
+                        </div>
+                        <!--ventana emergente para añadir a lista o crear nueva-->
+                        <div id="ventana-emergente-listas">
+                            <p class="x-cerrar"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg"
+                                    alt="boton-cerrar" class="boton-x"></p>
+                            <p>¿Quieres añadirlo a una de tus listas personalizadas?</p>
+                            <!-- Listas personalizadas existentes-->
                             <div>
-                                <!--puntación-->
-                                <div class="puntuacion">
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
-                                        class="star" data-value="1">
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
-                                        class="star" data-value="2">
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
-                                        class="star" data-value="3">
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
-                                        class="star" data-value="4">
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
-                                        class="star" data-value="5">
-                                </div>
-                                <!--enlace-->
-                                <div class="enlace-obra">
-                                    <a
-                                        href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
-                                </div>
+                                <input type="checkbox" id="lista1" name="lista">
+                                <label for="lista1">Nombre_lista</label>
                             </div>
+                            <div>
+                                <input type="checkbox" id="lista2" name="lista">
+                                <label for="lista2">Nombre_lista</label>
+                            </div>
+                            <!-- Opción para crear una nueva lista -->
+                            <p>O crear una lista nueva:</p>
+                            <input type="text" id="nueva-lista-nombre" placeholder="Nombre de la nueva lista">
+                            <button class="crear-lista">Crear Lista</button><!--sin funcionalidad-->
                         </div>
-                        <div class="datos-obra">
-                            <!--sinopsis-->
-                            <div class="descripcion">
-                                <h4>Sinopsis:</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                    vitae.<br>
-                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
-                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et
-                                    ac.
-                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                </p>
-                            </div>
 
-                            <!--datos del autor-->
-                            <div class="autor">
-                                <h4>Sobre el autor:</h4>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                    vitae.<br>
-                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
-                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et
-                                    ac.
-                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                </p>
+                        <div>
+                            <!--puntación-->
+                            <div class="puntuacion">
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
+                                    class="star" data-value="1">
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
+                                    class="star" data-value="2">
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
+                                    class="star" data-value="3">
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
+                                    class="star" data-value="4">
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
+                                    class="star" data-value="5">
                             </div>
-                            <!--generos-->
-                            <div id="generos">
-                                <h4>Géneros:</h4>
-                                <ul>
-                                    <li><a href="etiqueta.html">Histórico</a></li>
-                                    <li><a href="etiqueta.html">Misterio</a></li>
-                                    <li><a href="etiqueta.html">Fantasía</a></li>
-                                    <li><a href="etiqueta.html">Romance</a></li>
-                                </ul>
+                            <!--enlace-->
+                            <div class="enlace-obra">
+                                <a
+                                    href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
                             </div>
                         </div>
-                    </article>
-                </section>
-                <section class="resenias">
-                    <h4>Reseñas: </h4>
-                    <article class="resenia">
-                        <h5>Nom_user</h5>
-                        <p class="nota">10</p>
+                    </div>
+                    <div class="datos-obra">
+                        <!--sinopsis-->
+                        <div class="descripcion">
+                            <h4>Sinopsis:</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                vitae.<br>
+                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
+                                scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et
+                                ac.
+                                Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                            </p>
+                        </div>
+
+                        <!--datos del autor-->
+                        <div class="autor">
+                            <h4>Sobre el autor:</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                vitae.<br>
+                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
+                                scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et
+                                ac.
+                                Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                            </p>
+                        </div>
+                        <!--generos-->
+                        <div id="generos">
+                            <h4>Géneros:</h4>
+                            <ul>
+                                <li><a href="etiqueta.html">Histórico</a></li>
+                                <li><a href="etiqueta.html">Misterio</a></li>
+                                <li><a href="etiqueta.html">Fantasía</a></li>
+                                <li><a href="etiqueta.html">Romance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="resenias">
+                <h4>Reseñas: </h4>
+                <article class="resenia">
+                    <h5>Nom_user</h5>
+                    <p class="nota">10</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
+                        Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
+                        scelerisque
+                        nullam pellentesque justo fusce integer tincidunt.
+                        Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et ac.
+                        Bibendum
+                        aliquet metus pulvinar eleifend praesent etiam mus et.
+                    </p>
+                </article>
+
+                <article class="resenia nueva">
+                    <h5>Nueva reseña</h5>
+                    <p class="nota"></p>
+                    <!--cuando sea funcional se guardarían los datos de la reseña nueva
+                        <form action="#" method="post">-->
+                    <p class="nota"></p>
+                    <p>
+                        <textarea name="resenia-usuario" id="resenia-user" cols="50" rows="5" aria-label="escribir-resenia"
+                            placeholder="Escribe aquí tu reseña..."></textarea>
+                    </p>
+                    <!--botón de envío-->
+                    <p class="boton-postear">
+                        <button type="submit" id="submit-resena">Postear</button>
+                    </p>
+
+                </article>
+                <div class="boton-ver-resenias"><a href="resenias-obra.html">MÁS RESEÑAS</a></div>
+            </section>
+            <section class="listas-incluidas">
+                <h4>Listas personalizadas: </h4>
+                <article class="listas">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp" alt="portada4">
+                    <div class="formateo-texto">
+                        <h5>Nom_lista</h5>
                         <p>
                             Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
-                            Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem ante
-                            scelerisque
-                            nullam pellentesque justo fusce integer tincidunt.
-                            Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis et ac.
-                            Bibendum
-                            aliquet metus pulvinar eleifend praesent etiam mus et.
+                            Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
                         </p>
-                    </article>
-
-                    <article class="resenia nueva">
-                        <h5>Nueva reseña</h5>
-                        <p class="nota"></p>
-                        <!--cuando sea funcional se guardarían los datos de la reseña nueva
-                        <form action="#" method="post">-->
-                        <p class="nota"></p>
+                    </div>
+                </article>
+                <article class="listas">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp" alt="portada4">
+                    <div class="formateo-texto">
+                        <h5>Nom_lista</h5>
                         <p>
-                            <textarea name="resenia-usuario" id="resenia-user" cols="50" rows="5"
-                                placeholder="Escribe aquí tu reseña..."></textarea>
+                            Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
+                            Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
                         </p>
-                        <!--botón de envío-->
-                        <p class="boton-postear">
-                            <button type="submit" id="submit-resena">Postear</button>
-                        </p>
+                    </div>
+                </article>
+                <div class="boton-ver-listas"><a href="listas-obra.html">MÁS LISTAS</a></div>
+            </section>
 
-                    </article>
-                    <div class="boton-ver-resenias"><a href="resenias-obra.html">MÁS RESEÑAS</a></div>
-                </section>
-                <section class="listas-incluidas">
-                    <h4>Listas personalizadas: </h4>
-                    <article class="listas">
-                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                            alt="portada4">
-                        <div class="formateo-texto">
-                            <h5>Nom_lista</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
-                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
-                            </p>
-                        </div>
-                    </article>
-                    <article class="listas">
-                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                            alt="portada4">
-                        <div class="formateo-texto">
-                            <h5>Nom_lista</h5>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet vitae.<br>
-                                Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet.
-                            </p>
-                        </div>
-                    </article>
-                    <div class="boton-ver-listas"><a href="listas-obra.html">MÁS LISTAS</a></div>
-                </section>
-            
         </main>
 
         <!--pie de página-->

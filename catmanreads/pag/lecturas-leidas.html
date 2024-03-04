@@ -37,11 +37,12 @@
             </div>
             <div id="iconos">
                 <div id="buscador">
-                    <label for="busquedas">
-                        <input type="text" placeholder="Buscar..." id="busquedas">
-                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
-                                alt="lupa" id="lupa-buscador"></a>
-                    </label>
+
+                    <input type="text" placeholder="Buscar..." id="busquedas" aria-label="Buscar">
+                    <a href="pag/buscador.html"><img
+                            src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg" alt="lupa"
+                            id="lupa-buscador"></a>
+
                 </div>
                 <nav id="menu-usuario">
                     <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
@@ -71,279 +72,277 @@
         </header>
 
 
-        <!--cuerpo-->
+    <!--cuerpo-->
 
-        <main>
-            <section>
-                <h3>Libros leídos</h3>
-                
+    <main>
+        <section>
+            <h3>Libros leídos</h3>
 
-                <div class="obras-lectura">
-                    <article>
-                        <h4>Nombre de la obra</h4>
 
-                        <div class="contenido-articulo">
-                            <div class="portada">
-                                <!--portada-->
-                                <picture>
-                                    <!--tablet -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
-                                        media="(min-width: 768px) and (max-width: 1439px)">
-                                    <!--escritorio -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
-                                        media="(min-width: 1440px)">
-                                    <!-- navegadores antiguos y dispositivos móviles -->
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                                        alt="portada4">
-                                </picture>
-                            </div>
-                            <div class="datos-obra">
-                                <!--sinopsis-->
-                                <div class="descripcion">
-                                    <!--enlace-->
-                                    <div>
-                                        <!--puntación-->
-                                        <div class="puntuacion">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
-                                                class="star" data-value="1">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
-                                                class="star" data-value="2">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
-                                                class="star" data-value="3">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
-                                                class="star" data-value="4">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
-                                                class="star" data-value="5">
-                                        </div>
-                                        <!--enlace-->
-                                        <div class="enlace-obra">
-                                            <a
-                                                href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
-                                        </div>
+            <div class="obras-lectura">
+                <article>
+                    <h4>Nombre de la obra</h4>
+
+                    <div class="contenido-articulo">
+                        <div class="portada">
+                            <!--portada-->
+                            <picture>
+                                <!--tablet -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
+                                    media="(min-width: 768px) and (max-width: 1439px)">
+                                <!--escritorio -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
+                                    media="(min-width: 1440px)">
+                                <!-- navegadores antiguos y dispositivos móviles -->
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
+                                    alt="portada4">
+                            </picture>
+                        </div>
+                        <div class="datos-obra">
+                            <!--sinopsis-->
+                            <div class="descripcion">
+                                <!--enlace-->
+                                <div>
+                                    <!--puntación-->
+                                    <div class="puntuacion">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="1" class="star" data-value="1">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="2" class="star" data-value="2">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="3" class="star" data-value="3">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="4" class="star" data-value="4">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="5" class="star" data-value="5">
                                     </div>
-                                    <h4>Sinopsis:</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                        vitae.<br>
-                                        Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
-                                        ante
-                                        scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                        Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
-                                        et
-                                        ac.
-                                        Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                    </p>
+                                    <!--enlace-->
+                                    <div class="enlace-obra">
+                                        <a
+                                            href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
+                                    </div>
                                 </div>
+                                <h4>Sinopsis:</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                    vitae.<br>
+                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
+                                    ante
+                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
+                                    et
+                                    ac.
+                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                                </p>
                             </div>
                         </div>
-                    </article>
-                    <article>
-                        <h4>Nombre de la obra</h4>
+                    </div>
+                </article>
+                <article>
+                    <h4>Nombre de la obra</h4>
 
-                        <div class="contenido-articulo">
-                            <div class="portada">
-                                <!--portada-->
-                                <picture>
-                                    <!--tablet -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
-                                        media="(min-width: 768px) and (max-width: 1439px)">
-                                    <!--escritorio -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
-                                        media="(min-width: 1440px)">
-                                    <!-- navegadores antiguos y dispositivos móviles -->
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                                        alt="portada4">
-                                </picture>
-                            </div>
-                            <div class="datos-obra">
-                                <!--sinopsis-->
-                                <div class="descripcion">
-                                    <!--enlace-->
-                                    <div>
-                                        <!--puntación-->
-                                        <div class="puntuacion">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
-                                                class="star" data-value="1">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
-                                                class="star" data-value="2">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
-                                                class="star" data-value="3">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
-                                                class="star" data-value="4">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
-                                                class="star" data-value="5">
-                                        </div>
-                                        <!--enlace-->
-                                        <div class="enlace-obra">
-                                            <a
-                                                href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
-                                        </div>
+                    <div class="contenido-articulo">
+                        <div class="portada">
+                            <!--portada-->
+                            <picture>
+                                <!--tablet -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
+                                    media="(min-width: 768px) and (max-width: 1439px)">
+                                <!--escritorio -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
+                                    media="(min-width: 1440px)">
+                                <!-- navegadores antiguos y dispositivos móviles -->
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
+                                    alt="portada4">
+                            </picture>
+                        </div>
+                        <div class="datos-obra">
+                            <!--sinopsis-->
+                            <div class="descripcion">
+                                <!--enlace-->
+                                <div>
+                                    <!--puntación-->
+                                    <div class="puntuacion">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="1" class="star" data-value="1">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="2" class="star" data-value="2">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="3" class="star" data-value="3">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="4" class="star" data-value="4">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="5" class="star" data-value="5">
                                     </div>
-                                    <h4>Sinopsis:</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                        vitae.<br>
-                                        Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
-                                        ante
-                                        scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                        Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
-                                        et
-                                        ac.
-                                        Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                    </p>
+                                    <!--enlace-->
+                                    <div class="enlace-obra">
+                                        <a
+                                            href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
+                                    </div>
                                 </div>
+                                <h4>Sinopsis:</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                    vitae.<br>
+                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
+                                    ante
+                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
+                                    et
+                                    ac.
+                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                                </p>
                             </div>
                         </div>
-                    </article>
-                    <article>
-                        <h4>Nombre de la obra</h4>
+                    </div>
+                </article>
+                <article>
+                    <h4>Nombre de la obra</h4>
 
-                        <div class="contenido-articulo">
-                            <div class="portada">
-                                <!--portada-->
-                                <picture>
-                                    <!--tablet -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
-                                        media="(min-width: 768px) and (max-width: 1439px)">
-                                    <!--escritorio -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
-                                        media="(min-width: 1440px)">
-                                    <!-- navegadores antiguos y dispositivos móviles -->
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                                        alt="portada4">
-                                </picture>
-                            </div>
-                            <div class="datos-obra">
-                                <!--sinopsis-->
-                                <div class="descripcion">
-                                    <!--enlace-->
-                                    <div>
-                                        <!--puntación-->
-                                        <div class="puntuacion">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
-                                                class="star" data-value="1">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
-                                                class="star" data-value="2">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
-                                                class="star" data-value="3">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
-                                                class="star" data-value="4">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
-                                                class="star" data-value="5">
-                                        </div>
-                                        <!--enlace-->
-                                        <div class="enlace-obra">
-                                            <a
-                                                href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
-                                        </div>
+                    <div class="contenido-articulo">
+                        <div class="portada">
+                            <!--portada-->
+                            <picture>
+                                <!--tablet -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
+                                    media="(min-width: 768px) and (max-width: 1439px)">
+                                <!--escritorio -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
+                                    media="(min-width: 1440px)">
+                                <!-- navegadores antiguos y dispositivos móviles -->
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
+                                    alt="portada4">
+                            </picture>
+                        </div>
+                        <div class="datos-obra">
+                            <!--sinopsis-->
+                            <div class="descripcion">
+                                <!--enlace-->
+                                <div>
+                                    <!--puntación-->
+                                    <div class="puntuacion">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="1" class="star" data-value="1">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="2" class="star" data-value="2">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="3" class="star" data-value="3">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="4" class="star" data-value="4">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="5" class="star" data-value="5">
                                     </div>
-                                    <h4>Sinopsis:</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                        vitae.<br>
-                                        Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
-                                        ante
-                                        scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                        Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
-                                        et
-                                        ac.
-                                        Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                    </p>
+                                    <!--enlace-->
+                                    <div class="enlace-obra">
+                                        <a
+                                            href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
+                                    </div>
                                 </div>
+                                <h4>Sinopsis:</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                    vitae.<br>
+                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
+                                    ante
+                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
+                                    et
+                                    ac.
+                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                                </p>
                             </div>
                         </div>
-                    </article>
-                    <article>
-                        <h4>Nombre de la obra</h4>
+                    </div>
+                </article>
+                <article>
+                    <h4>Nombre de la obra</h4>
 
-                        <div class="contenido-articulo">
-                            <div class="portada">
-                                <!--portada-->
-                                <picture>
-                                    <!--tablet -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
-                                        media="(min-width: 768px) and (max-width: 1439px)">
-                                    <!--escritorio -->
-                                    <source
-                                        srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
-                                        media="(min-width: 1440px)">
-                                    <!-- navegadores antiguos y dispositivos móviles -->
-                                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
-                                        alt="portada4">
-                                </picture>
-                            </div>
-                            <div class="datos-obra">
-                                <!--sinopsis-->
-                                <div class="descripcion">
-                                    <!--enlace-->
-                                    <div>
-                                        <!--puntación-->
-                                        <div class="puntuacion">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="1"
-                                                class="star" data-value="1">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="2"
-                                                class="star" data-value="2">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="3"
-                                                class="star" data-value="3">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="4"
-                                                class="star" data-value="4">
-                                            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg" alt="5"
-                                                class="star" data-value="5">
-                                        </div>
-                                        <!--enlace-->
-                                        <div class="enlace-obra">
-                                            <a
-                                                href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
-                                        </div>
+                    <div class="contenido-articulo">
+                        <div class="portada">
+                            <!--portada-->
+                            <picture>
+                                <!--tablet -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp"
+                                    media="(min-width: 768px) and (max-width: 1439px)">
+                                <!--escritorio -->
+                                <source
+                                    srcset="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp"
+                                    media="(min-width: 1440px)">
+                                <!-- navegadores antiguos y dispositivos móviles -->
+                                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp"
+                                    alt="portada4">
+                            </picture>
+                        </div>
+                        <div class="datos-obra">
+                            <!--sinopsis-->
+                            <div class="descripcion">
+                                <!--enlace-->
+                                <div>
+                                    <!--puntación-->
+                                    <div class="puntuacion">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="1" class="star" data-value="1">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="2" class="star" data-value="2">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="3" class="star" data-value="3">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="4" class="star" data-value="4">
+                                        <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg"
+                                            alt="5" class="star" data-value="5">
                                     </div>
-                                    <h4>Sinopsis:</h4>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
-                                        vitae.<br>
-                                        Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
-                                        ante
-                                        scelerisque nullam pellentesque justo fusce integer tincidunt.
-                                        Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
-                                        et
-                                        ac.
-                                        Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
-                                    </p>
+                                    <!--enlace-->
+                                    <div class="enlace-obra">
+                                        <a
+                                            href="https://www.webtoons.com/es/fantasy/the-remarried-empress/list?title_no=2246">LINK</a>
+                                    </div>
                                 </div>
+                                <h4>Sinopsis:</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur. Arcu nullam aliquam mauris et amet
+                                    vitae.<br>
+                                    Amet pellentesque condimentum consectetur amet morbi libero sed imperdiet. Sem
+                                    ante
+                                    scelerisque nullam pellentesque justo fusce integer tincidunt.
+                                    Vel vitae aliquam nisl viverra amet mauris sollicitudin. Cursus tincidunt quis
+                                    et
+                                    ac.
+                                    Bibendum aliquet metus pulvinar eleifend praesent etiam mus et.
+                                </p>
                             </div>
                         </div>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-        <!--pie de página-->
-        <footer>
-            <div id="rrss">
-                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter"
-                    id="twitter">
-                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
-                    id="instagram">
-                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
-                <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook"
-                    id="facebook">
+                    </div>
+                </article>
             </div>
-            <div id="menu-terminos">
-                <ul>
-                    <li><a href="terminos-uso.html">Términos de uso</a></li>
-                    <li><a href="terminos-uso.html">Política de privacidad</a></li>
-                    <li><a href="terminos-uso.html">Política de cookies</a></li>
-                </ul>
-            </div>
-            <span>© catmanreads, 2023</span>
-        </footer>
+        </section>
+
+    </main>
+
+    <!--pie de página-->
+    <footer>
+        <div id="rrss">
+            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg" alt="twitter" id="twitter">
+            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg" alt="instagram"
+                id="instagram">
+            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg" alt="reddit" id="reddit">
+            <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg" alt="facebook" id="facebook">
+        </div>
+        <div id="menu-terminos">
+            <ul>
+                <li><a href="terminos-uso.html">Términos de uso</a></li>
+                <li><a href="terminos-uso.html">Política de privacidad</a></li>
+                <li><a href="terminos-uso.html">Política de cookies</a></li>
+            </ul>
+        </div>
+        <span>© catmanreads, 2023</span>
+    </footer>
 
     </div>
     <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg

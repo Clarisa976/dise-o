@@ -32,11 +32,12 @@
             </div>
             <div id="iconos">
                 <div id="buscador">
-                    <label for="busquedas">
-                        <input type="text" placeholder="Buscar..." id="busquedas">
-                        <a href="buscador.html"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg"
-                                alt="lupa" id="lupa-buscador"></a>
-                    </label>
+
+                    <input type="text" placeholder="Buscar..." id="busquedas" aria-label="Buscar">
+                    <a href="pag/buscador.html"><img
+                            src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg" alt="lupa"
+                            id="lupa-buscador"></a>
+
                 </div>
                 <nav id="menu-usuario">
                     <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg" alt="menu-usuario"
@@ -80,44 +81,44 @@
                 </section>
                 <section>
                     <h4>Ajustes del perfil</h4>
-                    
-                    <form action="#" method="post" id="formulario-cambiar-datos">    
-                    <div class="formulario-cambiar-datos">
-                        
-                        <h5>Cambiar contraseña</h5>
-                        
+
+                    <form action="#" method="post" id="formulario-cambiar-datos">
+                        <div class="formulario-cambiar-datos">
+
+                            <h5>Cambiar contraseña</h5>
+
                             <label class="error" for="contrasenia-acutal">Contraseña actual</label>
                             <input id="contrasenia-acutal" type="password" required>
                             <div class="mensaje-error"> No es tu contraseña actual</div>
-                        
-                            <label  class="error" for="contrasenia-nueva">Nueva contraseña</label>
+
+                            <label class="error" for="contrasenia-nueva">Nueva contraseña</label>
                             <input id="contrasenia-nueva" type="password">
                             <div class="mensaje-error"> No coinciden</div>
 
                             <label class="error" for="contrasenia-nueva-confirmar">Confirma la contraseña</label>
                             <input id="contrasenia-nueva-confirmar" type="password">
                             <div class="mensaje-error"> No coinciden</div>
-                        
-                        <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
-                    
-                        <h5>Cambiar correo</h5>
-                        
-                            <label class="error" for="contrasenia-acutal">Introduce tu contraseña actual</label>
+
+                            <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
+
+                            <h5>Cambiar correo</h5>
+
+                            <label class="error" for="contrasenia-acutal-cambio">Introduce tu contraseña actual</label>
                             <input id="contrasenia-acutal-cambio" type="password" required>
                             <div class="mensaje-error"> No es tu contraseña actual</div>
 
-                            
+
                             <label class="error" for="correo">Nuevo correo</label>
                             <input type="text" id="correo">
                             <div class="mensaje-error"> Dirección de correo no válida</div>
 
-                        
 
-                        <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
-                   </div> 
-                
-                </form>
-                
+
+                            <button type="submit" class="boton-enviar">GUARDAR CAMBIOS</button>
+                        </div>
+
+                    </form>
+
                 </section>
 
             </div>
