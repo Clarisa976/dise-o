@@ -1109,9 +1109,9 @@ section div.obras-lectura article:nth-child(even) {
 
 section div.obras-lectura article div.contenido-articulo {
     display: flex;
-    flex-flow: row;
+    flex-flow: column wrap;
     align-items: flex-start;
-    max-width: 650px;
+    max-width: 600px;
 }
 
 section div.obras-lectura div.descripcion h4{
@@ -1124,7 +1124,8 @@ section div.obras-lectura div.descripcion {
 }
 section div.obras-lectura div.descripcion p{
     color: #FFF;
-    padding-right: 2rem;
+    margin-right:0.5rem;
+    font-weight: 300;
 }
 section div.obras-lectura div.descripcion div.puntuacion {
     border: 2px solid #FFA559;
@@ -1139,6 +1140,7 @@ section div.obras-lectura div.descripcion div.puntuacion {
 section div.obras-lectura .portada {
     flex: 0 0 20%;
 }
+
 
 /*buscador*/
 #container-buscador {
