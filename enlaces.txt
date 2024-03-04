@@ -1,0 +1,173 @@
+Iconos:
+
+chevron-down.svg 
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-down.svg
+chevron-up.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+edit-alt.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-edit-alt.svg
+filter-alt.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-filter-alt.svg
+log-in.svg
+    
+menu.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-menu.svg
+plus.svg
+    
+facebook.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-facebook.svg
+instagram.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-instagram.svg
+reddit.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-reddit.svg
+twitter.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxl-twitter.svg
+envelope.svg - correo
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-envelope.svg
+lock-alt.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-lock-alt.svg
+user.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-user.svg
+x.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-x.svg
+search.svg
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-search.svg
+estrella vacia
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-star.svg
+estrella completa
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg
+media estrella
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-star-half.svg
+
+Logo:
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/catmanlogov2.webp
+    https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg
+
+
+Portadas:
+
+1
+ movil width:430
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/1.webp
+ tablet width:1040
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/1.webp
+ escritorio width:1440
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/1.webp
+2
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/21.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/2.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/2.webp
+    
+3
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/3.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/3.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/3.webp
+
+4
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/4.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/4.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/4.webp
+
+5
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/5.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/5.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/5.webp
+
+6
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/6.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/6.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/6.webp
+
+7
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/7.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/7.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/7.webp
+
+8
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/8.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/8.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/8.webp
+
+9
+movil
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-movil/9.webp
+ tablet
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-tablet/9.webp
+ escritorio
+   https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/portadas/webp-escritorio/9.webp
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap')
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+
+VIDEO
+
+salir de pantalla completa 
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-exit-fullscreen.svg
+fast-forward
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-fast-forward.svg
+pantalla completa
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-fullscreen.svg
+pause
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-pause.svg
+play
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-play.svg
+reset
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-reset.svg
+rewind
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-rewind.svg
+skip-next
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-skip-next.svg
+skip-previous
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-skip-previous.svg
+stop
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bx-stop.svg
+full volumen
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bxs-volume-full.svg 
+mute
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/bxs-volume-mute.svg
+time-forward
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/time-forward.svg
+time-past
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/time-past.svg
+trailer.png
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/trailer.png
+trailer.webp
+  https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/img-video/trailer.webp
+
+trailer.mp4
+  https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.mp4
+trailer.ogv
+  https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.ogv
+trailer.swf
+  https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.swf
+trailer.webm
+  https://cmr-ciaa.s3.amazonaws.com/cmr/videos/trailer.webm
