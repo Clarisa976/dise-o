@@ -419,35 +419,35 @@ section.obra article div.datos-obra div#generos li {
 
 section.obra article div.datos-obra div#generos a {
     font-size: 16px;
-    position: relative;
-    /*posicionamiento relativo para la pseudoelemento */
+    position: relative;    
+    display: inline-block;
     padding-bottom: 5px;
 }
-
+/*
 section.obra article div.datos-obra div#generos a::after {
     content: '';
-    /* Contenido vacío para la pseudoelemento */
+    /
     position: absolute;
-    /* Posicionamiento absoluto respecto al enlace */
+    
     bottom: 0;
-    /* Alineado a la parte inferior del enlace */
+    
     left: 0;
-    /* Alineado al lado izquierdo del enlace */
+    
     width: 0;
-    /* Ancho inicial de la línea */
+    
     height: 2px;
-    /* Altura de la línea */
+    
     background-color: #FFA559;
-    /* Color de la línea */
+    
     transition: width 0.5s;
-    /* Transición suave para la animación de "carga" */
+    
 }
 
 section.obra article div.datos-obra div#generos a:hover::after {
     width: 100%;
-    /* Ancho final de la línea al pasar el ratón */
+    
 }
-
+*/
 /*reseñas*/
 
 section.resenias {
@@ -513,7 +513,7 @@ section .boton-ver-resenias a {
 }
 
 /*listas en la que está inculida la obra que se muestra*/
-section.listas-incluidas h4 {
+section.listas-incluidas h3 {
     color: #FFF;
     padding-right: 0;
     padding-bottom: 0.2rem;
@@ -537,7 +537,11 @@ section.listas-incluidas article.listas {
     font-size: 15px;
 }
 
-section.listas-incluidas article.listas h5,
+section.listas-incluidas article.listas h4{
+    text-align: left;
+    text-decoration: underline #B3DEE5;
+}
+section.listas-incluidas article.listas h4,
 .listas p {
     flex: 1;
     margin-left: 1.5rem;
@@ -777,7 +781,7 @@ form#formulario-contactanos div.contenedor-formulario #descripcion {
 
 .mensaje-error {
     font-size: 12px;
-    visibility: hidden;
+    display: none;
     color: #ffa97f;
     margin-top: 5px;
     z-index: 1;
@@ -789,10 +793,10 @@ textarea.interactuado:invalid {
     border: 2px solid #ffa97f;
 }
 
-form#formulario-contactanos div.contenedor-formulario .bonton-enviar {
+form#formulario-contactanos div.contenedor-formulario .boton-enviar {
     background-color: #FFA559;
     width: 90px;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border-radius: 25px;
     text-align: center;
     align-self: center;
@@ -803,6 +807,16 @@ form#formulario-contactanos div.contenedor-formulario .bonton-enviar {
 }
 
 /*perfil usuario*/
+.underline{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #FFA559;
+    display: block;
+}
+
 #container-perfil {
     display: flex;
     flex-flow: column;
@@ -846,23 +860,6 @@ section.perfil-usuario div.editar-perfil {
     cursor: pointer;
 }
 
-section.perfil-usuario div.editar-perfil::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #FFA559;
-    transition: width 0.5s;
-
-}
-
-section.perfil-usuario div.editar-perfil:hover::after {
-    width: 100%;
-
-}
-
 section.estanterias {
     background-color: #525252;
 
@@ -886,23 +883,10 @@ article.estanteria li {
 article.estanteria a {
     font-size: 16px;
     position: relative;
+    display: inline-block;
     padding-bottom: 5px;
 }
 
-article.estanteria a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #FFA559;
-    transition: width 0.5s;
-}
-
-article.estanteria a:hover::after {
-    width: 100%;
-}
 
 section.listas-personalizadas {
     max-width: 600px;
@@ -911,7 +895,7 @@ section.listas-personalizadas {
     align-items: center;
 }
 
-section.listas-personalizadas h4,
+section.listas-personalizadas h3,
 section.estanterias h4 {
     align-self: flex-start;
     color: #FFF;
@@ -933,7 +917,7 @@ section.listas-personalizadas article.listas {
     flex: 0 0 80%;
 }
 
-section.listas-personalizadas article.listas h5 {
+section.listas-personalizadas article.listas h4 {
     font-weight: 300;
     margin: 0.5rem;
 }
@@ -955,7 +939,7 @@ section.listas-personalizadas div.boton-crear-lista {
     text-align: center;
     cursor: pointer;
 }
-
+/*
 section.listas-personalizadas div.boton-crear-lista::after {
     content: '';
     position: absolute;
@@ -972,7 +956,7 @@ section.listas-personalizadas div.boton-crear-lista:hover::after {
     width: 100%;
 
 }
-
+*/
 /*ventana emergente para crear una lista*/
 #ventana-emergente-crear-lista {
     background-color: #383838;
@@ -1207,7 +1191,10 @@ section div.obras-lectura .portada {
     color: #FFF;
     font-size: 15px;
 }
-
+.contenido-filtrar>div {
+    color: #FFF;
+    font-size: 15px;
+}
 .contenido-filtrar label.seleccionable {
     position: relative;
     padding-left: 25px;

@@ -96,7 +96,7 @@
                         </picture>
                         <!--seleccionar lectura-->
                         <div class="opciones-lectura">
-                            <select id="estadoLectura">
+                            <select id="estadoLectura" aria-label="estado-de-lectura">
                                 <option value="desmarcado" selected>Desmarcado</option>
                                 <option value="quiero_leerlo">Quiero leerlo</option>
                                 <option value="leyendo">Leyéndolo</option>
@@ -119,7 +119,7 @@
                             </div>
                             <!-- Opción para crear una nueva lista -->
                             <p>O crear una lista nueva:</p>
-                            <input type="text" id="nueva-lista-nombre" placeholder="Nombre de la nueva lista">
+                            <input type="text" id="nueva-lista-nombre" value="" aria-label="nombre-nueva-lista" placeholder="Nombre de la nueva lista">
                             <button class="crear-lista">Crear Lista</button><!--sin funcionalidad-->
                         </div>
 
@@ -176,10 +176,10 @@
                         <div id="generos">
                             <h4>Géneros:</h4>
                             <ul>
-                                <li><a href="etiqueta.html">Histórico</a></li>
-                                <li><a href="etiqueta.html">Misterio</a></li>
-                                <li><a href="etiqueta.html">Fantasía</a></li>
-                                <li><a href="etiqueta.html">Romance</a></li>
+                                <li><a href="etiqueta.html">Histórico<span class="underline"></span></a></li>
+                                <li><a href="etiqueta.html">Misterio<span class="underline"></span></a></li>
+                                <li><a href="etiqueta.html">Fantasía<span class="underline"></span></a></li>
+                                <li><a href="etiqueta.html">Romance<span class="underline"></span></a></li>
                             </ul>
                         </div>
                     </div>

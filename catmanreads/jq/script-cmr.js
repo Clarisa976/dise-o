@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(window).on('resize', function() {
+    $(window).on('resize', function () {
         if ($(window).width() >= 1440) {
             //si la ventana es de 1440 o más se muestra el menú
             $('#opciones-menu-principal').css('display', 'flex');
@@ -55,12 +55,29 @@ $(document).ready(function () {
 
 
 
+    //animación del subrayado
+    $('a').has('.underline').on('mouseenter', function () {
+        $(this).find('.underline').stop().animate({ width: '100%' }, 500).css('display', 'block');
+    }).on('mouseleave', function () {
+        $(this).find('.underline').stop().animate({ width: '0%' }, 500);
+    });
+
+    //cambio de color en los menús
+    $(document).ready(function () {
+        $('#menu-usuario li, #menuPrincipal li').on('mouseenter', function () {
+            // Acción al pasar el ratón: cambiar el fondo
+            $(this).css('background-color', '#171616');
+        }).on('mouseleave', function () {
+            // Acción al quitar el ratón: revertir el fondo
+            $(this).css('background-color', ''); // Volver al color de fondo original o especificar un color
+        });
+    });
 
 
 
 
 
-    /*volver arriba*/ 
+    /*volver arriba*/
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 15) {//si la posición es mayor a 0 se ha desplazado hacia abajo
             $("div#volverarriba").fadeIn();//muestra el botón de volver arriba
@@ -114,34 +131,38 @@ $(document).ready(function () {
 
     /*ventana emergente para crear listas*/
     $(document).ready(function () {
-        // Al hacer clic en el botón para abrir la ventana emergente
+
         $('.boton-crear-lista').on('click', function () {
             $('#ventana-emergente-crear-lista').show();
         });
 
-        // Al hacer clic en el botón de cerrar dentro de la ventana emergente
         $('.x-cerrar-crear-lista').on('click', function () {
             $('#ventana-emergente-crear-lista').hide();
         });
     });
-    /*formulario contacto*/
+
+    //formularios
     $(document).ready(function () {
-        $('input, select, textarea').on('mouseenter', function () {
+        $('.boton-enviar').click(function (event) {
+            event.preventDefault();
+            var formulario = $(this).closest('form');
+            var todosLosCamposLlenos = true;
 
-            $(this).next('.mensaje-error').css('visibility', 'visible');
-        }).on('mouseleave', function () {
+            formulario.find('input[required], select[required], textarea[required]').each(function () {
+                if (!$(this).val()) { //si el campo está vacío
+                    $(this).css('border', '2px solid #ffa97f');
+                    $(this).next('.mensaje-error').css('display', 'block');
+                    todosLosCamposLlenos = false;
+                } else {
+                    $(this).css('border', '');
+                    $(this).next('.mensaje-error').css('display', 'none');
+                }
+            });
 
-            $(this).next('.mensaje-error').css('visibility', 'hidden');
-        });
-    });
-    /*formulario ajustes del perfil*/
-    $(document).ready(function () {
-        $('#formulario-cambiar-datos input').on('mouseenter', function () {
-
-            $(this).next('.mensaje-error').css('visibility', 'visible');
-        }).on('mouseleave', function () {
-
-            $(this).next('.mensaje-error').css('visibility', 'hidden');
+            if (todosLosCamposLlenos) {
+                //para saber que funciona
+                console.log('formulario listo para ser enviado');
+            }
         });
     });
 
@@ -162,88 +183,88 @@ $(document).ready(function () {
         });
     });
 
-    $(document).ready(function() {
-        $('#saber-mas-cookies').on('click', function() {
+    $(document).ready(function () {
+        $('#saber-mas-cookies').on('click', function () {
             window.location.href = 'pag/terminos-uso.html';
         });
     });
-    
+
 
     /*ocultar el menú principal si está abierto al redimensionar la ventana*/
-    $(window).resize(function() {
-    if ($(window).width() >= 1440) {
-        // Si la ventana es de 1440px o más, muestra el menú
-        $('#opciones-menu-principal').show();
-        $('#img-menu-principal').hide();
-    } else {
-        // Si la ventana es menor a 1440px, oculta el menú y muestra el botón del menú
-        $('#opciones-menu-principal').hide();
-        $('#img-menu-principal').show();
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //carrusel
-        var swiper = new Swiper(".mySwiper", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            //impide que sigas pasando si no hay más artículos
-            on: {
-                init: function () {
-                    checkSwiperEdge(this);
-                },
-                slideChange: function () {
-                    checkSwiperEdge(this);
-                }
-            },
-    
-    
-    
-    
-    
-        });
-    
-        /*funcionamiento para desplazar el carrusel
-        se calcula el total de articulos que hay para mostrar restringiendo
-        el desplazamiento
-        */
-        function checkSwiperEdge(swiper) {
-            const swiperWrapper = swiper.wrapperEl;
-            const slides = swiper.slides;
-            let maxTranslate = 0;
-            let swiperContainerWidth = swiper.width;
-            let totalWidthOfSlides = 0;
-    
-            slides.forEach(slide => {
-                totalWidthOfSlides += slide.offsetWidth;
-            });
-    
-            maxTranslate = swiperContainerWidth - totalWidthOfSlides;
-    
-            if (swiper.translate < maxTranslate) {
-                swiper.setTranslate(maxTranslate);
-                swiper.navigation.nextEl.classList.add('disabled');
-            } else {
-                swiper.navigation.nextEl.classList.remove('disabled');
-            }
-    
-            if (swiper.isBeginning) {
-                swiper.navigation.prevEl.classList.add('disabled');
-            } else {
-                swiper.navigation.prevEl.classList.remove('disabled');
-            }
+    $(window).resize(function () {
+        if ($(window).width() >= 1440) {
+            // Si la ventana es de 1440px o más, muestra el menú
+            $('#opciones-menu-principal').show();
+            $('#img-menu-principal').hide();
+        } else {
+            // Si la ventana es menor a 1440px, oculta el menú y muestra el botón del menú
+            $('#opciones-menu-principal').hide();
+            $('#img-menu-principal').show();
         }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //carrusel
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        //impide que sigas pasando si no hay más artículos
+        on: {
+            init: function () {
+                checkSwiperEdge(this);
+            },
+            slideChange: function () {
+                checkSwiperEdge(this);
+            }
+        },
+
+
+
+
+
+    });
+
+    /*funcionamiento para desplazar el carrusel
+    se calcula el total de articulos que hay para mostrar restringiendo
+    el desplazamiento
+    */
+    function checkSwiperEdge(swiper) {
+        const swiperWrapper = swiper.wrapperEl;
+        const slides = swiper.slides;
+        let maxTranslate = 0;
+        let swiperContainerWidth = swiper.width;
+        let totalWidthOfSlides = 0;
+
+        slides.forEach(slide => {
+            totalWidthOfSlides += slide.offsetWidth;
+        });
+
+        maxTranslate = swiperContainerWidth - totalWidthOfSlides;
+
+        if (swiper.translate < maxTranslate) {
+            swiper.setTranslate(maxTranslate);
+            swiper.navigation.nextEl.classList.add('disabled');
+        } else {
+            swiper.navigation.nextEl.classList.remove('disabled');
+        }
+
+        if (swiper.isBeginning) {
+            swiper.navigation.prevEl.classList.add('disabled');
+        } else {
+            swiper.navigation.prevEl.classList.remove('disabled');
+        }
+    }
 })

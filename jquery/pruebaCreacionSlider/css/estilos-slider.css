@@ -39,6 +39,26 @@ h1 {
 /** ---------------------------------------
  * Slider 
  ----------------------------------------*/
+/*BOTONES*/
+.slider-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  background-color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.izquierda {
+  left: 0;
+}
+
+.derecha {
+  right: 0;
+}
+
+
 
 .contenedor-slider {
   width: 640px;

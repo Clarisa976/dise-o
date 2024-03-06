@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <link href="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/favicon-2.png" rel="icon" type="image/x-icon">
+    <script src="jq/jquery-3.7.1.min.js" type="text/javascript"></script>
+    <script src="jq/script-cmr.js" type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+
+
+    <title>Catmanreads - Contacta con nosotros</title>
+</head>
+
+<body>
+
+    <script>
+
+    </script>
+    <div id="container-body">
+        <!--cabecera-->
+        <header>
+            <div id="logo">
+                <a href="#">
+                    <img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/logo/logocatmanv2.svg" alt="logocatman"
+                        id="imglogo">
+                    <h1>Catmanreads</h1>
+                </a>
+            </div>
+
+        </header>
+
+
+        <!--cuerpo-->
+
+        <main>
+
+            <form id="formulario-contactanos" action="#" method="post">
+                <h3>Contacta con nosotros</h3>
+
+                <div class="contenedor-formulario">
+                    <label class="label-opciones" for="opciones-contacto">Por favor, escoge la opción que describe mejor
+                        tu situación</label>
+
+                    <select class="errores" id="opciones-contacto" name="opciones" required>
+                        <option value="">Elige una opción*</option>
+                        <option value="reportar-contenido-inadecuado">Reportar contenido inadecuado</option>
+                        <option value="reportar-error">Reportar un error</option>
+                        <option value="aportar-nueva-obra">Aportar nueva obra</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <p class="error-message">Este campo es obligatorio</p>
+
+                    <label for="email">Email*:</label>
+
+                    <input type="email" class="errores" id="email" name="email" required
+                        placeholder="ejemplo@ejemplo.com">
+                    <p class="error-message">Este campo es obligatorio</p>
+
+                    <label for="asunto">Asunto*:</label>
+
+                    <input type="text" value="" class="errores" id="asunto" name="asunto" required>
+                    <p class="error-message">Este campo es obligatorio</p>
+
+                    <label for="descripcion">Descripción*:</label>
+
+                    <textarea id="descripcion" class="errores" name="descripcion" maxlength="100" required></textarea>
+                    <p id="contador-caracteres">Dispone de 100 caracteres.</p>
+                    <p>Fecha: <input type="text" id="datepicker"></p>
+
+                    <button type="submit" class="boton-enviar">ENVIAR</button>
+                </div>
+            </form>
+
+
+        </main>
+
+        <!--pie de página-->
+        <footer>
+
+        </footer>
+
+    </div>
+    <div id="volverarriba"><a href="#top"><img src="https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-chevron-up.svg
+        " alt="volver arriba"> <span></span></a></div>
+</body>
+
+</html>

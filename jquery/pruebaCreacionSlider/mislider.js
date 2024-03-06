@@ -15,22 +15,22 @@ $(document).ready(function () {
 
         //constructor del Slider
         pb.init = function (settings) {
-            this.settings = settings || {duration:3000}
+            this.settings = settings || { duration: 3000 }
             var loscontroles = '';
             //console.log("Inicializado");
             SliderInit();//para inicializar el slider
-            
+
             //creamos los controles del Slider en tiempo de ejecución
-            for(var i=0;i<lengthSlider;i++){
-                if(i==0){
+            for (var i = 0; i < lengthSlider; i++) {
+                if (i == 0) {
                     loscontroles += '<li class="active"></li>';
-                }else{
+                } else {
                     loscontroles += '<li></li>';
                 }
             }
             //insertamos los controles creados en el  html
             $('#control-buttons').html(loscontroles);
-            
+
 
             $('#control-buttons li').click(function () {
 
@@ -44,9 +44,30 @@ $(document).ready(function () {
                 }
                 //cambiarPanel($(this).index());
             });
+            //BOTONES
+            //funcionalidad del botón izquierda
+            $('.izquierda').click(function (e) {
+                e.preventDefault(); // Previene el comportamiento por defecto del enlace
+                var targetSlider = currentSlider - 1 < 0 ? lengthSlider - 1 : currentSlider - 1;
+                cambiarPanel(targetSlider);
+            });
+            //funcionalidad del botón derecha
+            $('.derecha').click(function (e) {
+                e.preventDefault(); // Previene el comportamiento por defecto del enlace
+                var targetSlider = currentSlider + 1 >= lengthSlider ? 0 : currentSlider + 1;
+                cambiarPanel(targetSlider);
+            });
+
+            //PARAR EL SLIDER
+            //función para pausar y reanudar el slider
+            pb.items.panels.mouseenter(function () {
+                clearInterval(SliderInterval);
+            }).mouseleave(function () {
+                SliderInit();
+            });
         }
 
-        //funcioón que inicializa el Slider
+        //función que inicializa el Slider
         var SliderInit = function () {
             //SliderInterval = setInterval(pb.startSlider, 3000);//intervalo de ejecución
             SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
@@ -68,8 +89,15 @@ $(document).ready(function () {
             //añadimos la clase al control del panel seleccionado
             controles.eq(nextSlider).addClass('active');
 
-            paneles.eq(currentSlider).fadeOut('slow');//aplicamos efectos de transición
-            paneles.eq(nextSlider).fadeIn('slow');
+            //paneles.eq(currentSlider).fadeOut('slow');//aplicamos efectos de transición
+            //paneles.eq(nextSlider).fadeIn('slow');
+
+            //CAMBIAMOS EL SENTIDO DE COMO SE PASAN LAS IMÁGENES
+
+            paneles.css("position", "relative")
+            paneles.eq(nextSlider).css({ "left": "100%", "display": "block" });
+            paneles.eq(nextSlider).animate({ left: "0%" }, "slow");
+            paneles.eq(currentSlider).animate({ left: "-100%" }, "slow");
 
             //console.log(nextSlider);
             //actualizamos las variables
@@ -98,10 +126,23 @@ $(document).ready(function () {
             //añadimos la clase al control del panel seleccionado
             controles.eq(indice).addClass('active');
             //efectos de transición
-            paneles.eq(currentSlider).fadeOut('slow');
+            //paneles.eq(currentSlider).fadeOut('slow');
             //el siguiente panel del slider es el que indique
             //el parámetro "indice"
-            paneles.eq(indice).fadeIn('slow');
+            //paneles.eq(indice).fadeIn('slow');
+
+            //CAMBIAMOS EL SENTIDO DE COMO SE PASAN LAS IMÁGENES
+            paneles.css("position", "relative");
+
+            // Configuramos el siguiente panel para que aparezca desde la derecha
+            paneles.eq(indice).css({ "left": "100%", "display": "block" });
+
+            // Animamos los paneles actual y siguiente
+            paneles.eq(currentSlider).animate({ left: "-100%" }, "slow", function () {
+                // Esta función se ejecuta cuando la animación del panel actual se completa
+                paneles.eq(currentSlider).css({ "display": "block", "left": "0%" });
+            });
+            paneles.eq(indice).animate({ left: "0%" }, "slow");
 
             //actualizamos los datos 
             currentSlider = indice;
