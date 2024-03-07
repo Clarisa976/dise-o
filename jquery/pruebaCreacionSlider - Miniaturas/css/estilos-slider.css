@@ -23,13 +23,17 @@ body {
 ul {
   list-style-type: none;
 }*/
-
-a {
+section.contenedor-slider main{
+  background: #242c38;
+  font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+}
+section.contenedor-slider a {
   color: #00c5b9;
   text-decoration: none;
 }
 
-h1 {
+section.contenedor-slider h1 {
   color: #FFF;
   text-align: center;
   margin-top: 2rem;
@@ -40,7 +44,7 @@ h1 {
  * Slider 
  ----------------------------------------*/
 /*BOTONES*/
-.slider-control {
+section.contenedor-slider .slider-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
