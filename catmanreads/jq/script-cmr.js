@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function() {
     $(window).on('resize', function () {
         if ($(window).width() >= 1440) {
             //si la ventana es de 1440 o más se muestra el menú
@@ -85,6 +85,11 @@ $(document).ready(function () {
             $("div#volverarriba").fadeOut();//oculta el botón de volver arriba
         }
     });
+    //animación para volver arriba
+    $("div#volverarriba").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
 
 
     /*puntuar una obra*/
@@ -143,13 +148,25 @@ $(document).ready(function () {
 
     //formularios
     $(document).ready(function () {
-        $('.boton-enviar').click(function (event) {
-            event.preventDefault();
+        //primero validamos cada campo de forma individual
+        $('input[required], select[required], textarea[required]').focusout(function () {
+            if (!$(this).val()) {
+                //al estar vacío saldrá el mensaje de error
+                $(this).css('border', '2px solid #ffa97f');
+                $(this).next('.mensaje-error').css('display', 'block');
+            } else {
+                //si se rellena el campo se quita
+                $(this).css('border', '');
+                $(this).next('.mensaje-error').css('display', 'none');
+            }
+        });
+        //al hacer click en el botón de enviar el formulario se comprueba si los campos están vacíos o no
+        $('.boton-enviar').click(function () {
             var formulario = $(this).closest('form');
             var todosLosCamposLlenos = true;
-
+    
             formulario.find('input[required], select[required], textarea[required]').each(function () {
-                if (!$(this).val()) { //si el campo está vacío
+                if (!$(this).val()) {
                     $(this).css('border', '2px solid #ffa97f');
                     $(this).next('.mensaje-error').css('display', 'block');
                     todosLosCamposLlenos = false;
@@ -158,33 +175,32 @@ $(document).ready(function () {
                     $(this).next('.mensaje-error').css('display', 'none');
                 }
             });
-
+    
             if (todosLosCamposLlenos) {
-                //para saber que funciona
                 console.log('formulario listo para ser enviado');
-            }
+                }
         });
     });
 
     /*desplegar los filtros*/
     $(document).ready(function () {
         $(".filtro").click(function () {
-            $("#mostrar-filtros").toggle(); // Alternar la visibilidad
+            $("#mostrar-filtros").slideToggle();
         });
     });
 
 
     /*cookies*/
     $(document).ready(function () {
-        // Evento de clic para el botón 'ACEPTO'
         $('#aceptar-cookies').click(function () {
-            // Oculta el contenedor de la ventana emergente
+            //ocultamos la ventana si se pulsa aceptar
             $('#cookies').hide();
         });
     });
 
     $(document).ready(function () {
         $('#saber-mas-cookies').on('click', function () {
+            //redirigimos a la página de los términos
             window.location.href = 'pag/terminos-uso.html';
         });
     });
