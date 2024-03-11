@@ -959,7 +959,7 @@ form#formulario-contactanos div.contenedor-formulario #descripcion {
 
 .mensaje-error {
     font-size: 12px;
-    display: none;
+    visibility: hidden;
     color: #ffa97f;
     margin-top: 5px;
     z-index: 1;
@@ -1625,9 +1625,7 @@ footer span {
 div#cookies {
     color: #FFF;
     font-size: 16px;
-}
-
-div.cookie-consentimiento {
+    height: auto;
     position: fixed;
     top: 0;
     left: 0;

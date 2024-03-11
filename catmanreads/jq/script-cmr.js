@@ -63,7 +63,7 @@ $(function() {
     });
 
     //cambio de color en los menús
-    $(document).ready(function () {
+    $(function() {
         $('#menu-usuario li, #menuPrincipal li').on('mouseenter', function () {
             // Acción al pasar el ratón: cambiar el fondo
             $(this).css('background-color', '#171616');
@@ -99,9 +99,9 @@ $(function() {
             document.querySelectorAll('.star').forEach(innerStar => {
                 let innerValue = innerStar.getAttribute('data-value');
                 if (innerValue <= value) {
-                    innerStar.src = 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-star.svg'; // Estrella completa
+                    innerStar.src = 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bxs-star.svg';
                 } else {
-                    innerStar.src = 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg'; // Estrella vacía
+                    innerStar.src = 'https://cmr-ciaa.s3.amazonaws.com/cmr/imagen/icons/bx-star.svg';
                 }
             });
         };
@@ -109,7 +109,7 @@ $(function() {
 
 
     /*eventos para que la ventana emergente de las listas*/
-    $(document).ready(function () {
+    $(function() {
         //mostramos la ventana emergente si se cambia el select
         $('#estadoLectura').change(function () {
             if ($(this).val() !== 'desmarcado') {
@@ -135,29 +135,29 @@ $(function() {
 
 
     /*ventana emergente para crear listas*/
-    $(document).ready(function () {
+    $(function() {
 
         $('.boton-crear-lista').on('click', function () {
-            $('#ventana-emergente-crear-lista').show();
+            $('#ventana-emergente-crear-lista').fadeIn();
         });
 
         $('.x-cerrar-crear-lista').on('click', function () {
-            $('#ventana-emergente-crear-lista').hide();
+            $('#ventana-emergente-crear-lista').fadeOut();
         });
     });
 
     //formularios
-    $(document).ready(function () {
+    $(function() {
         //primero validamos cada campo de forma individual
         $('input[required], select[required], textarea[required]').focusout(function () {
             if (!$(this).val()) {
                 //al estar vacío saldrá el mensaje de error
                 $(this).css('border', '2px solid #ffa97f');
-                $(this).next('.mensaje-error').css('display', 'block');
+                $(this).next('.mensaje-error').css('visibility', 'visible');
             } else {
                 //si se rellena el campo se quita
                 $(this).css('border', '');
-                $(this).next('.mensaje-error').css('display', 'none');
+                $(this).next('.mensaje-error').css('visibility', 'hidden');
             }
         });
         //al hacer click en el botón de enviar el formulario se comprueba si los campos están vacíos o no
@@ -168,11 +168,11 @@ $(function() {
             formulario.find('input[required], select[required], textarea[required]').each(function () {
                 if (!$(this).val()) {
                     $(this).css('border', '2px solid #ffa97f');
-                    $(this).next('.mensaje-error').css('display', 'block');
+                    $(this).next('.mensaje-error').css('visibility', 'visible');
                     todosLosCamposLlenos = false;
                 } else {
                     $(this).css('border', '');
-                    $(this).next('.mensaje-error').css('display', 'none');
+                    $(this).next('.mensaje-error').css('visibility', 'hidden');
                 }
             });
     
@@ -183,7 +183,7 @@ $(function() {
     });
 
     /*desplegar los filtros*/
-    $(document).ready(function () {
+    $(function() {
         $(".filtro").click(function () {
             $("#mostrar-filtros").slideToggle();
         });
@@ -191,14 +191,14 @@ $(function() {
 
 
     /*cookies*/
-    $(document).ready(function () {
+    $(function() {
         $('#aceptar-cookies').click(function () {
             //ocultamos la ventana si se pulsa aceptar
-            $('#cookies').hide();
+            $('#cookies').fadeOut();
         });
     });
 
-    $(document).ready(function () {
+    $(function() {
         $('#saber-mas-cookies').on('click', function () {
             //redirigimos a la página de los términos
             window.location.href = 'pag/terminos-uso.html';
